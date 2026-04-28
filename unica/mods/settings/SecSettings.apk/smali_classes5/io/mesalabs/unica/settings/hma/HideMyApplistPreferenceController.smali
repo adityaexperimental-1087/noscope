@@ -121,11 +121,13 @@
 
     const-string v1, "unica_hma"
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
+
+    const/4 v2, 0x1
 
     const-string v1, "string"
 
@@ -341,11 +343,13 @@
 
     const-string v0, "unica_hma"
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
+
+    const/4 v1, 0x1
 
     if-ne p0, v1, :cond_0
 
@@ -389,11 +393,13 @@
 
     const-string v0, "unica_hma"
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
+
+    const/4 v1, 0x1
 
     if-nez p0, :cond_0
 

@@ -1,1 +1,0 @@
-SET_PROP "vendor" "ro.sf.init.lcd.density" "$(GET_PROP "vendor" "ro.sf.lcd.density")"

@@ -267,11 +267,13 @@
 
     const-string v0, "unica_hma"
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     invoke-static {p2, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p2
+
+    const/4 v1, 0x1
 
     if-eqz p2, :cond_2
 
