@@ -82,47 +82,6 @@ SYSTEM_DEBLOAT+="
 system/priv-app/CIDManager
 "
 
-# Gaming Hub
-SYSTEM_DEBLOAT+="
-system/etc/permissions/privapp-permissions-com.samsung.android.game.gamehome.xml
-system/priv-app/GameHome
-"
-
-# Gemini shortcut
-PRODUCT_DEBLOAT+="
-app/BardShell
-"
-
-# Gmail
-PRODUCT_DEBLOAT+="
-app/Gmail2
-"
-
-# Google Assistant shortcut
-PRODUCT_DEBLOAT+="
-app/AssistantShell
-"
-
-# Google Chrome
-PRODUCT_DEBLOAT+="
-app/Chrome
-"
-
-# Google Duo
-PRODUCT_DEBLOAT+="
-app/DuoStub
-"
-
-# Google Maps
-PRODUCT_DEBLOAT+="
-app/Maps
-"
-
-# Google PAI (Play Autoinstall)
-SYSTEM_DEBLOAT+="
-system/app/PlayAutoInstallConfig
-"
-
 # HwModuleTest
 SYSTEM_DEBLOAT+="
 system/app/Cameralyzer
@@ -279,11 +238,25 @@ SYSTEM_EXT_DEBLOAT+="
 framework/org.carconnectivity.android.digitalkey.rangingintent.jar
 framework/org.carconnectivity.android.digitalkey.secureelement.jar
 "
+# Chrome64
+PRODUCT_DEBLOAT+="
+app/Chrome64
+"
+
+# Duo
+PRODUCT_DEBLOAT+="
+app/Duo
+"
 
 # Search engine selector
 PRODUCT_DEBLOAT+="
 overlay/GmsConfigOverlaySearchSelector.apk
 priv-app/SearchSelector
+"
+
+# Messages
+PRODUCT_DEBLOAT+="
+priv-app/Messages
 "
 
 # SettingsHelper
