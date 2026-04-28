@@ -10,6 +10,7 @@
 /system/bin/bootstrap/linker u:object_r:system_linker_file:s0
 /system/bin/bootstrap/linker_asan u:object_r:system_file:s0
 /system/lib64 u:object_r:system_lib_file:s0
+/system/lib64/libnfc_sec_jni\.so u:object_r:system_lib_file:s0
 /system/lib64/libvkmanager\.so u:object_r:system_lib_file:s0
 /system/lib64/vendor\.samsung\.hardware\.security\.vaultkeeper@2\.0\.so u:object_r:system_lib_file:s0
 /system/lib64/lib\.engmode\.samsung\.so u:object_r:system_lib_file:s0
@@ -764,4 +765,3 @@
 /system/lib/libsnamrwb\.so u:object_r:system_lib_file:s0
 /system/lib/libSRTP\.so u:object_r:system_lib_file:s0
 /system/lib/libsnamrnb\.so u:object_r:system_lib_file:s0
-
