@@ -28,8 +28,8 @@ IS_UNICA_CERT_AVAILABLE()
     local OTA_KEY_SHA1="681aa9d28fe5fc60be8c25dc5f26a73ec3d6fb46"
 
     local USES_UNICA_CERT="false"
-    if [[ "$(sha1sum "$SRC_DIR/security/unica_platform.pk8" 2> /dev/null | cut -d " " -f 1)" == "$PLATFORM_KEY_SHA1" ]] && \
-            [[ "$(sha1sum "$SRC_DIR/security/unica_ota.pk8" 2> /dev/null | cut -d " " -f 1)" == "$OTA_KEY_SHA1" ]]; then
+    if [[ "$(sha1sum "$SRC_DIR/security/monsterrom_platform.pk8" 2> /dev/null | cut -d " " -f 1)" == "$PLATFORM_KEY_SHA1" ]] && \
+            [[ "$(sha1sum "$SRC_DIR/security/monsterrom_platform.x509.pem" 2> /dev/null | cut -d " " -f 1)" == "$OTA_KEY_SHA1" ]]; then
         USES_UNICA_CERT="true"
     fi
 
