@@ -37,4 +37,3 @@
     SET_PROP "vendor" "ro.zygote" "zygote64"
     SET_PROP "vendor" "dalvik.vm.dex2oat64.enabled" "true"
     LOG_STEP_OUT
-

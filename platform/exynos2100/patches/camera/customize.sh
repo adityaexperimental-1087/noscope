@@ -55,6 +55,7 @@ system/lib64/libdualcam_refocus_gallery_59.so
 system/lib64/libDualCamBokehCapture.camera.samsung.so
 system/lib64/libenn_wrapper_system.so
 system/lib64/libface_recognition.arcsoft.so
+system/lib64/libgallery_pic_best.arcsoft.so
 system/lib64/libhybrid_high_dynamic_range.arcsoft.so
 system/lib64/libpic_best.arcsoft.so
 "
@@ -99,3 +100,18 @@ for blob in $BLOBS_LIST
 do
     ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "$blob" 0 0 644 "u:object_r:system_lib_file:s0" &
 done
+
+LOG_STEP_IN "- Removing EDEN log tag"
+SET_PROP "system" "log.tag.EDEN" --delete
+SET_PROP "vendor" "log.tag.EDEN" --delete
+LOG_STEP_OUT
+
+LOG_STEP_IN "- Fixing vendor display props"
+# DPI
+LCD_DENSITY="$(GET_PROP "vendor" "ro.sf.lcd_density")"
+if [ "$LCD_DENSITY" ]; then
+    SET_PROP "vendor" "ro.sf.init.lcd_density" "$LCD_DENSITY"
+else
+    ABORT "ro.sf.lcd_density prop not found in vendor"
+fi
+LOG_STEP_OUT
