@@ -24,8 +24,8 @@ GET_BUILD_VAR()
 
 IS_UNICA_CERT_AVAILABLE()
 {
-    local PLATFORM_KEY_SHA1="5b0eb951718acc596370dabab83f546e779b21dc"
-    local OTA_KEY_SHA1="681aa9d28fe5fc60be8c25dc5f26a73ec3d6fb46"
+    local PLATFORM_KEY_SHA1="313e3dbe04ab670f1e554c4f27c23f1a0b65bf86"
+    local OTA_KEY_SHA1="e5250f9b75121e5436a0e653e8a0ac408e8db1a2"
 
     local USES_UNICA_CERT="false"
     if [[ "$(sha1sum "$SRC_DIR/security/monsterrom_platform.pk8" 2> /dev/null | cut -d " " -f 1)" == "$PLATFORM_KEY_SHA1" ]] && \
