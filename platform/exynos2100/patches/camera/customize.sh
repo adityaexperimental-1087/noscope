@@ -57,7 +57,6 @@ system/lib64/libenn_wrapper_system.so
 system/lib64/libface_recognition.arcsoft.so
 system/lib64/libgallery_pic_best.arcsoft.so
 system/lib64/libhybrid_high_dynamic_range.arcsoft.so
-system/lib64/libpic_best.arcsoft.so
 "
 for blob in $BLOBS_LIST
 do
