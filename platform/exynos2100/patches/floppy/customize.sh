@@ -191,18 +191,34 @@ PATCH_KERNEL_FEATURE_DEFAULTS()
 BUILD_KERNEL()
 {
     local PARENT
+    local STATUS
     PARENT="$(pwd)"
 
     cd "$FLOPPY_KERNEL_DIR"
 
     LOG "- Running FloppyKernel build script"
+    set +e
     DO_ZIP=0 \
     DO_TAR=0 \
     USE_CCACHE="${FLOPPY_USE_CCACHE:-1}" \
     DEVICE="$TARGET_NAME" \
     CODENAME="$TARGET_CODENAME" \
     bash ./build/ckbuild.sh $FLOPPY_BUILD_ARGS
-    local STATUS=$?
+    STATUS=$?
+    set -e
+
+    if [ "$STATUS" -ne 0 ] && [[ "$FLOPPY_BUILD_ARGS" != *c* ]]; then
+        LOGW "- FloppyKernel incremental build failed; retrying clean build"
+        set +e
+        DO_ZIP=0 \
+        DO_TAR=0 \
+        USE_CCACHE="${FLOPPY_USE_CCACHE:-1}" \
+        DEVICE="$TARGET_NAME" \
+        CODENAME="$TARGET_CODENAME" \
+        bash ./build/ckbuild.sh c $FLOPPY_BUILD_ARGS
+        STATUS=$?
+        set -e
+    fi
 
     if [ "$STATUS" -ne 0 ]; then
         cd "$PARENT"
