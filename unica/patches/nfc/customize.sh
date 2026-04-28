@@ -9,12 +9,3 @@
         ADD_TO_WORK_DIR "e3qxxx" "system" "$blob" 0 0 644 "u:object_r:system_lib_file:s0"
     done
 
-DECODE_APK "system" "system/priv-app/SecSettings/SecSettings.apk"
-
-FTP="
-system/priv-app/SecSettings/SecSettings.apk/smali_classes5/com/samsung/android/settings/nfc/NfcAntennaGuideDialog.smali
-system/priv-app/SecSettings/SecSettings.apk/smali_classes5/com/samsung/android/settings/nfc/NfcSettings.smali
-"
-for f in $FTP; do
-    sed -i "s/\"4\"/\"1\"/g" "$APKTOOL_DIR/$f"
-done

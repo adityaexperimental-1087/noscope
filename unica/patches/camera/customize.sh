@@ -42,6 +42,16 @@ else
     _LOG "File not found: $SRC_DIR/target/$TARGET_CODENAME/camera/camera-feature.xml"
 fi
 
+LOG_STEP_IN "- Adding cameramodes"
+CAMERA_CONFIG_VENDOR_LIB_INFO="$(GET_FLOATING_FEATURE_CONFIG "$FW_DIR/$SOURCE_FIRMWARE_PATH/system/system/etc/floating_feature.xml" "SEC_FLOATING_FEATURE_CAMERA_CONFIG_VENDOR_LIB_INFO")"
+if [ "$CAMERA_CONFIG_VENDOR_LIB_INFO" ]; then
+    SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_CAMERA_CONFIG_VENDOR_LIB_INFO" "$CAMERA_CONFIG_VENDOR_LIB_INFO"
+else
+    ABORT "SEC_FLOATING_FEATURE_CAMERA_CONFIG_VENDOR_LIB_INFO config not found in source firmware floating_feature.xml"
+fi
+unset CAMERA_CONFIG_VENDOR_LIB_INFO
+LOG_STEP_OUT
+
 LOG_STEP_IN
 if grep -q "DURING_SMARTVIEW" "$WORK_DIR/system/system/cameradata/camera-feature.xml" 2> /dev/null; then
     LOG "- Removing Smart View limitations flags"

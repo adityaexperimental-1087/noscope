@@ -158,6 +158,28 @@ if [ "$TARGET_PLATFORM_SDK_VERSION" -lt "35" ]; then
     fi
 fi
 
+# Ensure config_num_physical_slots is configured (pre-API 36)
+# https://android.googlesource.com/platform/frameworks/opt/telephony/+/42e37234cee15c9f3fcfac0532110abfc8843b99%5E%21/#F0
+if [ "$TARGET_PLATFORM_SDK_VERSION" -lt "36" ]; then
+    if [ ! "$(GET_PROP "ro.telephony.sim_slots.count")" ] && \
+            ! grep -q "ro.telephony.sim_slots.count" "$WORK_DIR/vendor/bin/secril_config_svc" && \
+            ! grep -q -r "config_num_physical_slots" "$WORK_DIR/vendor/overlay"; then
+        PATCHED=true
+        DECODE_APK "system" "system/framework/telephony-common.jar"
+        UICC_CONTROLLER="$APKTOOL_DIR/system/framework/telephony-common.jar/smali/com/android/internal/telephony/uicc/UiccController.smali"
+
+        if grep -q -F "ro.vendor.api_level" "$UICC_CONTROLLER" && \
+                grep -q -F "Adjusting numPhysicalSlots for firstApiLevel" "$UICC_CONTROLLER"; then
+            LOG "\033[0;33m! Legacy UiccController code already present. Skipping\033[0m"
+        else
+            APPLY_PATCH "system" "system/framework/telephony-common.jar" \
+                "$MODPATH/ril/telephony-common.jar/0001-Backport-legacy-UiccController-code.patch"
+        fi
+
+        unset UICC_CONTROLLER
+    fi
+fi
+
 # Support legacy sdFAT kernel drivers (pre-API 35)
 # https://android.googlesource.com/platform/system/vold/+/refs/tags/android-16.0.0_r2/fs/Vfat.cpp#150
 # - Check for 'bogus directory:' to determine if newer sdFAT drivers are in place
@@ -244,7 +266,7 @@ fi
 
 # Ensure PASS support (pre-API 35)
 if [ "$TARGET_PLATFORM_SDK_VERSION" -lt "35" ]; then
-    if ! grep -q "sec_pass_data_file" "$WORK_DIR/vendor/etc/selinux/vendor_sepolicy.cil"; then
+    if ! grep -q "sec_pass_data_file" "$WORK_DIR/vendor/etc/selinux/vendor_file_contexts"; then
         PATCHED=true
         SMALI_PATCH "system" "system/framework/services.jar" \
             "smali/com/android/server/StorageManagerService.smali" "return" \

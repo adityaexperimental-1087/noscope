@@ -88,11 +88,6 @@ else
     fi
 fi
 
-LOG_STEP_IN "- Replacing gamebooster props"
-SET_PROP "product" "ro.gfx.driver.0" "$(GET_PROP "$WORK_DIR/vendor/build.prop" "ro.gfx.driver.0")"
-SET_PROP "product" "ro.gfx.driver.1" "$(GET_PROP "$WORK_DIR/vendor/build.prop" "ro.gfx.driver.1")"
-LOG_STEP_OUT
-
 if [[ "$SOURCE_PRODUCT_FIRST_API_LEVEL" -gt 33 && "$TARGET_PRODUCT_FIRST_API_LEVEL" -le 33 ]]; then
     LOG_STEP_IN "- Downgrading ENGMODE JNI"
     DELETE_FROM_WORK_DIR "system" "system/lib64/vendor.samsung.hardware.security.engmode-V1-ndk.so"
