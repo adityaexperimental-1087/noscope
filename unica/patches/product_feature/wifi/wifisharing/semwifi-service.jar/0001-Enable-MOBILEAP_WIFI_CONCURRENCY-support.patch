@@ -3,18 +3,22 @@ From: Salvo Giangreco <giangrecosalvo9@gmail.com>
 Date: Sun, 31 Aug 2025 16:18:33 +0200
 Subject: [PATCH] Enable MOBILEAP_WIFI_CONCURRENCY support
 
-UN1CA: this patch is not complete! Please check unica/patches/product_feature/customize.sh for more info.
 ---
  .../com/samsung/android/server/wifi/ap/SemWifiApChipInfo.smali  | 2 ++
  1 file changed, 2 insertions(+)
 
-diff --git a/smali/org/apache/commons/compress/compressors/bzip2/BlockSort.smali b/smali/org/apache/commons/compress/compressors/bzip2/BlockSort.smali
---- a/smali/org/apache/commons/compress/compressors/bzip2/BlockSort.smali
-+++ b/smali/org/apache/commons/compress/compressors/bzip2/BlockSort.smali
-@@ -1,3 +1,3 @@
- .class public final Lorg/apache/commons/compress/compressors/bzip2/BlockSort;
--.super Ljava/lang/Object;
-+.super Ljava/lang/Object;
- .source "qb/108127447 1eb5cabe977e6f074866ba43820b71a1f7453a78a4406bde13cd736320e5ac3a"
+diff --git a/smali/com/samsung/android/server/wifi/ap/SemWifiApChipInfo.smali b/smali/com/samsung/android/server/wifi/ap/SemWifiApChipInfo.smali
+index 4e9fa28..fa418b4 100644
+--- a/smali/com/samsung/android/server/wifi/ap/SemWifiApChipInfo.smali
++++ b/smali/com/samsung/android/server/wifi/ap/SemWifiApChipInfo.smali
+@@ -1318,6 +1318,8 @@
+ 
+     move-result-object p1
+
++    sput-boolean v5, Lcom/samsung/android/server/wifi/ap/SemWifiApChipInfo;->mSupportWifiSharing:Z
++
+     invoke-static {p0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+ 
+     return-void
 -- 
-2.43.0
+2.51.0
