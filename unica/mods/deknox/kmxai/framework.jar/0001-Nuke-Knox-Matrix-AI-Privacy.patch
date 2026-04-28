@@ -1,0 +1,39 @@
+From 73c6f106fbb864f367617780eb806908219d1b93 Mon Sep 17 00:00:00 2001
+From: Salvo Giangreco <giangrecosalvo9@gmail.com>
+Date: Mon, 22 Sep 2025 12:45:02 +0200
+Subject: [PATCH] Nuke Knox Matrix AI Privacy
+
+Keep the One UI 8.5 privacy data classes present for linkage, but disable
+collection and flushing in the controller.
+---
+ .../kmxservice/ai/privacy/PermissionDataController.smali      | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/smali_classes6/com/samsung/android/kmxservice/ai/privacy/PermissionDataController.smali b/smali_classes6/com/samsung/android/kmxservice/ai/privacy/PermissionDataController.smali
+--- a/smali_classes6/com/samsung/android/kmxservice/ai/privacy/PermissionDataController.smali
++++ b/smali_classes6/com/samsung/android/kmxservice/ai/privacy/PermissionDataController.smali
+@@ -326,6 +326,8 @@
+         }
+     .end annotation
+
++    return-void
++
+     :try_start_0
+     iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mWriterLock:Ljava/util/concurrent/locks/Lock;
+
+@@ -396,6 +398,7 @@
+ .method public blacklist flushAsync()V
+     .locals 2
+
++    return-void
+     iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mFlushExecutor:Ljava/util/concurrent/Executor;
+
+     new-instance v1, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController$1;
+@@ -439,6 +442,7 @@
+ .method public blacklist write(IILjava/lang/String;I)V
+     .locals 7
+
++    return-void
+     invoke-direct {p0, p1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->isOpCodeEnable(I)Z
+
+     move-result v0

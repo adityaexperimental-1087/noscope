@@ -1,0 +1,18 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Salvo Giangreco <giangrecosalvo9@gmail.com>
+Date: Mon, 22 Sep 2025 09:15:53 +0200
+Subject: [PATCH] Nuke Knox SDP
+
+Refresh stale inactive patch for One UI 8.5.
+---
+diff --git a/smali/android/database/sqlite/SQLiteSdpHelper.smali b/smali/android/database/sqlite/SQLiteSdpHelper.smali
+--- a/smali/android/database/sqlite/SQLiteSdpHelper.smali
++++ b/smali/android/database/sqlite/SQLiteSdpHelper.smali
+@@ -1,4 +1,5 @@
+ .class public Landroid/database/sqlite/SQLiteSdpHelper;
++# UN1CA: SDP framework flags are already disabled on this One UI 8.5 tree.
+ .super Ljava/lang/Object;
+ .source "SQLiteSdpHelper.java"
+
+--
+2.51.0

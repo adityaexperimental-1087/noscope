@@ -1,0 +1,18 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Salvo Giangreco <giangrecosalvo9@gmail.com>
+Date: Mon, 22 Sep 2025 09:15:53 +0200
+Subject: [PATCH] Nuke Knox DualDAR
+
+Refresh stale inactive patch for One UI 8.5.
+---
+diff --git a/smali_classes5/com/samsung/android/settings/knox/ChooseLockGenericBridge.smali b/smali_classes5/com/samsung/android/settings/knox/ChooseLockGenericBridge.smali
+--- a/smali_classes5/com/samsung/android/settings/knox/ChooseLockGenericBridge.smali
++++ b/smali_classes5/com/samsung/android/settings/knox/ChooseLockGenericBridge.smali
+@@ -1,4 +1,5 @@
+ .class public Lcom/samsung/android/settings/knox/ChooseLockGenericBridge;
++# UN1CA: One UI 8.5 DualDAR Settings patch is obsolete on this target.
+ .super Landroid/app/Activity;
+ .source "qb/107965190 f613a39b500fb532f17464a5d771dad8f52438c362a6109555b6c3b1b27b51a2"
+
+--
+2.51.0

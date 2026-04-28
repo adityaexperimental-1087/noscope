@@ -1,0 +1,185 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Salvo Giangreco <giangrecosalvo9@gmail.com>
+Date: Mon, 22 Sep 2025 09:15:53 +0200
+Subject: [PATCH] Nuke MDF
+
+Stub MDF native entry points on One UI 8.5.
+---
+diff --git a/smali_classes6/com/samsung/android/security/mdf/MdfUtils.smali b/smali_classes6/com/samsung/android/security/mdf/MdfUtils.smali
+--- a/smali_classes6/com/samsung/android/security/mdf/MdfUtils.smali
++++ b/smali_classes6/com/samsung/android/security/mdf/MdfUtils.smali
+@@ -1297,22 +1297,58 @@
+     return v1
+ .end method
+
+-.method public static native blacklist isMdfApplied()Z
+-.end method
+-
+-.method public static native blacklist isMdfDisabled()Z
+-.end method
+-
+-.method public static native blacklist isMdfEnabled()Z
+-.end method
+-
+-.method public static native blacklist isMdfEnforced()Z
+-.end method
+-
+-.method public static native blacklist isMdfReady()Z
+-.end method
+-
+-.method public static native blacklist isMdfSupported()Z
++.method public static blacklist isMdfApplied()Z
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public static blacklist isMdfDisabled()Z
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public static blacklist isMdfEnabled()Z
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public static blacklist isMdfEnforced()Z
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public static blacklist isMdfReady()Z
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public static blacklist isMdfSupported()Z
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
+ .end method
+
+ .method public static blacklist logMdf(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;)V
+@@ -1505,28 +1541,76 @@
+     return-void
+ .end method
+
+-.method public static native blacklist updateMdfStatus()I
+-.end method
+-
+-.method public static native blacklist updateMdfVersion()Ljava/lang/String;
++.method public static blacklist updateMdfStatus()I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public static blacklist updateMdfVersion()Ljava/lang/String;
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return-object v0
++.end method
+ .end method
+
+
+ # virtual methods
+-.method public native blacklist FIPS_Openssl_SelfTest()I
+-.end method
+-
+-.method public native blacklist getCCModeFlag()I
+-.end method
+-
+-.method public native blacklist getSBFlag()I
+-.end method
+-
+-.method public native blacklist setCCModeFlag(I)I
+-.end method
+-
+-.method public native blacklist setSBFlagOff()I
+-.end method
+-
+-.method public native blacklist setSBFlagOn()I
+-.end method
++.method public blacklist FIPS_Openssl_SelfTest()I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public blacklist getCCModeFlag()I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public blacklist getSBFlag()I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public blacklist setCCModeFlag(I)I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public blacklist setSBFlagOff()I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
++
++.method public blacklist setSBFlagOn()I
++    .locals 1
++
++    const/4 v0, 0x0
++
++    return v0
++.end method
++.end method
+--
+2.51.0

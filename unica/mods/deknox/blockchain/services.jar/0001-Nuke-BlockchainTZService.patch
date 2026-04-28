@@ -1,0 +1,32 @@
+From 8690675ee358248079f99d9254ec8431c7d0ce6d Mon Sep 17 00:00:00 2001
+From: Salvo Giangreco <giangrecosalvo9@gmail.com>
+Date: Sat, 15 Nov 2025 14:11:10 +0100
+Subject: [PATCH] Nuke BlockchainTZService
+
+Skip registration of the blockchain binder service while keeping the
+One UI 8.5 SystemServer service creator switch unchanged.
+---
+ smali/com/android/server/SystemServer$$ExternalSyntheticLambda10.smali | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/smali/com/android/server/SystemServer$$ExternalSyntheticLambda10.smali b/smali/com/android/server/SystemServer$$ExternalSyntheticLambda10.smali
+--- a/smali/com/android/server/SystemServer$$ExternalSyntheticLambda10.smali
++++ b/smali/com/android/server/SystemServer$$ExternalSyntheticLambda10.smali
+@@ -49,6 +49,8 @@
+     :goto_0
+     invoke-virtual {v1}, Landroid/util/TimingsTraceLog;->traceEnd()V
+
++    goto/16 :goto_unica_blockchain_skip
++
+     const-string v2, "Blockchain Service"
+
+     invoke-virtual {v1, v2}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
+@@ -80,6 +82,8 @@
+     :goto_1
+     invoke-virtual {v1}, Landroid/util/TimingsTraceLog;->traceEnd()V
+
++    :goto_unica_blockchain_skip
++
+     const-string/jumbo v2, "SemAuthnrService"
+
+     invoke-virtual {v1, v2}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
