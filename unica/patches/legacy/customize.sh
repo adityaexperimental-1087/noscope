@@ -84,6 +84,28 @@ EXTRACT_KERNEL_IMAGE() {
     fi
 }
 
+DECOMPRESS_KERNEL_PAYLOAD() {
+    local FILE="$1"
+    local TYPE="$2"
+
+    case "$TYPE" in
+        "lz4")
+            if cat "$FILE" | lz4 -d > "$TMP_DIR/out/tmp" 2> /dev/null; then
+                EVAL "mv -f \"$TMP_DIR/out/tmp\" \"$FILE\""
+            else
+                rm -f "$TMP_DIR/out/tmp"
+            fi
+            ;;
+        "gzip")
+            if cat "$FILE" | gzip -d > "$TMP_DIR/out/tmp" 2> /dev/null; then
+                EVAL "mv -f \"$TMP_DIR/out/tmp\" \"$FILE\""
+            else
+                rm -f "$TMP_DIR/out/tmp"
+            fi
+            ;;
+    esac
+}
+
 EXTRACT_KERNEL_MODULES() {
     if [ -d "$TMP_DIR" ]; then
         EVAL "rm -rf \"$TMP_DIR\""
@@ -97,9 +119,9 @@ EXTRACT_KERNEL_MODULES() {
 
     while IFS= read -r f; do
         if [[ "$(READ_BYTES_AT "$f" "0" "4")" == "184c2102" ]]; then
-            EVAL "cat \"$f\" | lz4 -d > \"$TMP_DIR/out/tmp\" && mv -f \"$TMP_DIR/out/tmp\" \"$f\""
+            DECOMPRESS_KERNEL_PAYLOAD "$f" "lz4"
         elif [[ "$(READ_BYTES_AT "$f" "0" "2")" == "8b1f" ]]; then
-            EVAL "cat \"$f\" | gzip -d > \"$TMP_DIR/out/tmp\" && mv -f \"$TMP_DIR/out/tmp\" \"$f\""
+            DECOMPRESS_KERNEL_PAYLOAD "$f" "gzip"
         fi
     done < <(find "$TMP_DIR/out" -maxdepth 1 -type f -name "vendor_ramdisk*")
 }
@@ -346,4 +368,4 @@ if [ -d "$TMP_DIR" ]; then
 fi
 
 unset PATCHED TARGET_FIRMWARE_PATH
-unset -f BACKPORT_SF_PROPS EXTRACT_KERNEL_IMAGE EXTRACT_KERNEL_MODULES
+unset -f BACKPORT_SF_PROPS EXTRACT_KERNEL_IMAGE EXTRACT_KERNEL_MODULES DECOMPRESS_KERNEL_PAYLOAD
