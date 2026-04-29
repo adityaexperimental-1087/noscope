@@ -221,7 +221,7 @@ fi
 if $SAMLOADER; then
     SAMLOADER_CMDS=(
         "git reset --hard"
-        "for p in \"$SRC_DIR/external/patches/samloader/\"*.patch; do git apply \"$p\"; done"
+        "for p in \"$SRC_DIR/external/patches/samloader/\"*.patch; do git apply \"\$p\"; done"
         "python3 -m venv \"$TOOLS_DIR/venv\""
         "source \"$TOOLS_DIR/venv/bin/activate\"; pip3 install ."
     )

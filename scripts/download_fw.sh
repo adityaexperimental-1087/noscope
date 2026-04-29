@@ -178,6 +178,7 @@ PROCESS_FIRMWARE()
 {
     local FIRMWARE="$1"
     local SAMLOADER_WORK_DIR
+    local SAMLOADER_DOWNLOAD_ARGS=()
 
     MODEL=""
     CSC=""
@@ -232,9 +233,14 @@ PROCESS_FIRMWARE()
     SAMLOADER_WORK_DIR="$OUT_DIR/tmp/samloader/${MODEL}_${CSC}"
     rm -rf "$SAMLOADER_WORK_DIR"
     mkdir -p "$SAMLOADER_WORK_DIR"
+    if samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download --help 2>&1 | grep -q -- "--jobs"; then
+        SAMLOADER_DOWNLOAD_ARGS=(-j "$SAMLOADER_JOBS")
+    elif [ "$SAMLOADER_JOBS" -gt 1 ]; then
+        LOGW "Installed samloader does not support parallel ranged downloads; run build_dependencies to update it"
+    fi
     (
     cd "$SAMLOADER_WORK_DIR" || exit 1
-    samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download -j "$SAMLOADER_JOBS" -O "$ODIN_DIR/${MODEL}_${CSC}" 1> /dev/null || exit 1
+    samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download "${SAMLOADER_DOWNLOAD_ARGS[@]}" -O "$ODIN_DIR/${MODEL}_${CSC}" 1> /dev/null || exit 1
     ) || return 1
 
     ZIP_FILE="$(find "$ODIN_DIR/${MODEL}_${CSC}" -name "*.zip" | sort -r | head -n 1)"
