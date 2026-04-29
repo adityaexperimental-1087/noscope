@@ -140,7 +140,8 @@ lib64/vendor.samsung_slsi.hardware.enn_aidl-V1-ndk.so
 (allow hal_enn_default platform_app_30_0 (fd (use)))
 (allow hal_enn_default priv_app_30_0 (fd (use)))
 (allow hal_enn_default ion_device_30_0 (chr_file (ioctl read write getattr map open)))
-(allow hal_enn_default dmabuf_system_heap_device_30_0 (chr_file (ioctl read write getattr map open)))
+; This device type has no 30.0 mapping alias, so use the public platform type directly.
+(allow hal_enn_default dmabuf_system_heap_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default vendor_npu_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default vendor_dsp_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default sysfs_gpu_30_0 (file (ioctl read getattr lock map open watch watch_reads)))
