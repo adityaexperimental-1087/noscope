@@ -10,8 +10,8 @@ TMP_DIR="$OUT_DIR/target/$TARGET_CODENAME/zip"
 PRIVATE_KEY_PATH="$SRC_DIR/security/"
 PUBLIC_KEY_PATH="$SRC_DIR/security/"
 if $ROM_IS_OFFICIAL; then
-    PRIVATE_KEY_PATH+="unica_ota"
-    PUBLIC_KEY_PATH+="unica_ota"
+    PRIVATE_KEY_PATH+="monsterrom_platform"
+    PUBLIC_KEY_PATH+="monsterrom_platform"
 else
     PRIVATE_KEY_PATH+="aosp_testkey"
     PUBLIC_KEY_PATH+="aosp_testkey"
