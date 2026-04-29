@@ -159,6 +159,71 @@ path.write_text(text)
 PY
 }
 
+PATCH_KERNEL_NPU_ACCESS()
+{
+    local VISION_DEV="$FLOPPY_KERNEL_DIR/drivers/vision/vision-core/vision-dev.c"
+    local DSP_CORE="$FLOPPY_KERNEL_DIR/drivers/vision/dsp/dsp-core.c"
+
+    if [ ! -f "$VISION_DEV" ]; then
+        ABORT "FloppyKernel vision device source not found: ${VISION_DEV//$SRC_DIR\//}"
+    fi
+    if [ ! -f "$DSP_CORE" ]; then
+        ABORT "FloppyKernel DSP core source not found: ${DSP_CORE//$SRC_DIR\//}"
+    fi
+
+    python3 - "$VISION_DEV" "$DSP_CORE" <<'PY'
+from pathlib import Path
+import sys
+
+vision_dev = Path(sys.argv[1])
+dsp_core = Path(sys.argv[2])
+
+text = vision_dev.read_text()
+old = '''struct class vision_class = {
+\t.name = VISION_NAME,
+\t.dev_groups = vision_device_groups,
+};
+'''
+new = '''static char *vision_devnode(struct device *dev, umode_t *mode)
+{
+\tif (dev && mode)
+\t\t*mode = 0666;
+
+\treturn NULL;
+}
+
+struct class vision_class = {
+\t.name = VISION_NAME,
+\t.dev_groups = vision_device_groups,
+\t.devnode = vision_devnode,
+};
+'''
+
+if new not in text:
+    if old not in text:
+        raise SystemExit("vision_class block not found")
+    text = text.replace(old, new, 1)
+
+vision_dev.write_text(text)
+
+text = dsp_core.read_text()
+old = '''\tdsp_miscdev->miscdev.fops = &dsp_file_ops;
+\tdsp_miscdev->miscdev.parent = dspdev->dev;
+'''
+new = '''\tdsp_miscdev->miscdev.fops = &dsp_file_ops;
+\tdsp_miscdev->miscdev.parent = dspdev->dev;
+\tdsp_miscdev->miscdev.mode = 0666;
+'''
+
+if new not in text:
+    if old not in text:
+        raise SystemExit("DSP miscdevice block not found")
+    text = text.replace(old, new, 1)
+
+dsp_core.write_text(text)
+PY
+}
+
 PATCH_KERNEL_HEX()
 {
     local FILE="$1"
@@ -264,6 +329,7 @@ REPLACE_KERNEL_BINARIES()
 
     PREPARE_KERNEL_SOURCE
     PATCH_KERNEL_DEPS_SCRIPT
+    PATCH_KERNEL_NPU_ACCESS
     BUILD_KERNEL
 
     if [ ! -f "$IMAGE" ]; then
@@ -294,4 +360,4 @@ REPLACE_KERNEL_BINARIES
 LOG_STEP_OUT
 
 unset FLOPPY_REPO FLOPPY_BRANCH FLOPPY_BASE_DIR FLOPPY_KERNEL_DIR FLOPPY_BUILD_ARGS
-unset -f RUN_LIVE SAFE_PULL_CHANGES PREPARE_KERNEL_SOURCE PATCH_KERNEL_DEPS_SCRIPT PATCH_KERNEL_HEX PATCH_KERNEL_FEATURE_DEFAULTS BUILD_KERNEL REPACK_BOOT_IMAGE REPLACE_KERNEL_BINARIES
+unset -f RUN_LIVE SAFE_PULL_CHANGES PREPARE_KERNEL_SOURCE PATCH_KERNEL_DEPS_SCRIPT PATCH_KERNEL_NPU_ACCESS PATCH_KERNEL_HEX PATCH_KERNEL_FEATURE_DEFAULTS BUILD_KERNEL REPACK_BOOT_IMAGE REPLACE_KERNEL_BINARIES

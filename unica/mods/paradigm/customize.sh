@@ -47,6 +47,191 @@ LOG_STEP_IN "- Adding Now brief feature"
 SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_PERSONALIZED_DATA_CORE" "TRUE"
 LOG_STEP_OUT
 
+# S26 neural stack
+# Required by the S26 AIOS/SSNeuralCore userspace used by Now Nudge and Semantic Search.
+if [[ "$TARGET_PLATFORM" == "exynos2100" ]]; then
+    LOG_STEP_IN "- Backporting S26 neural stack"
+    S26_ENN_VENDOR_FILES="
+bin/hw/vendor.samsung_slsi.hardware.enn_aidl-service
+etc/enn
+etc/init/enn-lazy.rc
+etc/vintf/manifest/enn-default.xml
+lib64/libenn_common_utils.so
+lib64/libenn_cpu_operators.so
+lib64/libenn_engine.so
+lib64/libenn_engine_lib.so
+lib64/libenn_model.so
+lib64/libenn_public_api_cpp.so
+lib64/libenn_public_api_cpp_lib.so
+lib64/libenn_user.samsung_slsi.so
+lib64/libenn_user_driver_cpu.so
+lib64/libenn_user_driver_gpu.so
+lib64/libenn_user_driver_gpu_lib.so
+lib64/libenn_user_driver_unified.so
+lib64/libenn_user_lib.so
+lib64/libenn_wrapper.so
+lib64/vendor.samsung_slsi.hardware.enn_aidl-V1-ndk.so
+"
+    while IFS= read -r ENN_FILE; do
+        [ "$ENN_FILE" ] || continue
+        ADD_TO_WORK_DIR "$SOURCE_FIRMWARE" "vendor" "$ENN_FILE"
+    done <<< "$S26_ENN_VENDOR_FILES"
+    unset ENN_FILE S26_ENN_VENDOR_FILES
+
+    if ! grep -q -F "vendor.samsung_slsi.hardware.enn_aidl.IEnnInterfaceAidl/default" "$WORK_DIR/vendor/etc/selinux/vendor_service_contexts"; then
+        echo "vendor.samsung_slsi.hardware.enn_aidl.IEnnInterfaceAidl/default     u:object_r:hal_enn_service:s0" >> "$WORK_DIR/vendor/etc/selinux/vendor_service_contexts"
+    fi
+
+    if ! grep -q -F "vendor.samsung_slsi.hardware.enn::IEnnInterface" "$WORK_DIR/vendor/etc/selinux/vendor_hwservice_contexts"; then
+        echo "vendor.samsung_slsi.hardware.enn::IEnnInterface                         u:object_r:hal_enn_hwservice:s0" >> "$WORK_DIR/vendor/etc/selinux/vendor_hwservice_contexts"
+    fi
+
+    if ! grep -q -F "(type hal_enn_default)" "$WORK_DIR/vendor/etc/selinux/vendor_sepolicy.cil"; then
+        cat >> "$WORK_DIR/vendor/etc/selinux/vendor_sepolicy.cil" <<'EOF'
+
+; S26 ENN AIDL neural stack backport.
+(type hal_enn_default)
+(roletype object_r hal_enn_default)
+(type hal_enn_default_exec)
+(roletype object_r hal_enn_default_exec)
+(type hal_enn_hwservice)
+(roletype object_r hal_enn_hwservice)
+(type hal_enn_service)
+(roletype object_r hal_enn_service)
+(typeattributeset domain (hal_enn_default))
+(typeattributeset halserverdomain (hal_enn_default))
+(typeattributeset halclientdomain (hal_enn_default))
+(typeattributeset hal_neuralnetworks (hal_enn_default))
+(typeattributeset hal_neuralnetworks_server (hal_enn_default))
+(typeattributeset exec_type (hal_enn_default_exec))
+(typeattributeset vendor_file_type (hal_enn_default_exec))
+(typeattributeset file_type (hal_enn_default_exec))
+(typeattributeset service_manager_type (hal_enn_service))
+(typeattributeset hal_service_type (hal_enn_service))
+(typeattributeset hwservice_manager_type (hal_enn_hwservice))
+(allow init_30_0 hal_enn_default_exec (file (read getattr map execute open)))
+(allow init_30_0 hal_enn_default (process (transition siginh rlimitinh)))
+(dontaudit init_30_0 hal_enn_default (process (noatsecure)))
+(typetransition init_30_0 hal_enn_default_exec process hal_enn_default)
+(allow hal_enn_default hal_enn_default_exec (file (read getattr map execute open entrypoint)))
+(allow hal_enn_default hwservicemanager_30_0 (binder (call transfer)))
+(allow hal_enn_default hidl_base_hwservice_30_0 (hwservice_manager (add)))
+(allow hal_enn_default hidl_allocator_hwservice_30_0 (hwservice_manager (find)))
+(allow hal_enn_default hal_enn_hwservice (hwservice_manager (add find)))
+(allow hal_enn_default servicemanager_30_0 (binder (call transfer)))
+(allow servicemanager_30_0 hal_enn_default (binder (call transfer)))
+(allow hal_enn_default servicemanager_30_0 (fd (use)))
+(allow hal_enn_default hal_enn_service (service_manager (add)))
+(allow untrusted_app_all hal_enn_service (service_manager (find)))
+(allow untrusted_app_all hal_enn_hwservice (hwservice_manager (find)))
+(allow untrusted_app_all hal_enn_default (binder (call transfer)))
+(allow hal_enn_default untrusted_app_all (binder (call transfer)))
+(allow hal_enn_default untrusted_app_all (fd (use)))
+(allow system_app_30_0 hal_enn_service (service_manager (find)))
+(allow platform_app_30_0 hal_enn_service (service_manager (find)))
+(allow priv_app_30_0 hal_enn_service (service_manager (find)))
+(allow system_app_30_0 hal_enn_default (binder (call transfer)))
+(allow platform_app_30_0 hal_enn_default (binder (call transfer)))
+(allow priv_app_30_0 hal_enn_default (binder (call transfer)))
+(allow hal_enn_default system_app_30_0 (binder (call transfer)))
+(allow hal_enn_default platform_app_30_0 (binder (call transfer)))
+(allow hal_enn_default priv_app_30_0 (binder (call transfer)))
+(allow hal_enn_default system_app_30_0 (fd (use)))
+(allow hal_enn_default platform_app_30_0 (fd (use)))
+(allow hal_enn_default priv_app_30_0 (fd (use)))
+(allow hal_enn_default ion_device_30_0 (chr_file (ioctl read write getattr map open)))
+(allow hal_enn_default dmabuf_system_heap_device_30_0 (chr_file (ioctl read write getattr map open)))
+(allow hal_enn_default vendor_npu_device (chr_file (ioctl read write getattr map open)))
+(allow hal_enn_default vendor_dsp_device (chr_file (ioctl read write getattr map open)))
+(allow hal_enn_default sysfs_gpu_30_0 (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_enn_default sysfs_gpu_30_0 (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_enn_default sysfs_gpu_30_0 (dir (ioctl read getattr lock open watch watch_reads search)))
+(allow hal_enn_default gpu_device_30_0 (chr_file (ioctl read write getattr map open)))
+(allow hal_enn_default gpu_device_30_0 (dir (ioctl read getattr lock open watch watch_reads search)))
+EOF
+    fi
+
+    DECODE_APK "system" "system/priv-app/AIOSKernelService/AIOSKernelService.apk"
+    AIOS_CONFIG="$APKTOOL_DIR/system/priv-app/AIOSKernelService/AIOSKernelService.apk/assets/config/supported_config.json"
+    if [ -f "$AIOS_CONFIG" ]; then
+        LOG "- Enabling Exynos2100 AIOS neural config"
+        cat > "$AIOS_CONFIG" <<'EOF'
+{
+  "qc_sm8850": {
+    "LLM": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LLMV": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LVM": {
+      "libssneural_vndk.so": "0.9.0.0"
+    }
+  },
+  "slsi_s5e9965": {
+    "LLM": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LLMV": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LVM": {
+      "libssneural_vndk.so": "0.9.0.0"
+    }
+  },
+  "exynos2100": {
+    "LLM": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LLMV": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LVM": {
+      "libssneural_vndk.so": "0.9.0.0"
+    }
+  },
+  "slsi_exynos2100": {
+    "LLM": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LLMV": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LVM": {
+      "libssneural_vndk.so": "0.9.0.0"
+    }
+  },
+  "universal2100_r": {
+    "LLM": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LLMV": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LVM": {
+      "libssneural_vndk.so": "0.9.0.0"
+    }
+  },
+  "Exynos 2100": {
+    "LLM": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LLMV": {
+      "libssneural_vndk.so": "3.5.0"
+    },
+    "LVM": {
+      "libssneural_vndk.so": "0.9.0.0"
+    }
+  }
+}
+EOF
+    else
+        LOGW "AIOS supported_config.json not found; skipping Exynos2100 neural config"
+    fi
+    unset AIOS_CONFIG
+    LOG_STEP_OUT
+fi
+
 # Semantic search
 # Requires SEC_FLOATING_FEATURE_COMMON_CONFIG_AI_VERSION >= 20251
 DECODE_APK "system" "system/priv-app/SecSettingsIntelligence/SecSettingsIntelligence.apk"
