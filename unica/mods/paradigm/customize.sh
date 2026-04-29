@@ -145,7 +145,7 @@ lib64/vendor.samsung_slsi.hardware.enn_aidl-V1-ndk.so
 (allow hal_enn_default vendor_npu_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default vendor_dsp_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default sysfs_gpu_30_0 (file (ioctl read getattr lock map open watch watch_reads)))
-(allow hal_enn_default sysfs_gpu_30_0 (lnk_file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_enn_default sysfs_gpu_30_0 (lnk_file (read getattr)))
 (allow hal_enn_default sysfs_gpu_30_0 (dir (ioctl read getattr lock open watch watch_reads search)))
 (allow hal_enn_default gpu_device_30_0 (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default gpu_device_30_0 (dir (ioctl read getattr lock open watch watch_reads search)))
