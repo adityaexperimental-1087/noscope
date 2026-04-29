@@ -12,7 +12,7 @@ _FIND_DECODED_SMALI()
     local PATTERN="$3"
     local FILE_PATH
 
-    if ! DECODE_APK "$PARTITION" "$FILE"; then
+    if ! DECODE_APK "$PARTITION" "$FILE" >&2; then
         return 0
     fi
     FILE_PATH="$APKTOOL_DIR/$PARTITION/${FILE//system\//}"
@@ -136,14 +136,11 @@ if [ "$SERVICES_ATTEST_UTILS_PATH" ]; then
         '    # KnoxPatch: force verifiable integrity
     const/4 v0, 0x1' \
         'KnoxPatch: force verifiable integrity'
-fi
 
-SERVICES_ATTEST_SPEC_PATH="$(_FIND_DECODED_SMALI "system" "system/framework/services.jar" "*/com/samsung/android/security/keystore/AttestParameterSpec.smali")"
-if [ "$SERVICES_ATTEST_SPEC_PATH" ]; then
-    _PATCH_BEFORE_ONCE "$SERVICES_ATTEST_SPEC_PATH" \
-        '    iput-boolean p3, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSAKUidRequired:Z' \
+    _PATCH_AFTER_ONCE "$SERVICES_ATTEST_UTILS_PATH" \
+        '    iget-boolean v0, p1, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSAKUidRequired:Z' \
         '    # KnoxPatch: force SAK UID
-    const/4 p3, 0x1' \
+    const/4 v0, 0x1' \
         'KnoxPatch: force SAK UID'
 fi
 
