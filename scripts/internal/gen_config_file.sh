@@ -75,7 +75,7 @@ fi
 #     it is set in unica/configs/version.sh.
 #
 #   ROM_BUILD_TIMESTAMP
-#     Integer containing the build timestamp in seconds, this is used by the UN1CA Updates app.
+#     Integer containing the build timestamp in seconds, this is used by the MonsterROM Updates app.
 #     Defaults to the current time of execution of the script.
 #
 #   [SOURCE/TARGET]_FIRMWARE
