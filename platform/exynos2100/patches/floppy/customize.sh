@@ -72,16 +72,28 @@ PREPARE_KERNEL_SOURCE()
 PATCH_KERNEL_DEPS_SCRIPT()
 {
     local DEPS_SCRIPT="$FLOPPY_KERNEL_DIR/build/scripts/deps.sh"
+    local BUILD_SCRIPT="$FLOPPY_KERNEL_DIR/build/scripts/build.sh"
+    local CKB_SCRIPT="$FLOPPY_KERNEL_DIR/build/ckbuild.sh"
 
     if [ ! -f "$DEPS_SCRIPT" ]; then
         ABORT "FloppyKernel deps script not found: ${DEPS_SCRIPT//$SRC_DIR\//}"
     fi
+    if [ ! -f "$BUILD_SCRIPT" ]; then
+        ABORT "FloppyKernel build script not found: ${BUILD_SCRIPT//$SRC_DIR\//}"
+    fi
+    if [ ! -f "$CKB_SCRIPT" ]; then
+        ABORT "FloppyKernel ckbuild script not found: ${CKB_SCRIPT//$SRC_DIR\//}"
+    fi
 
-    python3 - "$DEPS_SCRIPT" <<'PY'
+    python3 - "$DEPS_SCRIPT" "$BUILD_SCRIPT" "$CKB_SCRIPT" <<'PY'
 from pathlib import Path
 import sys
 
-path = Path(sys.argv[1])
+deps_script = Path(sys.argv[1])
+build_script = Path(sys.argv[2])
+ckb_script = Path(sys.argv[3])
+
+path = deps_script
 text = path.read_text()
 old = '''if [ -f /etc/doas.conf ] && command -v "doas" &>/dev/null; then
 \t  ROOT="doas"
@@ -155,6 +167,35 @@ new = '''    if [ ${#MISSING[@]} -gt 0 ]; then
 '''
 text = text.replace(old, new, 1)
 
+path.write_text(text)
+
+path = build_script
+text = path.read_text()
+text = text.replace(
+    '    rm -f "$OUT_KERNEL"\n',
+    '    rm -f "$OUT_KERNEL" "$OUT_KERNEL.gz"\n',
+    1,
+)
+path.write_text(text)
+
+path = ckb_script
+text = path.read_text()
+old = '''if [ ! -f "$OUT_KERNEL" ]; then
+    echo -e "\\n$(log_err "Kernel files not found! Compilation failed?")"
+    exit 1
+fi
+'''
+new = '''if [ ! -f "$OUT_KERNEL" ] && [ -f "$OUT_KERNEL.gz" ]; then
+    OUT_KERNEL="$OUT_KERNEL.gz"
+fi
+
+if [ ! -f "$OUT_KERNEL" ]; then
+    echo -e "\\n$(log_err "Kernel files not found! Compilation failed?")"
+    exit 1
+fi
+'''
+if old in text:
+    text = text.replace(old, new, 1)
 path.write_text(text)
 PY
 }
@@ -325,12 +366,17 @@ REPACK_BOOT_IMAGE()
 REPLACE_KERNEL_BINARIES()
 {
     local IMAGE="$FLOPPY_KERNEL_DIR/out/arch/arm64/boot/Image"
+    local IMAGE_GZ="$FLOPPY_KERNEL_DIR/out/arch/arm64/boot/Image.gz"
     local VENDOR_BOOT="$FLOPPY_KERNEL_DIR/build/images/vendor_boot.img"
 
     PREPARE_KERNEL_SOURCE
     PATCH_KERNEL_DEPS_SCRIPT
     PATCH_KERNEL_NPU_ACCESS
     BUILD_KERNEL
+
+    if [ ! -f "$IMAGE" ] && [ -f "$IMAGE_GZ" ]; then
+        IMAGE="$IMAGE_GZ"
+    fi
 
     if [ ! -f "$IMAGE" ]; then
         ABORT "FloppyKernel Image not found: ${IMAGE//$SRC_DIR\//}"
@@ -339,7 +385,12 @@ REPLACE_KERNEL_BINARIES()
         ABORT "FloppyKernel vendor_boot.img not found: ${VENDOR_BOOT//$SRC_DIR\//}"
     fi
 
-    EVAL "cp -a \"$IMAGE\" \"$TMP_DIR-floppy-Image\""
+    if [[ "$IMAGE" == *.gz ]]; then
+        LOG "- Decompressing FloppyKernel Image.gz"
+        EVAL "gzip -cd \"$IMAGE\" > \"$TMP_DIR-floppy-Image\""
+    else
+        EVAL "cp -a \"$IMAGE\" \"$TMP_DIR-floppy-Image\""
+    fi
     PATCH_KERNEL_FEATURE_DEFAULTS "$TMP_DIR-floppy-Image"
     REPACK_BOOT_IMAGE "$TMP_DIR-floppy-Image"
     EVAL "rm -f \"$TMP_DIR-floppy-Image\""
