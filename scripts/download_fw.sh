@@ -8,7 +8,7 @@ source "$TOOLS_DIR/venv/bin/activate" || exit 1
 
 FORCE=false
 JOBS="${DOWNLOAD_FW_JOBS:-1}"
-SAMLOADER_JOBS="${SAMLOADER_DOWNLOAD_JOBS:-8}"
+SAMLOADER_JOBS="${SAMLOADER_DOWNLOAD_JOBS:-16}"
 
 FIRMWARES=()
 QUEUE_FIRMWARES=()
@@ -93,7 +93,7 @@ PRINT_USAGE()
     echo " --ignore-source : Skip parsing source firmware flags" >&2
     echo " --ignore-target : Skip parsing target firmware flags" >&2
     echo " -j, --jobs <n> : Number of firmwares to process in parallel (default: ${DOWNLOAD_FW_JOBS:-1})" >&2
-    echo " --samloader-jobs <n> : Number of ranged samloader connections per firmware (default: ${SAMLOADER_DOWNLOAD_JOBS:-8})" >&2
+    echo " --samloader-jobs <n> : Number of ranged samloader connections per firmware (default: ${SAMLOADER_DOWNLOAD_JOBS:-16})" >&2
     echo " -f, --force : Force firmware download" >&2
 }
 
@@ -235,12 +235,13 @@ PROCESS_FIRMWARE()
     mkdir -p "$SAMLOADER_WORK_DIR"
     if samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download --help 2>&1 | grep -q -- "--jobs"; then
         SAMLOADER_DOWNLOAD_ARGS=(-j "$SAMLOADER_JOBS")
+        LOG "- Using $SAMLOADER_JOBS parallel samloader connection(s)"
     elif [ "$SAMLOADER_JOBS" -gt 1 ]; then
         LOGW "Installed samloader does not support parallel ranged downloads; run build_dependencies to update it"
     fi
     (
     cd "$SAMLOADER_WORK_DIR" || exit 1
-    samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download "${SAMLOADER_DOWNLOAD_ARGS[@]}" -O "$ODIN_DIR/${MODEL}_${CSC}" 1> /dev/null || exit 1
+    samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download "${SAMLOADER_DOWNLOAD_ARGS[@]}" -O "$ODIN_DIR/${MODEL}_${CSC}" || exit 1
     ) || return 1
 
     ZIP_FILE="$(find "$ODIN_DIR/${MODEL}_${CSC}" -name "*.zip" | sort -r | head -n 1)"
@@ -325,6 +326,16 @@ RUN_DOWNLOAD_QUEUE()
     fi
 
     LOG "- Running ${#QUEUE_FIRMWARES[@]} firmware download(s) with $JOBS parallel job(s)"
+
+    if [ "$JOBS" -eq 1 ]; then
+        while [ "$NEXT_JOB" -lt "${#QUEUE_FIRMWARES[@]}" ]; do
+            LOG "- Starting ${QUEUE_LABELS[$NEXT_JOB]}"
+            PROCESS_FIRMWARE "${QUEUE_FIRMWARES[$NEXT_JOB]}" || return "$?"
+            NEXT_JOB="$((NEXT_JOB + 1))"
+        done
+
+        return 0
+    fi
 
     while [ "$NEXT_JOB" -lt "${#QUEUE_FIRMWARES[@]}" ] || [ "${#RUNNING_PIDS[@]}" -gt 0 ]; do
         while [ "$EXIT_CODE" = "0" ] && \
