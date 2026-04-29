@@ -2,7 +2,7 @@ FLOPPY_REPO="https://github.com/FlopKernel-Series/flop_exynos2100_kernel.git"
 FLOPPY_BRANCH="floppy-main"
 FLOPPY_BASE_DIR="${KERNEL_TMP_DIR:-$SRC_DIR/out/kernel}/floppy-$TARGET_PLATFORM"
 FLOPPY_KERNEL_DIR="$FLOPPY_BASE_DIR/kernel"
-FLOPPY_BUILD_ARGS="${FLOPPY_BUILD_ARGS:-}"
+FLOPPY_BUILD_ARGS="${FLOPPY_BUILD_ARGS:-k}"
 
 RUN_LIVE()
 {
