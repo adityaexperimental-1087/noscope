@@ -7,7 +7,8 @@ source "$SRC_DIR/scripts/utils/firmware_utils.sh" || exit 1
 source "$TOOLS_DIR/venv/bin/activate" || exit 1
 
 FORCE=false
-JOBS="${DOWNLOAD_FW_JOBS:-4}"
+JOBS="${DOWNLOAD_FW_JOBS:-1}"
+SAMLOADER_JOBS="${SAMLOADER_DOWNLOAD_JOBS:-8}"
 
 FIRMWARES=()
 QUEUE_FIRMWARES=()
@@ -38,6 +39,16 @@ PREPARE_SCRIPT()
             JOBS="$1"
         elif [[ "$1" == "--jobs="* ]]; then
             JOBS="${1#*=}"
+        elif [[ "$1" == "--samloader-jobs" ]]; then
+            shift
+            if [ ! "$1" ]; then
+                LOGE "No samloader jobs value supplied"
+                PRINT_USAGE
+                exit 1
+            fi
+            SAMLOADER_JOBS="$1"
+        elif [[ "$1" == "--samloader-jobs="* ]]; then
+            SAMLOADER_JOBS="${1#*=}"
         elif [[ "$1" == "--ignore-source" ]]; then
             IGNORE_SOURCE=true
         elif [[ "$1" == "--ignore-target" ]]; then
@@ -81,7 +92,8 @@ PRINT_USAGE()
     echo "Usage: download_fw [options] <firmware>" >&2
     echo " --ignore-source : Skip parsing source firmware flags" >&2
     echo " --ignore-target : Skip parsing target firmware flags" >&2
-    echo " -j, --jobs <n> : Number of firmware downloads to run in parallel (default: ${DOWNLOAD_FW_JOBS:-4})" >&2
+    echo " -j, --jobs <n> : Number of firmwares to process in parallel (default: ${DOWNLOAD_FW_JOBS:-1})" >&2
+    echo " --samloader-jobs <n> : Number of ranged samloader connections per firmware (default: ${SAMLOADER_DOWNLOAD_JOBS:-8})" >&2
     echo " -f, --force : Force firmware download" >&2
 }
 
@@ -131,6 +143,10 @@ PREPARE_DOWNLOAD_QUEUE()
 
     if [[ ! "$JOBS" =~ ^[0-9]+$ ]] || [ "$JOBS" -lt 1 ]; then
         LOGE "Invalid jobs value: $JOBS"
+        return 1
+    fi
+    if [[ ! "$SAMLOADER_JOBS" =~ ^[0-9]+$ ]] || [ "$SAMLOADER_JOBS" -lt 1 ]; then
+        LOGE "Invalid samloader jobs value: $SAMLOADER_JOBS"
         return 1
     fi
 
@@ -218,7 +234,7 @@ PROCESS_FIRMWARE()
     mkdir -p "$SAMLOADER_WORK_DIR"
     (
     cd "$SAMLOADER_WORK_DIR" || exit 1
-    samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download -O "$ODIN_DIR/${MODEL}_${CSC}" 1> /dev/null || exit 1
+    samloader -m "$MODEL" -r "$CSC" -i "$IMEI" -s "$SERIAL_NO" download -j "$SAMLOADER_JOBS" -O "$ODIN_DIR/${MODEL}_${CSC}" 1> /dev/null || exit 1
     ) || return 1
 
     ZIP_FILE="$(find "$ODIN_DIR/${MODEL}_${CSC}" -name "*.zip" | sort -r | head -n 1)"
