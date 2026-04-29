@@ -27,7 +27,7 @@ index 3774d65..d3665b2 100644
          req.raise_for_status()
          return req
 diff --git a/samloader/main.py b/samloader/main.py
-index 9e71759..ee2723f 100644
+index 9e71759..0aeee3b 100644
 --- a/samloader/main.py
 +++ b/samloader/main.py
 @@ -4,9 +4,11 @@
@@ -112,19 +112,18 @@ index 9e71759..ee2723f 100644
 +
 +def downloadfile_parallel(client, filename, out, size, jobs):
 +    jobs = max(1, min(jobs, size))
-+    part_size = (size + jobs - 1) // jobs
++    chunk_size = int(os.environ.get("SAMLOADER_CHUNK_SIZE", str(128 * 1024 * 1024)))
++    chunk_size = max(0x100000, chunk_size)
 +    part_dir = out + ".parts"
 +    os.makedirs(part_dir, exist_ok=True)
 +
 +    tasks = []
 +    parts = []
 +    initial = 0
-+    for index in range(jobs):
-+        start = index * part_size
-+        end = min(size - 1, start + part_size - 1)
-+        if start > end:
-+            break
-+        part_file = os.path.join(part_dir, "{:03d}.part".format(index))
++    index = 0
++    for start in range(0, size, chunk_size):
++        end = min(size - 1, start + chunk_size - 1)
++        part_file = os.path.join(part_dir, "{:06d}.part".format(index))
 +        expected = end - start + 1
 +        existing = os.path.getsize(part_file) if os.path.isfile(part_file) else 0
 +        if existing > expected:
@@ -133,6 +132,7 @@ index 9e71759..ee2723f 100644
 +        initial += existing
 +        if existing < expected:
 +            tasks.append((start, end, part_file, existing))
++        index += 1
 +
 +    lock = threading.Lock()
 +    with tqdm(total=size, initial=initial, unit="B", unit_scale=True) as pbar:
