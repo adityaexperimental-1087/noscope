@@ -101,7 +101,7 @@ _DEKNOX_FIND_SMALI()
     local PATTERN="$3"
     local FILE_PATH
 
-    if ! DECODE_APK "$PARTITION" "$FILE"; then
+    if ! DECODE_APK "$PARTITION" "$FILE" >&2; then
         return 0
     fi
 
