@@ -144,6 +144,58 @@ _DEKNOX_RETURN_OPTIONAL()
     $FOUND || LOG "\033[0;33m! Smali not found, skipping deknox hook: $PATTERN\033[0m"
 }
 
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL()
+{
+    local PARTITION="$1"
+    local FILE="$2"
+    local PATTERN="$3"
+    local METHOD="$4"
+    local FOUND=false
+    local SMALI_PATH
+
+    while IFS= read -r SMALI_PATH; do
+        [ "$SMALI_PATH" ] || continue
+        FOUND=true
+        if grep "^\.method.*" "$SMALI_PATH" | grep -q -F -- "$METHOD"; then
+            local DECL
+            local LOC=".locals 0"
+            local REG="p0"
+
+            DECL="$(grep "^\.method.*" "$SMALI_PATH" | grep -F -- "$METHOD" | head -n 1)"
+            if [[ "$DECL" == *" static "* ]] && [[ "$METHOD" == *"()"* ]]; then
+                LOC=".locals 1"
+                REG="v0"
+            fi
+
+            LOG "- Replacing return value of method \"$METHOD\" in ${SMALI_PATH//$APKTOOL_DIR\//} to empty string"
+            awk -v FN="$METHOD" -v LOC="$LOC" -v REG="$REG" '
+                BEGIN { inside = 0 }
+                /^\.method/ && index($0, FN) {
+                    print
+                    print "    " LOC
+                    print ""
+                    print "    const-string " REG ", \"\""
+                    print ""
+                    print "    return-object " REG
+                    inside = 1
+                    next
+                }
+                inside && /^\.end method/ {
+                    print
+                    inside = 0
+                    next
+                }
+                inside { next }
+                { print }
+            ' "$SMALI_PATH" > "$SMALI_PATH.tmp" && mv "$SMALI_PATH.tmp" "$SMALI_PATH"
+        else
+            LOG "\033[0;33m! Method not found, skipping deknox hook: $METHOD\033[0m"
+        fi
+    done < <(_DEKNOX_FIND_SMALI "$PARTITION" "$FILE" "$PATTERN")
+
+    $FOUND || LOG "\033[0;33m! Smali not found, skipping deknox hook: $PATTERN\033[0m"
+}
+
 _DEKNOX_PATCH_FILE_ONCE()
 {
     local FILE="$1"
@@ -192,32 +244,35 @@ if [ -f "$EDM_SERVICE_IMPL" ]; then
 fi
 LOG_STEP_OUT
 
-LOG_STEP_IN "- Hiding Knox version strings"
-_DEKNOX_RETURN_OPTIONAL "system" "system/framework/knoxsdk.jar" \
+LOG_STEP_IN "- Nuking Knox version strings"
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/framework/knoxsdk.jar" \
     "*/com/samsung/android/knox/ddar/DualDARPolicy.smali" \
-    'getDualDARVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system" "system/framework/knoxsdk.jar" \
+    'getDualDARVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/framework/knoxsdk.jar" \
     "*/com/samsung/android/knox/hdm/HdmManager.smali" \
-    'getHdmVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
+    'getHdmVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
     "*/com/samsung/android/knox/ddar/DualDARPolicy.smali" \
-    'getDualDARVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
+    'getDualDARVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
     "*/com/samsung/android/knox/hdm/HdmManager.smali" \
-    'getHdmVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
+    'getHdmVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
     "*/com/samsung/android/settings/deviceinfo/softwareinfo/SecuritySoftwareVersionPreferenceController.smali" \
-    'getESECOSValue()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system" "system/priv-app/SecSettingsIntelligence/SecSettingsIntelligence.apk" \
+    'getESECOSValue()Ljava/lang/String;'
+_DEKNOX_RETURN_OPTIONAL "system" "system/priv-app/SecSettings/SecSettings.apk" \
+    "*/com/samsung/android/settings/deviceinfo/softwareinfo/KnoxVersionPreferenceController.smali" \
+    'getAvailabilityStatus()I' '0x3'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/priv-app/SecSettingsIntelligence/SecSettingsIntelligence.apk" \
     "*/com/samsung/android/knox/ddar/DualDARPolicy.smali" \
-    'getDualDARVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system" "system/priv-app/SecSettingsIntelligence/SecSettingsIntelligence.apk" \
+    'getDualDARVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system" "system/priv-app/SecSettingsIntelligence/SecSettingsIntelligence.apk" \
     "*/com/samsung/android/knox/hdm/HdmManager.smali" \
-    'getHdmVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system_ext" "priv-app/StorageManager/StorageManager.apk" \
+    'getHdmVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system_ext" "priv-app/StorageManager/StorageManager.apk" \
     "*/com/samsung/android/knox/ddar/DualDARPolicy.smali" \
-    'getDualDARVersion()Ljava/lang/String;' 'null'
-_DEKNOX_RETURN_OPTIONAL "system_ext" "priv-app/StorageManager/StorageManager.apk" \
+    'getDualDARVersion()Ljava/lang/String;'
+_DEKNOX_RETURN_EMPTY_STRING_OPTIONAL "system_ext" "priv-app/StorageManager/StorageManager.apk" \
     "*/com/samsung/android/knox/hdm/HdmManager.smali" \
-    'getHdmVersion()Ljava/lang/String;' 'null'
+    'getHdmVersion()Ljava/lang/String;'
 LOG_STEP_OUT

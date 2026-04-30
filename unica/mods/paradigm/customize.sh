@@ -144,13 +144,21 @@ lib64/vendor.samsung_slsi.hardware.enn_aidl-V1-ndk.so
 (allow hal_enn_default dmabuf_system_heap_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default vendor_npu_device (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default vendor_dsp_device (chr_file (ioctl read write getattr map open)))
-(allow hal_enn_default sysfs_gpu_30_0 (file (ioctl read getattr lock map open watch watch_reads)))
-(allow hal_enn_default sysfs_gpu_30_0 (lnk_file (read getattr)))
-(allow hal_enn_default sysfs_gpu_30_0 (dir (ioctl read getattr lock open watch watch_reads search)))
+; This sysfs type has no 30.0 mapping alias either.
+(allow hal_enn_default sysfs_gpu (file (ioctl read getattr lock map open watch watch_reads)))
+(allow hal_enn_default sysfs_gpu (dir (ioctl read getattr lock open watch watch_reads search)))
 (allow hal_enn_default gpu_device_30_0 (chr_file (ioctl read write getattr map open)))
 (allow hal_enn_default gpu_device_30_0 (dir (ioctl read getattr lock open watch watch_reads search)))
 EOF
     fi
+
+    # Repair older generated ENN blocks when rebuilding without recreating work_dir.
+    sed -i \
+        -e 's/(allow hal_enn_default dmabuf_system_heap_device_30_0 /(allow hal_enn_default dmabuf_system_heap_device /g' \
+        -e '/(allow hal_enn_default sysfs_gpu_30_0 (lnk_file /d' \
+        -e '/(allow hal_enn_default sysfs_gpu (lnk_file /d' \
+        -e 's/(allow hal_enn_default sysfs_gpu_30_0 /(allow hal_enn_default sysfs_gpu /g' \
+        "$WORK_DIR/vendor/etc/selinux/vendor_sepolicy.cil"
 
     DECODE_APK "system" "system/priv-app/AIOSKernelService/AIOSKernelService.apk"
     AIOS_CONFIG="$APKTOOL_DIR/system/priv-app/AIOSKernelService/AIOSKernelService.apk/assets/config/supported_config.json"

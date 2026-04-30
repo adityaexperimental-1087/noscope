@@ -71,6 +71,27 @@ _PATCH_BEFORE_ONCE()
     grep -q -F "$MARKER" "$FILE" || ABORT "Failed to patch ${FILE//$APKTOOL_DIR\//}"
 }
 
+_FORCE_BOOL_FIELD_ONCE()
+{
+    local FILE="$1"
+    local FIELD="$2"
+    local MARKER="$3"
+
+    if grep -q -F "$MARKER" "$FILE"; then
+        return 0
+    fi
+
+    FIELD="$FIELD" MARKER="$MARKER" perl -0pi -e '
+        my $field = $ENV{"FIELD"};
+        my $marker = $ENV{"MARKER"};
+        my $done = 0;
+        s{(^[ \t]*iget-boolean ([vp]\d+), [^\n]+, \Q$field\E[ \t]*\n)}
+         {if ($done) { $& } else { $done = 1; $1."\n    # ".$marker."\n    const/4 ".$2.", 0x1\n" }}egm;
+    ' "$FILE"
+
+    grep -q -F "$MARKER" "$FILE" || ABORT "Failed to patch ${FILE//$APKTOOL_DIR\//}"
+}
+
 _RETURN_IF_METHOD_EXISTS()
 {
     local PARTITION="$1"
@@ -131,16 +152,12 @@ fi
 
 SERVICES_ATTEST_UTILS_PATH="$(_FIND_DECODED_SMALI "system" "system/framework/services.jar" "*/com/samsung/android/security/keystore/AttestationUtils.smali")"
 if [ "$SERVICES_ATTEST_UTILS_PATH" ]; then
-    _PATCH_AFTER_ONCE "$SERVICES_ATTEST_UTILS_PATH" \
-        '    iget-boolean v0, p1, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mVerifiableIntegrity:Z' \
-        '    # KnoxPatch: force verifiable integrity
-    const/4 v0, 0x1' \
+    _FORCE_BOOL_FIELD_ONCE "$SERVICES_ATTEST_UTILS_PATH" \
+        'Lcom/samsung/android/security/keystore/AttestParameterSpec;->mVerifiableIntegrity:Z' \
         'KnoxPatch: force verifiable integrity'
 
-    _PATCH_AFTER_ONCE "$SERVICES_ATTEST_UTILS_PATH" \
-        '    iget-boolean v0, p1, Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSAKUidRequired:Z' \
-        '    # KnoxPatch: force SAK UID
-    const/4 v0, 0x1' \
+    _FORCE_BOOL_FIELD_ONCE "$SERVICES_ATTEST_UTILS_PATH" \
+        'Lcom/samsung/android/security/keystore/AttestParameterSpec;->mSAKUidRequired:Z' \
         'KnoxPatch: force SAK UID'
 fi
 
