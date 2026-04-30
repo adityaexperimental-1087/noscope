@@ -16,25 +16,6 @@ LOG_MISSING_PATCHES()
 SOURCE_FIRMWARE_PATH="$(cut -d "/" -f 1 -s <<< "$SOURCE_FIRMWARE")_$(cut -d "/" -f 2 -s <<< "$SOURCE_FIRMWARE")"
 TARGET_FIRMWARE_PATH="$(cut -d "/" -f 1 -s <<< "$TARGET_FIRMWARE")_$(cut -d "/" -f 2 -s <<< "$TARGET_FIRMWARE")"
 
-LOG_STEP_IN "- Adding A53 camera provider libs"
-A53_CAMERA_PROVIDER_LIBS="
-android.hardware.camera.provider@2.4.so
-android.hardware.camera.provider@2.5.so
-android.hardware.camera.provider@2.6.so
-vendor.samsung.hardware.camera.provider@4.0.so
-vendor.samsung.hardware.camera.provider@4.0-legacy.so
-"
-for lib in $A53_CAMERA_PROVIDER_LIBS
-do
-    ADD_TO_WORK_DIR "a53xnaxx" "vendor" "lib64/$lib" 0 0 644 "u:object_r:vendor_file:s0"
-
-    if [ -f "$SRC_DIR/prebuilts/samsung/a53/vendor/lib/$lib" ]; then
-        ADD_TO_WORK_DIR "a53xnaxx" "vendor" "lib/$lib" 0 0 644 "u:object_r:vendor_file:s0"
-    fi
-done
-unset A53_CAMERA_PROVIDER_LIBS
-LOG_STEP_OUT
-
 DELETE_FROM_WORK_DIR "system" "system/cameradata/portrait_data"
 ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/cameradata/portrait_data" 0 0 755 "u:object_r:system_file:s0"
 if [ -f "$SRC_DIR/target/$TARGET_CODENAME/camera/singletake/service-feature.xml" ]; then
