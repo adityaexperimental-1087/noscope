@@ -294,6 +294,7 @@ fi
 
 LOG "- Patching \"${TOP_LEVEL_KEYS_COLLECTOR_PATH#$SETTINGS_INTELLIGENCE_APK_DIR/}\" in /system/system/priv-app/SecSettingsIntelligence.apk"
 _ADD_TOP_LEVEL_KEY "top_level_unica" "$TOP_LEVEL_KEYS_COLLECTOR_PATH"
+_ADD_TOP_LEVEL_KEY "top_level_monster_updates" "$TOP_LEVEL_KEYS_COLLECTOR_PATH"
 
 # Show Vulkan renderer toggle if required
 if [[ "$(GET_PROP "ro.hwui.use_vulkan")" != "true" ]]; then

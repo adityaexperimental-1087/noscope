@@ -1,2 +1,7 @@
 /TopLevelAdvancedFeatures/a
     <com.android.settings.widget.HomepagePreference android:icon="@drawable/sec_ic_settings_unica" android:title="@string/unica_settings_title" android:key="top_level_unica" android:summary="@string/summary_placeholder" android:order="-39999" android:fragment="io.mesalabs.unica.settings.UnicaSettingsFragment" settings:controller="io.mesalabs.unica.settings.TopLevelUnicaSettingsPreferenceController" settings:highlightableMenuKey="@string/menu_key_unica_top_settings" settings:keywords="@string/keywords_unica_settings" />
+    <com.android.settings.widget.HomepagePreference android:icon="@drawable/sec_ic_settings_software_update" android:title="@string/unica_updates_title" android:key="top_level_monster_updates" android:summary="@string/summary_placeholder" android:order="-39998" settings:highlightableMenuKey="top_level_monster_updates" settings:keywords="@string/keywords_software_update_settings">
+        <intent android:targetPackage="com.artisan.updater" android:targetClass="com.artisan.updater.MainActivity">
+            <extra android:name="from_settings" android:value="true" />
+        </intent>
+    </com.android.settings.widget.HomepagePreference>
