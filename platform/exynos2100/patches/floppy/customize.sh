@@ -154,9 +154,44 @@ path.write_text(text)
 
 path = build_script
 text = path.read_text()
+old = '''    run_make() {
+        if [ "$DO_QUIET" = "1" ]; then
+            make "$@" >> log.txt 2>&1
+        else
+            make "$@" 2>&1 | tee -a log.txt
+        fi
+    }
+'''
+new = '''    run_make() {
+        if [ "$DO_QUIET" = "1" ]; then
+            make "$@" >> log.txt 2>&1
+        else
+            set -o pipefail
+            make "$@" 2>&1 | tee -a log.txt
+        fi
+    }
+'''
+if old in text:
+    text = text.replace(old, new, 1)
+
 text = text.replace(
     '    rm -f "$OUT_KERNEL"\n',
     '    rm -f "$OUT_KERNEL" "$OUT_KERNEL.gz"\n',
+    1,
+)
+text = text.replace(
+    '''    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" dtbs
+    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}"
+    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" \\
+        INSTALL_MOD_STRIP="--strip-debug --keep-section=.ARM.attributes" \\
+        INSTALL_MOD_PATH="$MOD_OUTDIR" modules_install
+''',
+    '''    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}"
+    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" dtbs
+    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" \\
+        INSTALL_MOD_STRIP="--strip-debug --keep-section=.ARM.attributes" \\
+        INSTALL_MOD_PATH="$MOD_OUTDIR" modules_install
+''',
     1,
 )
 path.write_text(text)
