@@ -26,32 +26,15 @@ SAFE_PULL_CHANGES()
     cd "$FLOPPY_KERNEL_DIR"
 
     EVAL "git remote set-url origin \"$FLOPPY_REPO\""
+
+    if ! git diff --quiet || ! git diff --cached --quiet; then
+        LOGW "- FloppyKernel source has build-time changes; discarding cached edits"
+        RUN_LIVE "Resetting FloppyKernel worktree" git reset --hard HEAD
+    fi
+
     RUN_LIVE "Fetching FloppyKernel source" git fetch --prune origin "$FLOPPY_BRANCH"
-
-    if ! git rev-parse --verify -q "$FLOPPY_BRANCH" > /dev/null; then
-        EVAL "git checkout -q -B \"$FLOPPY_BRANCH\" \"origin/$FLOPPY_BRANCH\""
-    else
-        EVAL "git checkout -q \"$FLOPPY_BRANCH\""
-    fi
-
-    local LOCAL
-    local REMOTE
-    local BASE
-    LOCAL="$(git rev-parse HEAD)"
-    REMOTE="$(git rev-parse "origin/$FLOPPY_BRANCH")"
-    BASE="$(git merge-base HEAD "origin/$FLOPPY_BRANCH")"
-
-    if [[ "$LOCAL" == "$REMOTE" ]]; then
-        LOG "- FloppyKernel source is up-to-date"
-    elif [[ "$LOCAL" == "$BASE" ]]; then
-        RUN_LIVE "Updating FloppyKernel source" git merge --ff-only "origin/$FLOPPY_BRANCH"
-    elif [[ "$REMOTE" == "$BASE" ]]; then
-        LOGW "- FloppyKernel source is ahead of remote; keeping local checkout"
-    else
-        cd "$PARENT"
-        ABORT "FloppyKernel source history diverged. Please clean $FLOPPY_KERNEL_DIR and rebuild."
-    fi
-
+    RUN_LIVE "Checking out latest FloppyKernel source" git checkout -q -B "$FLOPPY_BRANCH" "origin/$FLOPPY_BRANCH"
+    RUN_LIVE "Resetting FloppyKernel source" git reset --hard "origin/$FLOPPY_BRANCH"
     RUN_LIVE "Updating FloppyKernel submodules" git submodule update --init --recursive
 
     cd "$PARENT"
