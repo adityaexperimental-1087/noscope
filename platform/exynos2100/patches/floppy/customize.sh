@@ -57,6 +57,7 @@ PATCH_KERNEL_DEPS_SCRIPT()
     local DEPS_SCRIPT="$FLOPPY_KERNEL_DIR/build/scripts/deps.sh"
     local BUILD_SCRIPT="$FLOPPY_KERNEL_DIR/build/scripts/build.sh"
     local CKB_SCRIPT="$FLOPPY_KERNEL_DIR/build/ckbuild.sh"
+    local POST_SCRIPT="$FLOPPY_KERNEL_DIR/build/scripts/post.sh"
 
     if [ ! -f "$DEPS_SCRIPT" ]; then
         ABORT "FloppyKernel deps script not found: ${DEPS_SCRIPT//$SRC_DIR\//}"
@@ -67,14 +68,18 @@ PATCH_KERNEL_DEPS_SCRIPT()
     if [ ! -f "$CKB_SCRIPT" ]; then
         ABORT "FloppyKernel ckbuild script not found: ${CKB_SCRIPT//$SRC_DIR\//}"
     fi
+    if [ ! -f "$POST_SCRIPT" ]; then
+        ABORT "FloppyKernel post script not found: ${POST_SCRIPT//$SRC_DIR\//}"
+    fi
 
-    python3 - "$DEPS_SCRIPT" "$BUILD_SCRIPT" "$CKB_SCRIPT" <<'PY'
+    python3 - "$DEPS_SCRIPT" "$BUILD_SCRIPT" "$CKB_SCRIPT" "$POST_SCRIPT" <<'PY'
 from pathlib import Path
 import sys
 
 deps_script = Path(sys.argv[1])
 build_script = Path(sys.argv[2])
 ckb_script = Path(sys.argv[3])
+post_script = Path(sys.argv[4])
 
 path = deps_script
 text = path.read_text()
@@ -180,6 +185,11 @@ text = text.replace(
     1,
 )
 text = text.replace(
+    '    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" "$DEFCONFIG" $FRAGMENTS\n',
+    '    run_make "${MAKE_COMMON_ARGS[@]}" "$DEFCONFIG" $FRAGMENTS\n',
+    1,
+)
+text = text.replace(
     '''    run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" dtbs
     run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}"
     run_make $MAKE_JOBS "${MAKE_COMMON_ARGS[@]}" \\
@@ -214,6 +224,23 @@ fi
 '''
 if old in text:
     text = text.replace(old, new, 1)
+path.write_text(text)
+
+path = post_script
+text = path.read_text()
+text = text.replace(
+    '    mkdir -p "$TMPDIR" "$RAMDISK_DIR" "$MODULES_DIR/0.0"\n',
+    '    mkdir -p "$TMPDIR" "$RAMDISK_DIR"\n',
+    1,
+)
+if '    cp -a "$IN_VBOOT/." "$RAMDISK_DIR/"\n    rm -rf "$MODULES_DIR"\n' not in text:
+    text = text.replace(
+        '    cp -a "$IN_VBOOT/." "$RAMDISK_DIR/"\n',
+        '    cp -a "$IN_VBOOT/." "$RAMDISK_DIR/"\n    rm -rf "$MODULES_DIR"\n',
+        1,
+    )
+if '    cp -a "$IN_VBOOT/." "$RAMDISK_DIR/"\n    rm -rf "$MODULES_DIR"\n    mkdir -p "$MODULES_DIR/0.0"\n' not in text:
+    raise SystemExit("failed to patch FloppyKernel module staging cleanup")
 path.write_text(text)
 PY
 }
