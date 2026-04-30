@@ -17,7 +17,6 @@
 <permissions>
     <privapp-permissions package="com.artisan.updater">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/> 
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
