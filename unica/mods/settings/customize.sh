@@ -15,78 +15,6 @@ SMALI_PATCH "system" "system/framework/framework.jar" \
     '    invoke-virtual {p0, p3}, Landroid/app/Application;->attach(Landroid/content/Context;)V\n\n    invoke-static {p3}, Lio/mesalabs/unica/SamsungPropsHooks;->init(Landroid/content/Context;)V' \
     > /dev/null
 
-DECODE_APK "system" "system/framework/framework.jar"
-FRAMEWORK_JAR_DIR="$APKTOOL_DIR/system/framework/framework.jar"
-ASKS_MANAGER_PATH="$(find "$FRAMEWORK_JAR_DIR" -type f -path "*/android/content/pm/ASKSManager.smali" | sort | head -n 1)"
-if [ "$ASKS_MANAGER_PATH" ] && ! grep -q -F "UN1CA: honor ASKS toggle" "$ASKS_MANAGER_PATH"; then
-    LOG "- Patching \"${ASKS_MANAGER_PATH#$FRAMEWORK_JAR_DIR/}\" in /system/system/framework/framework.jar"
-    perl -0pi -e '
-        s{(^\.method[^\n]* hasBlockPolicy\(\)Z\n)\s+\.locals \d+\n.*?^\.end method}
-         {$1."    .locals 2\n\n    # UN1CA: honor ASKS toggle\n    const-string v0, \"persist.sys.unica.asks\"\n\n    const/4 v1, 0x1\n\n    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z\n\n    move-result v0\n\n    if-eqz v0, :cond_0\n\n    sget-boolean v0, Landroid/content/pm/ASKSManager;->hasBlockedPolicy:Z\n\n    return v0\n\n    :cond_0\n    const/4 v0, 0x0\n\n    return v0\n.end method"}mse;
-        s{(^\.method[^\n]* isBlockTarget\(ILjava/lang/String;\)Z\n\s+\.locals \d+\n)}
-         {$1."\n    # UN1CA: honor ASKS toggle\n    const-string v0, \"persist.sys.unica.asks\"\n\n    const/4 v1, 0x1\n\n    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z\n\n    move-result v0\n\n    if-nez v0, :unica_asks_enabled_block\n\n    const/4 v0, 0x0\n\n    return v0\n\n    :unica_asks_enabled_block\n"}mse;
-        s{(^\.method[^\n]* isRestrictedTarget\(Ljava/lang/String;Ljava/lang/String;\)Z\n\s+\.locals \d+\n)}
-         {$1."\n    # UN1CA: honor ASKS toggle\n    const-string v0, \"persist.sys.unica.asks\"\n\n    const/4 v1, 0x1\n\n    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z\n\n    move-result v0\n\n    if-nez v0, :unica_asks_enabled_restricted\n\n    const/4 v0, 0x0\n\n    return v0\n\n    :unica_asks_enabled_restricted\n"}mse;
-    ' "$ASKS_MANAGER_PATH"
-    grep -q -F "UN1CA: honor ASKS toggle" "$ASKS_MANAGER_PATH" || ABORT "Failed to patch ASKSManager"
-fi
-
-LOG "- Allowing UN1CA Settings to write runtime props"
-UNICA_SYSTEM_PROPERTY_CONTEXTS="$WORK_DIR/system/system/etc/selinux/plat_property_contexts"
-UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS=""
-UNICA_SYSTEM_EXT_SEPOLICY=""
-for UNICA_SELINUX_DIR in \
-        "$WORK_DIR/system_ext/etc/selinux" \
-        "$WORK_DIR/system/system_ext/etc/selinux" \
-        "$WORK_DIR/system/system/system_ext/etc/selinux"; do
-    if [ -f "$UNICA_SELINUX_DIR/system_ext_property_contexts" ]; then
-        UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS="$UNICA_SELINUX_DIR/system_ext_property_contexts"
-    fi
-    if [ -f "$UNICA_SELINUX_DIR/system_ext_sepolicy.cil" ]; then
-        UNICA_SYSTEM_EXT_SEPOLICY="$UNICA_SELINUX_DIR/system_ext_sepolicy.cil"
-    fi
-    if [ "$UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS" ] && [ "$UNICA_SYSTEM_EXT_SEPOLICY" ]; then
-        break
-    fi
-done
-
-if [ "$UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS" ]; then
-    sed -i '/^persist\.sys\.unica\.[[:space:]]/d' "$UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS"
-fi
-
-if [ -f "$UNICA_SYSTEM_PROPERTY_CONTEXTS" ]; then
-    if ! grep -q -F "persist.sys.unica." "$UNICA_SYSTEM_PROPERTY_CONTEXTS"; then
-        if [ "$UNICA_SYSTEM_EXT_SEPOLICY" ] && grep -q -F "system_ucm_prop" "$UNICA_SYSTEM_EXT_SEPOLICY"; then
-            sed -i '/^persist\.sys\.[[:space:]]/i persist.sys.unica.                   u:object_r:system_ucm_prop:s0' "$UNICA_SYSTEM_PROPERTY_CONTEXTS"
-        else
-            LOG "\033[0;33m! system_ucm_prop label not found, skipping UN1CA property context\033[0m"
-        fi
-    fi
-else
-    LOG "\033[0;33m! platform property contexts not found, skipping UN1CA property context\033[0m"
-fi
-
-if [ "$UNICA_SYSTEM_EXT_SEPOLICY" ]; then
-    for UNICA_PROP_DOMAIN in system_app platform_app priv_app; do
-        grep -Eq "(^|[[:space:](])${UNICA_PROP_DOMAIN}([[:space:])]|$)" "$UNICA_SYSTEM_EXT_SEPOLICY" || continue
-
-        UNICA_ALLOW_RULE="(allow $UNICA_PROP_DOMAIN system_ucm_prop (property_service (set)))"
-        grep -q -F "$UNICA_ALLOW_RULE" "$UNICA_SYSTEM_EXT_SEPOLICY" || echo "$UNICA_ALLOW_RULE" >> "$UNICA_SYSTEM_EXT_SEPOLICY"
-
-        UNICA_ALLOW_RULE="(allow $UNICA_PROP_DOMAIN system_ucm_prop (file (read getattr map open)))"
-        grep -q -F "$UNICA_ALLOW_RULE" "$UNICA_SYSTEM_EXT_SEPOLICY" || echo "$UNICA_ALLOW_RULE" >> "$UNICA_SYSTEM_EXT_SEPOLICY"
-    done
-
-    for UNICA_PROP_DOMAIN in system_server; do
-        grep -Eq "(^|[[:space:](])${UNICA_PROP_DOMAIN}([[:space:])]|$)" "$UNICA_SYSTEM_EXT_SEPOLICY" || continue
-
-        UNICA_ALLOW_RULE="(allow $UNICA_PROP_DOMAIN system_ucm_prop (file (read getattr map open)))"
-        grep -q -F "$UNICA_ALLOW_RULE" "$UNICA_SYSTEM_EXT_SEPOLICY" || echo "$UNICA_ALLOW_RULE" >> "$UNICA_SYSTEM_EXT_SEPOLICY"
-    done
-else
-    LOG "\033[0;33m! system_ext sepolicy not found, skipping UN1CA property allow rules\033[0m"
-fi
-
 DECODE_APK "system" "system/priv-app/SecSettings/SecSettings.apk"
 SECSETTINGS_APK_DIR="$APKTOOL_DIR/system/priv-app/SecSettings/SecSettings.apk"
 
@@ -294,7 +222,6 @@ fi
 
 LOG "- Patching \"${TOP_LEVEL_KEYS_COLLECTOR_PATH#$SETTINGS_INTELLIGENCE_APK_DIR/}\" in /system/system/priv-app/SecSettingsIntelligence.apk"
 _ADD_TOP_LEVEL_KEY "top_level_unica" "$TOP_LEVEL_KEYS_COLLECTOR_PATH"
-_ADD_TOP_LEVEL_KEY "top_level_monster_updates" "$TOP_LEVEL_KEYS_COLLECTOR_PATH"
 
 # Show Vulkan renderer toggle if required
 if [[ "$(GET_PROP "ro.hwui.use_vulkan")" != "true" ]]; then
@@ -302,8 +229,6 @@ if [[ "$(GET_PROP "ro.hwui.use_vulkan")" != "true" ]]; then
 fi
 
 unset PATCH_INST CONTENT SECSETTINGS_APK_DIR SETTINGS_GATEWAY_PATH SETTINGS_ACTIVITY_PATH \
-    FRAMEWORK_JAR_DIR ASKS_MANAGER_PATH \
-    UNICA_SELINUX_DIR UNICA_PROPERTY_CONTEXTS \
     SOFTWARE_UPDATE_UTILS_PATH SOFTWARE_UPDATE_UTILS_SMALI \
     ONEUI_VERSION_CONTROLLER_PATH ONEUI_VERSION_CONTROLLER_SMALI \
     MODEL_NAME_GETTER_PATH MODEL_NAME_GETTER_SMALI \

@@ -383,45 +383,12 @@
 .end method
 
 .method public updateState(Landroidx/preference/Preference;)V
-    .locals 3
+    .locals 0
 
     invoke-super {p0, p1}, Lcom/android/settings/core/TogglePreferenceController;->updateState(Landroidx/preference/Preference;)V
 
     invoke-virtual {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;->refreshSummary(Landroidx/preference/Preference;)V
 
-    invoke-static {}, Lio/mesalabs/unica/settings/keybox/KeyboxUtils;->isKeyboxSpoofEnabled()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lio/mesalabs/unica/settings/keybox/KeyboxPreferenceController;->mLoadPreference:Landroidx/preference/SecPreference;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    :cond_0
-    iget-object v0, p0, Lio/mesalabs/unica/settings/keybox/KeyboxPreferenceController;->mClearPreference:Landroidx/preference/SecPreference;
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-static {p0}, Lio/mesalabs/unica/settings/keybox/KeyboxUtils;->hasKeyboxData(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    :cond_2
     return-void
 .end method
 

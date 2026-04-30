@@ -278,30 +278,12 @@
 .end method
 
 .method public updateState(Landroidx/preference/Preference;)V
-    .locals 1
+    .locals 0
 
     invoke-super {p0, p1}, Lcom/android/settings/core/TogglePreferenceController;->updateState(Landroidx/preference/Preference;)V
 
     invoke-virtual {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;->refreshSummary(Landroidx/preference/Preference;)V
 
-    invoke-static {}, Lio/mesalabs/unica/settings/pif/PIFUtils;->isPIFEnabled()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lio/mesalabs/unica/settings/pif/PIFPreferenceController;->mUpdatePreference:Landroidx/preference/SecPreference;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    :cond_0
-    iget-object p0, p0, Lio/mesalabs/unica/settings/pif/PIFPreferenceController;->mCustomPreference:Landroidx/preference/SecPreference;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0, p1}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    :cond_1
     return-void
 .end method
 

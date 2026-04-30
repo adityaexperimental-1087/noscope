@@ -5,11 +5,6 @@
     <com.samsung.android.settings.widget.SecInsetCategoryPreference />
     <Preference android:title="@string/unica_rom_version_title" android:key="unica_rom_version" android:summary="@string/summary_placeholder" settings:controller="io.mesalabs.unica.settings.ROMVersionPreferenceController" />
     <Preference android:title="@string/unica_device_name_title" android:key="unica_device_name" android:summary="@string/summary_placeholder" settings:controller="io.mesalabs.unica.settings.DeviceNamePreferenceController" />
-    <io.mesalabs.unica.settings.preference.IconPreference android:icon="@drawable/sec_ic_settings_software_update" android:title="@string/unica_updates_title" android:key="unica_updates">
-        <intent android:targetPackage="com.artisan.updater" android:targetClass="com.artisan.updater.MainActivity">
-            <extra android:name="from_settings" android:value="true" />
-        </intent>
-    </io.mesalabs.unica.settings.preference.IconPreference>
     <com.samsung.android.settings.widget.SecInsetCategoryPreference />
     <io.mesalabs.unica.settings.preference.IconPreference android:icon="@drawable/ic_unica_settings_ui" android:title="@string/unica_ui_settings_title" android:key="unica_ui_settings" android:fragment="io.mesalabs.unica.settings.ui.UISettingsFragment" settings:controller="io.mesalabs.unica.settings.ui.UISettingsPreferenceController" />
     <com.samsung.android.settings.widget.SecInsetCategoryPreference />
