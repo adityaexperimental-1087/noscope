@@ -32,27 +32,59 @@ if [ "$ASKS_MANAGER_PATH" ] && ! grep -q -F "UN1CA: honor ASKS toggle" "$ASKS_MA
 fi
 
 LOG "- Allowing UN1CA Settings to write runtime props"
-UNICA_PROPERTY_CONTEXTS=""
+UNICA_SYSTEM_PROPERTY_CONTEXTS="$WORK_DIR/system/system/etc/selinux/plat_property_contexts"
+UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS=""
+UNICA_SYSTEM_EXT_SEPOLICY=""
 for UNICA_SELINUX_DIR in \
         "$WORK_DIR/system_ext/etc/selinux" \
         "$WORK_DIR/system/system_ext/etc/selinux" \
         "$WORK_DIR/system/system/system_ext/etc/selinux"; do
     if [ -f "$UNICA_SELINUX_DIR/system_ext_property_contexts" ]; then
-        UNICA_PROPERTY_CONTEXTS="$UNICA_SELINUX_DIR/system_ext_property_contexts"
+        UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS="$UNICA_SELINUX_DIR/system_ext_property_contexts"
+    fi
+    if [ -f "$UNICA_SELINUX_DIR/system_ext_sepolicy.cil" ]; then
+        UNICA_SYSTEM_EXT_SEPOLICY="$UNICA_SELINUX_DIR/system_ext_sepolicy.cil"
+    fi
+    if [ "$UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS" ] && [ "$UNICA_SYSTEM_EXT_SEPOLICY" ]; then
         break
     fi
 done
 
-if [ "$UNICA_PROPERTY_CONTEXTS" ]; then
-    if ! grep -q -F "persist.sys.unica." "$UNICA_PROPERTY_CONTEXTS"; then
-        if grep -q -F "system_ucm_prop" "$UNICA_PROPERTY_CONTEXTS"; then
-            echo "persist.sys.unica.                   u:object_r:system_ucm_prop:s0" >> "$UNICA_PROPERTY_CONTEXTS"
+if [ "$UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS" ]; then
+    sed -i '/^persist\.sys\.unica\.[[:space:]]/d' "$UNICA_SYSTEM_EXT_PROPERTY_CONTEXTS"
+fi
+
+if [ -f "$UNICA_SYSTEM_PROPERTY_CONTEXTS" ]; then
+    if ! grep -q -F "persist.sys.unica." "$UNICA_SYSTEM_PROPERTY_CONTEXTS"; then
+        if [ "$UNICA_SYSTEM_EXT_SEPOLICY" ] && grep -q -F "system_ucm_prop" "$UNICA_SYSTEM_EXT_SEPOLICY"; then
+            sed -i '/^persist\.sys\.[[:space:]]/i persist.sys.unica.                   u:object_r:system_ucm_prop:s0' "$UNICA_SYSTEM_PROPERTY_CONTEXTS"
         else
             LOG "\033[0;33m! system_ucm_prop label not found, skipping UN1CA property context\033[0m"
         fi
     fi
 else
-    LOG "\033[0;33m! system_ext property contexts not found, skipping UN1CA property context\033[0m"
+    LOG "\033[0;33m! platform property contexts not found, skipping UN1CA property context\033[0m"
+fi
+
+if [ "$UNICA_SYSTEM_EXT_SEPOLICY" ]; then
+    for UNICA_PROP_DOMAIN in system_app platform_app priv_app; do
+        grep -Eq "(^|[[:space:](])${UNICA_PROP_DOMAIN}([[:space:])]|$)" "$UNICA_SYSTEM_EXT_SEPOLICY" || continue
+
+        UNICA_ALLOW_RULE="(allow $UNICA_PROP_DOMAIN system_ucm_prop (property_service (set)))"
+        grep -q -F "$UNICA_ALLOW_RULE" "$UNICA_SYSTEM_EXT_SEPOLICY" || echo "$UNICA_ALLOW_RULE" >> "$UNICA_SYSTEM_EXT_SEPOLICY"
+
+        UNICA_ALLOW_RULE="(allow $UNICA_PROP_DOMAIN system_ucm_prop (file (read getattr map open)))"
+        grep -q -F "$UNICA_ALLOW_RULE" "$UNICA_SYSTEM_EXT_SEPOLICY" || echo "$UNICA_ALLOW_RULE" >> "$UNICA_SYSTEM_EXT_SEPOLICY"
+    done
+
+    for UNICA_PROP_DOMAIN in system_server; do
+        grep -Eq "(^|[[:space:](])${UNICA_PROP_DOMAIN}([[:space:])]|$)" "$UNICA_SYSTEM_EXT_SEPOLICY" || continue
+
+        UNICA_ALLOW_RULE="(allow $UNICA_PROP_DOMAIN system_ucm_prop (file (read getattr map open)))"
+        grep -q -F "$UNICA_ALLOW_RULE" "$UNICA_SYSTEM_EXT_SEPOLICY" || echo "$UNICA_ALLOW_RULE" >> "$UNICA_SYSTEM_EXT_SEPOLICY"
+    done
+else
+    LOG "\033[0;33m! system_ext sepolicy not found, skipping UN1CA property allow rules\033[0m"
 fi
 
 DECODE_APK "system" "system/priv-app/SecSettings/SecSettings.apk"

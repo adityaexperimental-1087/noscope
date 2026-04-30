@@ -93,31 +93,17 @@
 .end method
 
 .method public isChecked()Z
-    .locals 2
+    .locals 1
 
-    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+    const-string p0, "persist.sys.unica.sdkbypass"
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const/4 v0, 0x0
 
-    move-result-object p0
-
-    const-string v0, "unica_allow_sdkbypass"
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p0, v0}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
-    if-ne p0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    :goto_0
-    return v1
+    return p0
 .end method
 
 .method public isControllable()Z
@@ -151,17 +137,15 @@
 .method public setChecked(Z)Z
     .locals 1
 
-    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+    invoke-static {p1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    move-result-object p1
 
-    move-result-object p0
+    const-string v0, "persist.sys.unica.sdkbypass"
 
-    const-string v0, "unica_allow_sdkbypass"
+    invoke-static {v0, p1}, Landroid/os/SemSystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    move-result p0
+    const/4 p0, 0x1
 
     return p0
 .end method
