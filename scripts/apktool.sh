@@ -42,8 +42,8 @@ BUILD()
     FILE_NAME="$(basename "$INPUT_FILE")"
 
     if [[ "$INPUT_FILE" == *".apk" ]]; then
-        local CERT_PREFIX="monsterrom"
-        $ROM_IS_OFFICIAL && CERT_PREFIX="monsterrom"
+        local CERT_PREFIX="aosp"
+        $ROM_IS_OFFICIAL && CERT_PREFIX="aosp"
         local PUBLIC_KEY="$SRC_DIR/security/${CERT_PREFIX}_platform.x509.pem"
         local PRIVATE_KEY="$SRC_DIR/security/${CERT_PREFIX}_platform.pk8"
 
