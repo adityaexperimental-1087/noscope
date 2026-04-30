@@ -21,7 +21,7 @@ index c88d436..0d7d15d 100644
  
      const/4 v0, -0x1
  
-@@ -1312,7 +1312,20 @@
+@@ -1312,7 +1312,18 @@
  
      if-nez p1, :cond_1
  
@@ -45,16 +45,14 @@ diff --git a/smali/android/content/pm/parsing/FrameworkParsingPackageUtils.smali
 index 279b8bc..be89d90 100644
 --- a/smali/android/content/pm/parsing/FrameworkParsingPackageUtils.smali
 +++ b/smali/android/content/pm/parsing/FrameworkParsingPackageUtils.smali
-@@ -209,7 +209,7 @@
+@@ -209,5 +209,5 @@
  
  .method public static blacklist computeMinSdkVersion(ILjava/lang/String;I[Ljava/lang/String;Landroid/content/pm/parsing/result/ParseInput;)Landroid/content/pm/parsing/result/ParseResult;
 -    .locals 2
 +    .locals 3
- 
      .annotation system Ldalvik/annotation/Signature;
          value = {
- 
-@@ -241,7 +241,20 @@
+@@ -241,7 +241,22 @@
  
      if-nez p1, :cond_1
  
