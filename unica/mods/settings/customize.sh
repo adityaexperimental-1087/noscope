@@ -31,6 +31,30 @@ if [ "$ASKS_MANAGER_PATH" ] && ! grep -q -F "UN1CA: honor ASKS toggle" "$ASKS_MA
     grep -q -F "UN1CA: honor ASKS toggle" "$ASKS_MANAGER_PATH" || ABORT "Failed to patch ASKSManager"
 fi
 
+LOG "- Allowing UN1CA Settings to write runtime props"
+UNICA_PROPERTY_CONTEXTS=""
+for UNICA_SELINUX_DIR in \
+        "$WORK_DIR/system_ext/etc/selinux" \
+        "$WORK_DIR/system/system_ext/etc/selinux" \
+        "$WORK_DIR/system/system/system_ext/etc/selinux"; do
+    if [ -f "$UNICA_SELINUX_DIR/system_ext_property_contexts" ]; then
+        UNICA_PROPERTY_CONTEXTS="$UNICA_SELINUX_DIR/system_ext_property_contexts"
+        break
+    fi
+done
+
+if [ "$UNICA_PROPERTY_CONTEXTS" ]; then
+    if ! grep -q -F "persist.sys.unica." "$UNICA_PROPERTY_CONTEXTS"; then
+        if grep -q -F "system_ucm_prop" "$UNICA_PROPERTY_CONTEXTS"; then
+            echo "persist.sys.unica.                   u:object_r:system_ucm_prop:s0" >> "$UNICA_PROPERTY_CONTEXTS"
+        else
+            LOG "\033[0;33m! system_ucm_prop label not found, skipping UN1CA property context\033[0m"
+        fi
+    fi
+else
+    LOG "\033[0;33m! system_ext property contexts not found, skipping UN1CA property context\033[0m"
+fi
+
 DECODE_APK "system" "system/priv-app/SecSettings/SecSettings.apk"
 SECSETTINGS_APK_DIR="$APKTOOL_DIR/system/priv-app/SecSettings/SecSettings.apk"
 
@@ -246,6 +270,7 @@ fi
 
 unset PATCH_INST CONTENT SECSETTINGS_APK_DIR SETTINGS_GATEWAY_PATH SETTINGS_ACTIVITY_PATH \
     FRAMEWORK_JAR_DIR ASKS_MANAGER_PATH \
+    UNICA_SELINUX_DIR UNICA_PROPERTY_CONTEXTS \
     SOFTWARE_UPDATE_UTILS_PATH SOFTWARE_UPDATE_UTILS_SMALI \
     ONEUI_VERSION_CONTROLLER_PATH ONEUI_VERSION_CONTROLLER_SMALI \
     MODEL_NAME_GETTER_PATH MODEL_NAME_GETTER_SMALI \

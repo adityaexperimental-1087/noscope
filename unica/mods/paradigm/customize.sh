@@ -40,11 +40,63 @@ LOG_STEP_IN "- Adding Audio eraser feature"
 SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_AUDIO_CONFIG_MULTISOURCE_SEPARATOR" "{FastScanning_6, SourceSeparator_4, Version_1.3.0}"
 LOG_STEP_OUT
 
-# Now brief
+_IMPORT_SOURCE_FLOATING_FEATURE_FLAGS()
+{
+    local SOURCE_FILE="$1"
+    local FEATURE
+    local CURRENT_VALUE
+    local IMPORTED_COUNT=0
+
+    if [ ! -f "$SOURCE_FILE" ]; then
+        LOGW "Source firmware floating_feature.xml not found; skipping S26 floating feature flags"
+        return 0
+    fi
+
+    while IFS= read -r FEATURE; do
+        [ "$FEATURE" ] || continue
+        CURRENT_VALUE="$(GET_FLOATING_FEATURE_CONFIG "$FEATURE")"
+        if [[ "${CURRENT_VALUE^^}" == "TRUE" ]]; then
+            continue
+        fi
+
+        SET_FLOATING_FEATURE_CONFIG "$FEATURE" "TRUE"
+        IMPORTED_COUNT=$((IMPORTED_COUNT + 1))
+    done < <(perl -0777 -ne '
+        while (/<(SEC_FLOATING_FEATURE_[A-Z0-9_]+)>([^<]*)<\/\1>/g) {
+            my ($feature, $value) = ($1, $2);
+            $value =~ s/^\s+|\s+$//g;
+            next unless uc($value) eq "TRUE";
+            next unless $feature =~ /_(SUPPORT|ENABLE|FUNCTION)(_|$)/;
+            print "$feature\n";
+        }
+    ' "$SOURCE_FILE")
+
+    LOG "- Imported $IMPORTED_COUNT S26 floating feature flag(s)"
+}
+
+# Now brief / Now Nudge
 # Requires SEC_FLOATING_FEATURE_COMMON_CONFIG_AI_VERSION >= 20251
 # or SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_AI_BRIEF_FOR_UT
-LOG_STEP_IN "- Adding Now brief feature"
+LOG_STEP_IN "- Adding Now brief and Now Nudge features"
+SOURCE_FIRMWARE_PATH="$(cut -d "/" -f 1 -s <<< "$SOURCE_FIRMWARE")_$(cut -d "/" -f 2 -s <<< "$SOURCE_FIRMWARE")"
+SOURCE_FLOATING_FEATURE="$FW_DIR/$SOURCE_FIRMWARE_PATH/system/system/etc/floating_feature.xml"
+if [ -f "$SOURCE_FLOATING_FEATURE" ]; then
+    AI_VERSION="$(GET_FLOATING_FEATURE_CONFIG "$SOURCE_FLOATING_FEATURE" "SEC_FLOATING_FEATURE_COMMON_CONFIG_AI_VERSION")"
+else
+    AI_VERSION=""
+fi
+if [ ! "$AI_VERSION" ]; then
+    LOGW "SEC_FLOATING_FEATURE_COMMON_CONFIG_AI_VERSION not found in source firmware, using S26 default"
+    AI_VERSION="20261"
+fi
+SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_COMMON_CONFIG_AI_VERSION" "$AI_VERSION"
 SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_PERSONALIZED_DATA_CORE" "TRUE"
+LOG_STEP_OUT
+
+LOG_STEP_IN "- Importing S26 floating feature flags"
+_IMPORT_SOURCE_FLOATING_FEATURE_FLAGS "$SOURCE_FLOATING_FEATURE"
+unset AI_VERSION SOURCE_FLOATING_FEATURE SOURCE_FIRMWARE_PATH FEATURE CURRENT_VALUE IMPORTED_COUNT
+unset -f _IMPORT_SOURCE_FLOATING_FEATURE_FLAGS
 LOG_STEP_OUT
 
 # S26 neural stack

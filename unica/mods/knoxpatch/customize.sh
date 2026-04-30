@@ -92,6 +92,43 @@ _FORCE_BOOL_FIELD_ONCE()
     grep -q -F "$MARKER" "$FILE" || ABORT "Failed to patch ${FILE//$APKTOOL_DIR\//}"
 }
 
+_PATCH_SYSTEM_PROPERTIES_GETS()
+{
+    local FILE="$1"
+
+    if grep -q -F "KnoxPatch: spoof SystemProperties.get(String)" "$FILE" \
+        && grep -q -F "KnoxPatch: spoof SystemProperties.get(String, String)" "$FILE"; then
+        return 0
+    fi
+
+    perl -0pi -e '
+        s{
+            (\.method\ public\ static[^\n]*\ get\(Ljava/lang/String;\)Ljava/lang/String;\n)
+            [ \t]+\.locals\ \d+\n
+            (\s+\.annotation\ runtime\ Landroid/annotation/SystemApi;\n\s+\.end\ annotation\n\n)
+            \s+invoke-static\ \{p0\},\ Landroid/os/SystemProperties;->native_get\(Ljava/lang/String;\)Ljava/lang/String;\n\n
+            \s+move-result-object\ p0\n\n
+            \s+return-object\ p0\n
+            \.end\ method
+        }{$1    .locals 1\n$2    invoke-static {p0}, Lio/mesalabs/unica/KnoxPatchHooks;->onSystemPropertiesGet(Ljava/lang/String;)Ljava/lang/String;\n\n    move-result-object v0\n\n    # KnoxPatch: spoof SystemProperties.get(String)\n    if-eqz v0, :cond_knoxpatch_get\n\n    return-object v0\n\n    :cond_knoxpatch_get\n    invoke-static {p0}, Landroid/os/SystemProperties;->native_get(Ljava/lang/String;)Ljava/lang/String;\n\n    move-result-object p0\n\n    return-object p0\n.end method}x;
+
+        s{
+            (\.method\ public\ static[^\n]*\ get\(Ljava/lang/String;Ljava/lang/String;\)Ljava/lang/String;\n)
+            [ \t]+\.locals\ \d+\n
+            (\s+\.annotation\ runtime\ Landroid/annotation/SystemApi;\n\s+\.end\ annotation\n\n)
+            \s+invoke-static\ \{p0,\ p1\},\ Landroid/os/SystemProperties;->native_get\(Ljava/lang/String;Ljava/lang/String;\)Ljava/lang/String;\n\n
+            \s+move-result-object\ p0\n\n
+            \s+return-object\ p0\n
+            \.end\ method
+        }{$1    .locals 1\n$2    invoke-static {p0}, Lio/mesalabs/unica/KnoxPatchHooks;->onSystemPropertiesGet(Ljava/lang/String;)Ljava/lang/String;\n\n    move-result-object v0\n\n    # KnoxPatch: spoof SystemProperties.get(String, String)\n    if-eqz v0, :cond_knoxpatch_get_default\n\n    return-object v0\n\n    :cond_knoxpatch_get_default\n    invoke-static {p0, p1}, Landroid/os/SystemProperties;->native_get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;\n\n    move-result-object p0\n\n    return-object p0\n.end method}x;
+    ' "$FILE"
+
+    grep -q -F "KnoxPatch: spoof SystemProperties.get(String)" "$FILE" \
+        || ABORT "Failed to patch ${FILE//$APKTOOL_DIR\//}"
+    grep -q -F "KnoxPatch: spoof SystemProperties.get(String, String)" "$FILE" \
+        || ABORT "Failed to patch ${FILE//$APKTOOL_DIR\//}"
+}
+
 _RETURN_IF_METHOD_EXISTS()
 {
     local PARTITION="$1"
@@ -129,6 +166,12 @@ SMALI_PATCH "system" "system/framework/framework.jar" \
     'return-object p0' \
     '    invoke-static {p3}, Lio/mesalabs/unica/KnoxPatchHooks;->init(Landroid/content/Context;)V\n\n    return-object p0' \
     > /dev/null
+SYSTEM_PROPERTIES_PATH="$(_FIND_DECODED_SMALI "system" "system/framework/framework.jar" "*/android/os/SystemProperties.smali")"
+if [ "$SYSTEM_PROPERTIES_PATH" ]; then
+    _PATCH_SYSTEM_PROPERTIES_GETS "$SYSTEM_PROPERTIES_PATH"
+else
+    ABORT "SystemProperties.smali not found in framework.jar"
+fi
 ENTERPRISE_DEVICE_MANAGER_PATH="$(_FIND_DECODED_SMALI "system" "system/framework/knoxsdk.jar" "*/com/samsung/android/knox/EnterpriseDeviceManager.smali")"
 if [ "$ENTERPRISE_DEVICE_MANAGER_PATH" ]; then
     if ! grep -q -F "Lio/mesalabs/unica/KnoxPatchHooks;->onEDMGetAPILevel()I" "$ENTERPRISE_DEVICE_MANAGER_PATH"; then
