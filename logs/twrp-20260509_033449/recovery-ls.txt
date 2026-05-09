@@ -1,0 +1,224 @@
+> adb shell ls -la / /tmp /cache/recovery /data /data/log /data/vendor/log /data/tombstones /data/anr /data/system/dropbox /sys/fs/pstore 2>&1
+code=0 signal=null
+:
+total 2404
+drwxrwxrwt  41 root     root        1480 2026-05-08 20:33 .
+drwxrwxrwt  41 root     root        1480 2026-05-08 20:33 ..
+dr-xr-xr-x   3 root     root           0 2026-05-08 20:33 acct
+drwxr-xr-x   2 root     root          40 2026-05-08 20:33 apex
+lrwxrwxrwx   1 root     root          11 1969-12-31 19:00 bin -> /system/bin
+lrwxrwxrwx   1 root     root          50 1969-12-31 19:00 bugreports -> /data/user_de/0/com.android.shell/files/bugreports
+drwxrwx---   7 system   cache       4096 2026-05-08 20:15 cache
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 carrier
+drwxr-xr-x   4 root     root           0 1969-12-31 19:00 config
+lrwxrwxrwx   1 root     root          17 1969-12-31 19:00 d -> /sys/kernel/debug
+drwxrwx--x  69 system   system      4096 2026-05-08 20:28 data
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 data_mirror
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 debug_ramdisk
+lrwxrwxrwx   1 root     root          12 1969-12-31 19:00 default.prop -> prop.default
+drwxr-xr-x  21 root     root        8040 2026-05-08 20:33 dev
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 efs
+lrwxrwxrwx   1 root     root          11 1969-12-31 19:00 etc -> /system/etc
+-rw-r--r--   1 root     root       65492 1969-12-31 19:00 file_contexts
+-rw-r--r--   1 root     root     1154282 1969-12-31 19:00 file_contexts.bin
+lrwxrwxrwx   1 root     root          16 1969-12-31 19:00 init -> /system/bin/init
+-rwxr-x---   1 root     root         673 1969-12-31 19:00 init.recovery.exynos2100.rc
+-rwxr-x---   1 root     root         103 1969-12-31 19:00 init.recovery.hlthchrg.rc
+-rwxr-x---   1 root     root          58 1969-12-31 19:00 init.recovery.ldconfig.rc
+-rwxr-x---   1 root     root         307 1969-12-31 19:00 init.recovery.logd.rc
+-rwxr-x---   1 root     root         162 1969-12-31 19:00 init.recovery.service.rc
+-rwxr-x---   1 root     root         883 1969-12-31 19:00 init.recovery.usb.rc
+drwxr-xr-x   3 root     root          60 1969-12-31 19:00 lib
+drwxr-xr-x   2 root     root          60 2026-05-08 20:33 linkerconfig
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 metadata
+drwxr-xr-x   8 root     system       160 2026-05-08 20:33 mnt
+drwxr-xr-x   2 root     root         240 1969-12-31 19:00 odm
+drwxr-xr-x   2 root     root          60 1969-12-31 19:00 odm_dlkm
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 odm_file_contexts
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 odm_property_contexts
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 oem
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 optics
+-rw-r--r--   1 root     root       47253 1969-12-31 19:00 plat_file_contexts
+-rw-r--r--   1 root     root       76885 1969-12-31 19:00 plat_property_contexts
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 postinstall
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 prism
+dr-xr-xr-x 530 root     root           0 1969-12-31 19:00 proc
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 product
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 product_file_contexts
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 product_property_contexts
+-rw-r--r--   1 root     root       10165 1969-12-31 19:00 prop.default
+-rw-r--r--   1 root     root      320500 1969-12-31 19:00 ramdisk-files.sha256sum
+-rw-r--r--   1 root     root      105139 1969-12-31 19:00 ramdisk-files.txt
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 relink_binaries-timestamp
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 relink_libraries-timestamp
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 relink_vendor_hw_binaries-timestamp
+drwxr-xr-x   3 root     root          60 1969-12-31 19:00 res
+drwx------   2 root     root          40 2026-01-30 04:38 root
+drwxr-xr-x   2 root     root          80 1969-12-31 19:00 sbin
+drwxrws---  27 media_rw media_rw    8192 2026-05-08 20:28 sdcard
+drwxrwxrwx   2 root     root          40 2026-05-08 20:33 sec_efs
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 second_stage_resources
+-rw-r--r--   1 root     root      610168 1969-12-31 19:00 sepolicy
+drwxr-xr-x   2 root     root          40 2026-05-08 20:33 sideload
+drwxr-xr-x   2 root     root          40 1969-12-31 19:00 spu
+drwxr-x--x   2 root     root          40 1969-12-31 19:00 storage
+dr-xr-xr-x  15 root     root           0 1969-12-31 19:00 sys
+drwxr-xr-x   6 root     root         120 1969-12-31 19:00 system
+lrwxrwxrwx   1 root     root          18 1969-12-31 19:00 system_ext -> /system/system_ext
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 system_ext_file_contexts
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 system_ext_property_contexts
+drwxrwxrwx   2 root     root          40 2026-05-08 20:33 system_root
+drwxrwxr-x   3 root     shell        100 2026-05-08 20:33 tmp
+drwxr-xr-x   5 root     root         160 1969-12-31 19:00 twres
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 twrp_ramdisk-timestamp
+drwxrwxrwx   2 root     root          40 2026-05-08 20:33 usb-otg
+drwxr-xr-x   4 root     root          80 1969-12-31 19:00 vendor
+drwxr-xr-x   2 root     root          60 1969-12-31 19:00 vendor_dlkm
+-rw-r--r--   1 root     root       11617 1969-12-31 19:00 vendor_file_contexts
+-rw-r--r--   1 root     root           0 1969-12-31 19:00 vendor_property_contexts
+
+/cache/recovery:
+total 104
+drwxrwx--- 2 system cache   4096 2026-05-08 20:33 .
+drwxrwx--- 7 system cache   4096 2026-05-08 20:15 ..
+-rw-rw-rw- 1 root   root      19 2026-05-08 20:33 .version
+-rw-rw-rw- 1 root   root       1 2026-05-08 20:31 intent
+-rw-r----- 1 root   root   35654 2026-05-08 20:33 last_log.gz
+-rw------- 1 system system 41995 2026-05-08 20:33 log.gz
+-rw-r--r-- 1 root   root    1407 2026-05-08 20:33 recovery.fstab
+-rw-rw-rw- 1 root   root      50 2026-05-08 20:33 storage.fstab
+-rw------- 1 system system     0 2026-05-08 20:15 uncrypt.log
+
+/data:
+total 209
+drwxrwx--x 69 system      system   4096 2026-05-08 20:28 .
+drwxrwxrwt 41 root        root     1480 2026-05-08 20:33 ..
+drwxrwxr-x  7 system      system   3452 2026-05-08 20:15 DownFilters
+drwx------  2 root        root     3452 2026-05-08 20:15 adb
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 anr
+drwxr-xr-x  7 root        system   3452 2026-05-08 20:15 apex
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 apex_repair
+drwxrwx--x  3 system      system   3452 2026-05-08 20:15 app
+drwx------  2 root        root     3452 2026-05-08 20:15 app-asec
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 app-ephemeral
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 app-lib
+drwx------  2 system      system   3452 2026-05-08 20:15 app-metadata
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 app-private
+drwxr-x--x  2 system      system   3452 2026-05-08 20:15 app-staging
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 app_fonts
+drwxrwxrwx  2 system      system   3452 2026-05-08 20:15 attribution
+drwx------  2 system      system   3452 2026-05-08 20:15 backup
+drwxr-xr-x  2 shell       shell    3452 2026-05-08 20:15 bootchart
+drwxrwx---  5 system      cache    3452 2026-05-08 20:15 cache
+drwxrwx--x  3 root        root     3452 2026-05-08 20:15 dalvik-cache
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 data
+drwxrwx---  2 drm         drm      3452 2026-05-08 20:15 drm
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 enc_user
+drwxrwx--x  4 root        root     3452 2026-05-08 20:15 fonts
+drwxrwx---  2 system      system   3452 2026-05-08 20:15 fota
+drwx------  5 root        root     3452 2026-05-08 20:15 gsi
+-rw-------  1 system      system      1 2026-05-08 20:33 gsi_persistent_data
+drwxrwx---  2 system      system   3452 2026-05-08 20:15 heimdall
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 incremental
+drwxrwx--x 14 system      system   3452 2026-05-08 20:15 knox
+drwxr-x--x  6 root        root     3452 2026-05-08 20:15 local
+drwxrwxr-x 12 system      log      3452 2026-05-08 20:16 log
+drwxrwx---  2 root        root     3452 2026-04-24 01:48 lost+found
+dr-xr-x---  6 media_rw    media_rw 3452 2026-04-29 03:25 media
+drwxrwx---  2 mediadrm    mediadrm 3452 2026-05-08 20:15 mediadrm
+drwxrwx--t 73 system      misc     3452 2026-05-08 20:32 misc
+dr-xr-x--x  2 system      misc     3452 2026-05-08 20:15 misc_ce
+dr-xr-x--x  3 system      misc     3452 2026-05-08 20:15 misc_de
+drwxrwx---  3 nfc         nfc      3452 2026-05-08 20:15 nfc
+drwxr-x---  2 nfc         system   3452 2026-05-08 20:15 nfc_log
+drwxrwx--x  2 root        root     3452 2026-05-08 20:15 ota
+drwxrwx---  2 system      cache    3452 2026-05-08 20:15 ota_package
+drwxr-xr-x  3 system      system   3452 2026-05-08 20:15 overlays
+drwxr-----  5 system      system   3452 2026-05-08 20:15 pdp_bkup
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 preloads
+drwx------  2 root        root     3452 2026-05-08 20:33 property
+drwxrwxr-x  2 root        system   3452 2026-05-08 20:15 rdx_dump
+drwxrwxrwx  2 root        root     3452 2026-05-08 20:31 recovery
+drwxrwx--x  2 system      system   3452 2026-05-08 20:15 resource-cache
+drwx------  2 system      system   3452 2026-05-08 20:15 rollback
+drwx------  2 system      system   3452 2026-05-08 20:15 rollback-history
+drwx------  2 system      system   3452 2026-05-08 20:15 rollback-observer
+drwxr-xr-x  2 system      system   3452 2026-05-08 20:15 sblockchain
+drwxrwx--x  2 system      oem_5666 3452 2026-05-08 20:15 sec_backup_de
+drwxrwxr-x  4 system      oem_5666 3452 2026-05-08 20:15 sec_backup_sys_de
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 semclipboard
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 server_configurable_flags
+drwxrwx---  2 audioserver system   3452 2026-05-08 20:16 snd
+drwx------  2 system      system   3452 2026-05-08 20:15 ss
+dr-xr-x--x  2 root        root     3452 2026-05-08 20:15 storage_area
+drwxrwxr-x  8 system      system   3452 2026-05-08 20:15 system
+dr-xr-x---  2 system      system   3452 2026-05-08 20:15 system_ce
+dr-xr-x---  3 system      system   3452 2026-05-08 20:15 system_de
+drwxrwxr-x  2 system      system   3452 2026-05-08 20:15 tombstones
+dr-x--x--x  3 system      system   3452 2026-05-08 20:15 user
+dr-x--x--x  3 system      system   3452 2026-05-08 20:15 user_de
+drwxrwxr-x  3 system      system   3452 2026-05-08 20:15 uwb
+drwxrwx--x 31 system      system   3452 2026-05-08 20:15 vendor
+dr-xr-x--x  2 root        root     3452 2026-05-08 20:15 vendor_ce
+dr-xr-x--x  3 root        root     3452 2026-05-08 20:15 vendor_de
+
+/data/anr:
+total 11
+drwxrwxr-x  2 system system 3452 2026-05-08 20:15 .
+drwxrwx--x 69 system system 4096 2026-05-08 20:28 ..
+
+/data/log:
+total 1550
+drwxrwxr-x 12 system    log          3452 2026-05-08 20:16 .
+drwxrwx--x 69 system    system       4096 2026-05-08 20:28 ..
+drwxrwx--x  2 system    graphics     3452 2026-05-08 20:15 SF_Dump
+drwxr-x---  2 system    log          3452 2026-05-08 20:15 batterystats
+drwxrwx---  2 bluetooth bluetooth    3452 2026-05-08 20:15 bt
+drwxrwxr-x  2 system    log          3452 2026-05-08 20:15 core
+-rw-------  1 system    log          1360 2026-05-08 20:33 ddar_log.txt
+drwxrwxr-x  2 radio     log          3452 2026-05-08 20:16 err
+drwxr-xr-x  2 system    system       3452 2026-05-08 20:32 ewlogd
+drwxrwxr-x  2 root      log          3452 2026-05-08 20:33 fsdbg
+drwxrwx--x  2 radio     log          3452 2026-05-08 20:15 omc
+-rw-r-----  1 system    log          4000 2026-05-08 20:33 power_off_reset_reason.txt
+-rw-r-----  1 system    log       1467051 2026-05-08 20:33 prev_dump.log
+-rw-r--r--  1 radio     radio       62961 2026-05-08 20:15 radio_PRECONFG_SET.log
+drwxrwxrwx  2 system    system       3452 2026-05-08 20:15 traces
+drwxr-xr-x  2 root      log          3452 2026-05-08 20:15 update_engine_log
+-rw-------  1 system    graphics      208 2026-05-08 20:32 vrrinfo.txt
+
+/data/system/dropbox:
+total 6
+drwx------ 2 system system 3452 2026-05-08 20:15 .
+drwxrwxr-x 8 system system 3452 2026-05-08 20:15 ..
+
+/data/tombstones:
+total 11
+drwxrwxr-x  2 system system 3452 2026-05-08 20:15 .
+drwxrwx--x 69 system system 4096 2026-05-08 20:28 ..
+
+/data/vendor/log:
+total 24
+drwxrwx--x  8 root        system   3452 2026-05-08 20:15 .
+drwxrwx--x 31 system      system   3452 2026-05-08 20:15 ..
+drwxrwxr-x  2 audioserver system   3452 2026-05-08 20:15 abox
+drwxrwx---  2 audioserver system   3452 2026-05-08 20:15 audiopcm
+drwxrwxr-x  2 system      log      3452 2026-05-08 20:15 drk
+drwxrwxr-x  2 radio       log      3452 2026-05-08 20:15 err
+drwxrwx--x  2 system      graphics 3452 2026-05-08 20:15 hwc
+drwxrwx---  2 wifi        system   3452 2026-05-08 20:15 wifi
+
+/sys/fs/pstore:
+total 0
+drwxr-x---  2 root root 0 2026-05-08 20:33 .
+drwxr-xr-x 12 root root 0 1969-12-31 19:00 ..
+
+/tmp:
+total 36
+drwxrwxr-x  3 root shell   100 2026-05-08 20:33 .
+drwxrwxrwt 41 root root   1480 2026-05-08 20:33 ..
+drwxr-xr-x  3 root root     60 2026-05-08 20:33 misc
+-rw-rw-rw-  1 root root  35245 2026-05-08 20:33 recovery.log
+prwSrwS---  1 root root      0 2026-05-08 20:33 twadbfifo
+
+

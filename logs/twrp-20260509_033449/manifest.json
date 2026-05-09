@@ -1,0 +1,242 @@
+[
+  {
+    "path": "adb-devices--l.txt",
+    "size": 160
+  },
+  {
+    "path": "adb-get-state.txt",
+    "size": 47
+  },
+  {
+    "path": "adb-root.txt",
+    "size": 65
+  },
+  {
+    "path": "adb-start-server.txt",
+    "size": 40
+  },
+  {
+    "path": "current-recovery-logcat.txt",
+    "size": 1276482
+  },
+  {
+    "path": "data-log-find.txt",
+    "size": 2142
+  },
+  {
+    "path": "fresh-triage.txt",
+    "size": 58175
+  },
+  {
+    "path": "last-logcat-all.txt",
+    "size": 287
+  },
+  {
+    "path": "last-logcat-main-system-crash-events.txt",
+    "size": 329
+  },
+  {
+    "path": "proc-last_kmsg.txt",
+    "size": 56010
+  },
+  {
+    "path": "proc-mounts.txt",
+    "size": 2487
+  },
+  {
+    "path": "pstore-console-ramoops-0.txt",
+    "size": 138
+  },
+  {
+    "path": "pstore-list.txt",
+    "size": 162
+  },
+  {
+    "path": "pstore-pmsg-ramoops-0.txt",
+    "size": 132
+  },
+  {
+    "path": "pull.log",
+    "size": 2931
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ddar_log.txt",
+    "size": 1360
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_011543613542.log",
+    "size": 108197
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_011657534600.log",
+    "size": 52995
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_011827913848.log",
+    "size": 52237
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_011957758363.log",
+    "size": 40196
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_012118123507.log",
+    "size": 62115
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_012247852364.log",
+    "size": 41363
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_012402609822.log",
+    "size": 52146
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_012532551282.log",
+    "size": 51282
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_012652438753.log",
+    "size": 63069
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_013228156783.log",
+    "size": 43296
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_0.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_1.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_3.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_4.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_5.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_6.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_7.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\u_history_1.txt",
+    "size": 1153
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\us_history_1.txt",
+    "size": 593
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\usinfo_history_1.txt",
+    "size": 3353
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\power_off_reset_reason.txt",
+    "size": 4000
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\prev_dump.log",
+    "size": 1467051
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\radio_PRECONFG_SET.log",
+    "size": 62961
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\vrrinfo.txt",
+    "size": 208
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_misc_recovery\\proc\\version",
+    "size": 212
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_misc_recovery\\proc\\version.1",
+    "size": 212
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_misc_recovery\\ro.build.fingerprint",
+    "size": 70
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_misc_recovery\\ro.build.fingerprint.1",
+    "size": 70
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_vendor_log\\hwc\\hwc_error_log.txt",
+    "size": 704
+  },
+  {
+    "path": "pulled\\cache-recovery\\.version",
+    "size": 19
+  },
+  {
+    "path": "pulled\\cache-recovery\\intent",
+    "size": 1
+  },
+  {
+    "path": "pulled\\cache-recovery\\last_log.gz",
+    "size": 35654
+  },
+  {
+    "path": "pulled\\cache-recovery\\log.gz",
+    "size": 41995
+  },
+  {
+    "path": "pulled\\cache-recovery\\recovery.fstab",
+    "size": 1407
+  },
+  {
+    "path": "pulled\\cache-recovery\\storage.fstab",
+    "size": 50
+  },
+  {
+    "path": "pulled\\cache-recovery\\uncrypt.log",
+    "size": 0
+  },
+  {
+    "path": "pulled\\data-media-0-TWRP\\.twrps",
+    "size": 1027
+  },
+  {
+    "path": "pulled\\etc-recovery.fstab",
+    "size": 1407
+  },
+  {
+    "path": "pulled\\sdcard-TWRP\\.twrps",
+    "size": 1027
+  },
+  {
+    "path": "pulled\\tmp-recovery.log",
+    "size": 35245
+  },
+  {
+    "path": "recovery-dmesg.txt",
+    "size": 964059
+  },
+  {
+    "path": "recovery-getprop.txt",
+    "size": 12380
+  },
+  {
+    "path": "recovery-ls.txt",
+    "size": 13495
+  },
+  {
+    "path": "recovery-mounts.txt",
+    "size": 2627
+  }
+]

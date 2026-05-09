@@ -1,0 +1,12 @@
+===== pulled/android-data-logs/data_log/prev_dump.log =====
+system_server: 1
+
+===== last-logcat-all.txt =====
+
+===== pstore-pmsg-ramoops-0.txt =====
+
+===== proc-last_kmsg.txt =====
+
+===== current-recovery-logcat.txt =====
+system_server: 1
+

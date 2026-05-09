@@ -1,0 +1,56 @@
+
+> adb pull /tmp/recovery.log C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\tmp-recovery.log
+code=0 signal=null
+
+/tmp/recovery.log: 1 file pulled, 0 skipped. 8.0 MB/s (35361 bytes in 0.004s)
+
+
+
+> adb pull /etc/recovery.fstab C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\etc-recovery.fstab
+code=0 signal=null
+
+/etc/recovery.fstab: 1 file pulled, 0 skipped. 0.4 MB/s (1407 bytes in 0.003s)
+
+
+
+> adb pull /cache/recovery C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\cache-recovery
+code=0 signal=null
+
+/cache/recovery/: 7 files pulled, 0 skipped. 6.3 MB/s (79218 bytes in 0.012s)
+
+
+
+> adb pull /sys/fs/pstore C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\sys-fs-pstore
+code=0 signal=null
+
+/sys/fs/pstore/: 1 file pulled, 0 skipped. 1.4 MB/s (5474 bytes in 0.004s)
+
+
+
+> adb pull /sdcard/TWRP C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\sdcard-TWRP
+code=0 signal=null
+
+/sdcard/TWRP/: 1 file pulled, 0 skipped. 0.3 MB/s (1027 bytes in 0.003s)
+
+
+
+> adb pull /data/media/0/TWRP C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\data-media-0-TWRP
+code=0 signal=null
+
+/data/media/0/TWRP/: 1 file pulled, 0 skipped. 0.4 MB/s (1027 bytes in 0.002s)
+
+
+
+> adb pull /data/log C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_log
+code=0 signal=null
+
+/data/log/: 12 files pulled, 0 skipped. 27.8 MB/s (2318500 bytes in 0.080s)
+
+
+
+> adb pull /data/vendor/log C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_vendor_log
+code=0 signal=null
+
+/data/vendor/log/: 1 file pulled, 0 skipped. 0.0 MB/s (192 bytes in 0.011s)
+
+

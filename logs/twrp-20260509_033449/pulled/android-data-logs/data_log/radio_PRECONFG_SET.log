@@ -1,0 +1,673 @@
+--------- beginning of radio
+05-09 01:15:15.122   623   623 D SEC_CONFIG: secril_config_service starts
+05-09 01:15:15.122   623   623 D SIM_CONFIG: getModelType() 0
+05-09 01:15:15.122   623   623 D SIM_CONFIG: setSimConfig() slot count : 2
+05-09 01:15:41.035  1274  1274 D SEC_CONFIG: secril_config_service starts
+05-09 01:15:41.035  1274  1274 D SEC_CONFIG: NetworkConfig: NetworkConfig()
+05-09 01:15:41.035  1274  1274 D SEC_CONFIG: NetworkConfig: ro.csc.sales_code - EUX
+05-09 01:15:41.035  1274  1274 D SEC_CONFIG: NetworkConfig: isDecideNetworkMode()
+05-09 01:15:41.036  1274  1274 D SEC_CONFIG: NetworkConfig: after checkNetworkMode() - 26
+05-09 01:15:41.036  1274  1274 D SEC_CONFIG: NetworkConfig: trying to set mode: 26
+05-09 01:15:41.041  1274  1274 D SEC_CONFIG: NetworkConfig: NetworkConfig Done
+05-09 01:15:41.041  1274  1274 D SEC_CONFIG: NetworkConfig: supportVoiceCapable - 0
+05-09 01:15:41.043  1274  1274 D SEC_CONFIG: NetworkConfig update multisim config
+05-09 01:15:41.137  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.188  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.238  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.288  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.338  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.389  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.439  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.489  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.539  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.589  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.639  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.690  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.740  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.790  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.840  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.891  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.941  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:41.991  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.041  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.092  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.095  1381  1381 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.142  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.192  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.243  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.293  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.343  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.393  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.444  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.494  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.544  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.594  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.644  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.695  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.745  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.795  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.845  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.896  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.946  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:42.996  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.046  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.096  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.147  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.197  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.247  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.297  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.347  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.398  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.448  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.498  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.548  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.598  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.649  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.699  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.751  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.801  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.852  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.902  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:43.952  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.003  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.053  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.104  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.154  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.205  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.256  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.306  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.356  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.407  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.457  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.508  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.559  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.609  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.659  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.710  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.761  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.811  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.862  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.913  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:44.963  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.014  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.064  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.114  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.164  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.214  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.265  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.315  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.366  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.416  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.467  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.517  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.568  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.618  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.668  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.719  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.769  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.819  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.870  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.920  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:45.971  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.021  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.071  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.122  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.172  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.222  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.273  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.323  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.373  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.424  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.474  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.524  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.574  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.625  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.675  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.725  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.776  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.826  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.876  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.927  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:46.977  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.027  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.078  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.128  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.179  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.229  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.279  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.329  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.379  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.429  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.479  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.530  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.580  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.630  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.680  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.730  1271  1279 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.770  1693  1693 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: main: Argos Daemon Boot
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: NODE:
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: LABEL:UFS
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: INTERVAL:500
+05-09 01:15:47.818  1723  1723 E ARGOS   : argos: (ERR! No such file or directory) read_node_ul: Fail to open with(2)
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: NODE:p2p-wlan0-0
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: LABEL:P2P
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: INTERVAL:1000
+05-09 01:15:47.818  1723  1723 E ARGOS   : argos: (ERR! No such file or directory) read_node_ul: Fail to open with(2)
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: NODE:aware_data0
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: LABEL:NAN
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: INTERVAL:1000
+05-09 01:15:47.818  1723  1723 D ARGOS   : argos: argos_monitor: MIN INTERVAL:500
+05-09 01:15:47.824  1724  1724 D boot    : cbd: get_cmdline_str: find str androidboot.debug_level=0x4f4c form /proc/cmdline
+05-09 01:15:47.824  1724  1724 D boot    : cbd: check_debug_level: androidboot.debug_level=0x4f4c, 0
+05-09 01:15:47.824  1724  1724 D boot    : cbd: get_cmdline_str: find str androidboot.force_upload=0x0 form /proc/cmdline
+05-09 01:15:47.824  1724  1724 D boot    : cbd: check_debug_level: force_upload = 0x0
+05-09 01:15:47.824  1724  1724 D boot    : cbd: check_debug_level: debug level=0, cp_debug=0
+05-09 01:15:47.824  1724  1724 D boot    : cbd: main: Start CP Boot Daemon v3 (CBD) CBD-V3-20200928R1
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: Daemon Mode
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: SS310 modem
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: set partition number : by-name/radio
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: partition path : /dev/block/by-name/radio
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: boot SHMEM link
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: main SHMEM link
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: set boot_node : umts_boot0
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: boot_node : /dev/umts_boot0
+05-09 01:15:47.824  1724  1724 D boot    : cbd: parseArgs: set dump_node : umts_ramdump0
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: dump_node : /dev/umts_ramdump0
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: set nv partition : /mnt/vendor/efs
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: nv data file path : /mnt/vendor/efs/nv_data.bin
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: nv norm file path : 
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: nv prot file path : 
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: reinit vss
+05-09 01:15:47.825  1724  1724 D boot    : cbd: parseArgs: verify vss
+05-09 01:15:47.825  1724  1724 D boot    : cbd: main: Call boot start
+05-09 01:15:47.825  1724  1724 D boot    : cbd: main: Modem type = 1
+05-09 01:15:47.825  1724  1724 D boot    : cbd: main: Boot link = 9
+05-09 01:15:47.825  1724  1724 D boot    : cbd: main: Main link = 9
+05-09 01:15:47.825  1724  1724 D boot    : cbd: boot: CP boot device = /dev/umts_boot0
+05-09 01:15:47.825  1724  1724 D boot    : cbd: boot: CP binary file = /dev/block/by-name/radio
+05-09 01:15:47.825  1724  1724 D boot    : cbd: boot: CP NV data file = /mnt/vendor/efs/nv_data.bin
+05-09 01:15:47.825  1724  1724 D boot    : cbd: boot: BOOT link SHMEM
+05-09 01:15:47.825  1724  1724 D boot    : cbd: boot: MAIN link SHMEM
+05-09 01:15:47.902  1742  1742 D ATD     : setProdCode product code SM-G996BZKDEUX
+05-09 01:15:47.902  1742  1742 D ATD     : setProdCode sales code EUX
+05-09 01:15:47.905  1742  1742 D ATD     : gUartPath = /dev/ttySAC0
+05-09 01:15:47.905  1742  1742 D ATD     : UART ttySAC0 is not used by console
+05-09 01:15:47.905  1742  1742 D ATD     : MakeLocalServer(): AirCmdService Communication: Server_socket 5
+05-09 01:15:47.905  1742  1742 D ATD     : InitSocketAcceptHandler(): AirCmdService, id(6), fd(5)
+05-09 01:15:47.905  1742  1742 D ATD     : MakeLocalServer(): FactoryClientRecv Communication: Server_socket 6
+05-09 01:15:47.906  1742  1742 D ATD     : InitSocketAcceptHandler(): FactoryClientRecv, id(0), fd(6)
+05-09 01:15:47.906  1742  1742 D ATD     : MakeLocalServer(): FactoryClientSend Communication: Server_socket 7
+05-09 01:15:47.906  1742  1742 D ATD     : InitSocketAcceptHandler(): FactoryClientSend, id(1), fd(7)
+05-09 01:15:47.906  1742  1742 D ATD     : MakeLocalServer(): EuiccPatchClient Communication: Server_socket 8
+05-09 01:15:47.906  1742  1742 D ATD     : InitSocketAcceptHandler(): EuiccPatchClient, id(9), fd(8)
+05-09 01:15:47.906  1742  1742 D ATD     : MakeLocalServer(): ATDMultiClient Communication: Server_socket 9
+05-09 01:15:47.906  1742  1742 D ATD     : InitSocketAcceptHandler(): ATDMultiClient, id(5), fd(9)
+05-09 01:15:47.906  1742  1742 D ATD     : MakeLocalServer(): SatsService Communication: Server_socket 10
+05-09 01:15:47.906  1742  1742 D ATD     : InitSocketAcceptHandler(): SatsService, id(8), fd(10)
+05-09 01:15:47.912  1730  1730 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.912  1730  1730 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:47.948  1738  1738 D RILD    : **RIL Daemon Started**
+05-09 01:15:47.948  1738  1738 D RILD    : **RILd param count=1**
+05-09 01:15:47.952  1738  1738 D RILD    : rilLibPath = libsec-ril.so
+05-09 01:15:47.982  1738  1738 D RILD    : RIL_Init argc = 3 simSlotCount = 2
+05-09 01:15:47.982  1738  1738 D RILD    : RIL_Init argc = 5 clientId = 0
+05-09 01:15:47.983  1738  1738 D RILD    : RIL_Init: SimCount: 2
+05-09 01:15:47.983  1738  1738 D RILD    : RIL_Init:  Initialize XML Parser once
+05-09 01:15:47.986  1738  1738 D RILD    : RIL_Init[0]: phy intf: rmnet_mhi0, gsm net prefix: rmnet
+05-09 01:15:47.986  1738  1738 D RILD    : RIL_Init[1]: phy intf: rmnet_mhi0, gsm net prefix: rmnet
+05-09 01:15:47.988  1738  1803 E RILD    : create Thread[IPM]
+05-09 01:15:47.988  1738  1804 E RILD2   : create Thread[IPM2]
+05-09 01:15:47.992  1738  1804 E RILD2   : Debug channel is not opened for ship build.
+05-09 01:15:47.992  1738  1803 E RILD    : Debug channel is not opened for ship build.
+05-09 01:15:47.992  1738  1804 E RILD2   : Debug channel is not opened for ship build.
+05-09 01:15:47.993  1738  1804 E RILD2   : Debug channel is not opened for ship build.
+05-09 01:15:47.993  1738  1804 E RILD2   : create Thread[MTC2]
+05-09 01:15:47.998  1738  1804 E RILD2   : NET-MGR - ModelType: 0 -> 1
+05-09 01:15:47.998  1738  1804 E RILD2   : create Thread[ODEAR2]
+05-09 01:15:48.003  1738  1803 E RILD    : Debug channel is not opened for ship build.
+05-09 01:15:48.003  1738  1803 E RILD    : Debug channel is not opened for ship build.
+05-09 01:15:48.003  1738  1803 E RILD    : Debug channel is not opened for ship build.
+05-09 01:15:48.003  1738  1803 E RILD    : create Thread[MTC]
+05-09 01:15:48.005  1738  1803 E RILD    : NET-MGR - ModelType: 0 -> 1
+05-09 01:15:48.005  1738  1803 E RILD    : create Thread[ODEAR]
+05-09 01:15:48.014  1738  1803 E RILD    : RecoveryOpnameDb: /data/vendor/secradio/opname.db has been corrupted
+05-09 01:15:48.025  1724  1724 D boot    : cbd: boot: NV validation done
+05-09 01:15:48.025  1724  1724 D boot    : cbd: boot_wake_lock: /sys/power/wake_lock/ss310
+05-09 01:15:48.025  1724  1724 D boot    : cbd: boot: Prepare arguments
+05-09 01:15:48.025  1724  1724 D boot    : cbd: std_boot_prepare_args: DEV(/dev/umts_boot0) opened (fd 6)
+05-09 01:15:48.025  1724  1724 D boot    : cbd: prepare_boot_args: BIN(/dev/block/by-name/radio) opened (fd 7)
+05-09 01:15:48.025  1724  1724 D boot    : cbd: prepare_boot_args: toc[0].name = TOC, b_off=0x00000000, m_off=0x40008000, size=0x00000410
+05-09 01:15:48.025  1724  1724 D boot    : cbd: prepare_boot_args: toc[1].name = BOOT, b_off=0x00000420, m_off=0x40000000, size=0x00003b3c
+05-09 01:15:48.025  1724  1724 D boot    : cbd: prepare_boot_args: toc[2].name = MAIN, b_off=0x00003f60, m_off=0x40010000, size=0x03cfebd4
+05-09 01:15:48.025  1724  1724 D boot    : cbd: prepare_boot_args: toc[3].name = VSS, b_off=0x03d02b40, m_off=0x4d000000, size=0x00550474
+05-09 01:15:48.025  1724  1724 D boot    : cbd: prepare_boot_args: toc[4].name = NV, b_off=0x00000000, m_off=0x49a00000, size=0x00100000
+05-09 01:15:48.026  1724  1724 D boot    : cbd: getNvFd: NV(/mnt/vendor/efs/nv_data.bin) opened (fd 8)
+05-09 01:15:48.026  1724  1724 D boot    : cbd: prepare_boot_args: toc[5].name = OFFSET, b_off=0x00080000, m_off=0x00000000, size=0x00080000
+05-09 01:15:48.026  1724  1724 D boot    : cbd: build_std_dload_control: stage=0, name:TOC b_off=0x00000000, m_offset=0x00008000 b_size=0x00000410
+05-09 01:15:48.026  1724  1724 D boot    : cbd: build_std_dload_control: stage=1, name:BOOT b_off=0x00000420, m_offset=0x00000000 b_size=0x00003b3c
+05-09 01:15:48.026  1724  1724 D boot    : cbd: build_std_dload_control: stage=2, name:MAIN b_off=0x00003f60, m_offset=0x00010000 b_size=0x03cfebd4
+05-09 01:15:48.026  1724  1724 D boot    : cbd: build_std_dload_control: stage=3, name:VSS b_off=0x03d02b40, m_offset=0x0d000000 b_size=0x00550474
+05-09 01:15:48.026  1724  1724 D boot    : cbd: build_std_dload_control: stage=4, name:NV b_off=0x00000000, m_offset=0x09a00000 b_size=0x00100000
+05-09 01:15:48.026  1724  1724 D boot    : cbd: build_std_dload_control: stage=5, name:OFFSET b_off=0x00080000, m_offset=0x00000000 b_size=0x00080000
+05-09 01:15:48.026  1724  1724 D boot    : cbd: check_srinfo_last: check_srinfo_last: full_path: /data/vendor/log/cbd/err/last_sr_info_umts
+05-09 01:15:48.026  1724  1724 D boot    : cbd: alloc_srinfo: Crash info string was invalid(0/5245564a)
+05-09 01:15:48.026  1724  1724 D boot    : cbd: store_srinfo: alloc srinfo fail
+05-09 01:15:48.026  1724  1724 D boot    : cbd: get_modem_state: modem_status: 10
+05-09 01:15:48.026  1724  1724 D boot    : cbd: boot: Power reset CP_BOOT_MODE_NORMAL
+05-09 01:15:48.026  1724  1724 D boot    : cbd: boot: Power on CP
+05-09 01:15:48.028  1724  1724 D boot    : cbd: boot: Request security : non-secure mode
+05-09 01:15:48.028  1724  1724 D boot    : cbd: std_security_req: security_req: 2:0:0:0
+05-09 01:15:48.028  1724  1724 D boot    : cbd: boot: Send CP image
+05-09 01:15:48.029  1724  1724 D boot    : cbd: load_cp_image_by_stage: stage=0(0), b_off=0x00000000, m_off=0x00008000, b_size=0x00000410, mode=0x00000000
+05-09 01:15:48.030  1724  1724 D boot    : cbd: load_cp_image_by_stage: 0 stage complelte
+05-09 01:15:48.030  1724  1724 D boot    : cbd: load_cp_image_by_stage: stage=1(1), b_off=0x00000420, m_off=0x00000000, b_size=0x00003b3c, mode=0x00000000
+05-09 01:15:48.030  1724  1724 D boot    : cbd: load_cp_image_by_stage: 1 stage complelte
+05-09 01:15:48.030  1724  1724 D boot    : cbd: load_cp_image_by_stage: stage=2(2), b_off=0x00003f60, m_off=0x00010000, b_size=0x03cfebd4, mode=0x00000000
+05-09 01:15:48.037  1738  1803 E RILD    : RecoveryOpnameDb: /data/vendor/secradio/opname.db has been corrupted
+05-09 01:15:48.038  1738  1804 E RILD2   : RecoverySemDatabase: /data/vendor/secradio/sem_database_1.db is alive
+05-09 01:15:48.038  1738  1804 E RILD2   : create Thread[SDBHAR2]
+05-09 01:15:48.038  1738  1804 E RILD2   : CALL-MGR - ModelType: 0 -> 1
+05-09 01:15:48.038  1738  1804 E RILD2   : CALL-MGR - Make new CallManager (ModelType: 1)
+05-09 01:15:48.045  1738  1804 E RILD2   : NetworkManager init start
+05-09 01:15:48.045  1738  1804 E RILD2   : NetworkManager init end
+05-09 01:15:48.045  1738  1804 E RILD2   : SelectE911RatDeterminer - inInitialize: 1
+05-09 01:15:48.045  1738  1804 E RILD2   : SelectE911RatDeterminer - Type: DEFAULT (Reason: CS domain)
+05-09 01:15:48.045  1738  1804 E RILD2   : MakeE911RatDeterminer - type: 0. QmiSupported: 0
+05-09 01:15:48.093  1738  1804 E RILD2   : [C] Initialize(): Is initialized: 0
+05-09 01:15:48.093  1738  1804 E RILD2   : [E] Initialize(): Is initialized: 0
+05-09 01:15:48.096  1738  1803 E RILD    : RecoveryOpnameDb: /data/vendor/secradio/opname.db is alive
+05-09 01:15:48.096  1738  1804 E RILD2   : create Thread[ESAR2]
+05-09 01:15:48.097  1738  1824 E RILD2   : DoEvent - data call is nullptr
+05-09 01:15:48.097  1738  1804 E RILD2   : create Thread[RDAR2]
+05-09 01:15:48.097  1738  1804 E RILD2   : create Thread[MBM2]
+05-09 01:15:48.102  1738  1803 E RILD    : RecoverySemDatabase: /data/vendor/secradio/sem_database_0.db is alive
+05-09 01:15:48.102  1738  1803 E RILD    : create Thread[SDBHAR]
+05-09 01:15:48.107  1738  1803 E RILD    : CALL-MGR - ModelType: 0 -> 1
+05-09 01:15:48.107  1738  1803 E RILD    : CALL-MGR - Make new CallManager (ModelType: 1)
+05-09 01:15:48.112  1738  1803 E RILD    : NetworkManager init start
+05-09 01:15:48.112  1738  1803 E RILD    : NetworkManager init end
+05-09 01:15:48.112  1738  1803 E RILD    : SelectE911RatDeterminer - inInitialize: 1
+05-09 01:15:48.112  1738  1803 E RILD    : SelectE911RatDeterminer - Type: DEFAULT (Reason: CS domain)
+05-09 01:15:48.112  1738  1803 E RILD    : MakeE911RatDeterminer - type: 0. QmiSupported: 0
+05-09 01:15:48.112  1738  1803 E RILD    : Start, NetlinkUtils thread Started
+05-09 01:15:48.112  1738  1803 E RILD    : create Thread[NU]
+05-09 01:15:48.112  1738  1829 E RILD    : Run(): NetlinkUtilsRunnable
+05-09 01:15:48.115  1738  1803 E RILD    : [C] Initialize(): Is initialized: 0
+05-09 01:15:48.115  1738  1803 E RILD    : [E] Initialize(): Is initialized: 0
+05-09 01:15:48.116  1738  1829 E RILD    : Run(): nlmsg_type = 16
+05-09 01:15:48.116  1738  1829 E RILD    : Run(): nlmsg_type = 16
+05-09 01:15:48.117  1738  1829 E RILD    : Run(): nlmsg_type = 16
+05-09 01:15:48.118  1738  1829 E RILD    : Run(): nlmsg_type = 16
+05-09 01:15:48.118  1738  1803 E RILD    : create Thread[ESAR]
+05-09 01:15:48.118  1738  1803 E RILD    : create Thread[RDAR]
+05-09 01:15:48.118  1738  1830 E RILD    : DoEvent - data call is nullptr
+05-09 01:15:48.118  1738  1803 E RILD    : create Thread[MBM]
+05-09 01:15:48.122  1738  1738 D RILD    : RIL_Init rilInit completed
+05-09 01:15:48.122  1738  1738 I RILC    : SIM_COUNT: 2
+05-09 01:15:48.122  1738  1738 E RILC    : RIL_register: RIL version 15
+05-09 01:15:48.122  1738  1738 I RILC    : s_registerCalled flag set, 1
+05-09 01:15:48.122  1738  1738 D RILC    : registerService: starting android::hardware::radio::V1_5::IRadio slot1
+05-09 01:15:48.122  1738  1738 D rild    : V1_5::registerAsService(slot1)
+05-09 01:15:48.124  1738  1738 D rild    : android.hardware.radio@1.5::IRadio,V1_5
+05-09 01:15:48.124  1738  1738 D RILC    : registerService: V1_5
+05-09 01:15:48.124  1738  1738 D RILC    : registerService: starting android::hardware::radio::V1_5::IRadio slot2
+05-09 01:15:48.124  1738  1738 D rild    : V1_5::registerAsService(slot2)
+05-09 01:15:48.124  1738  1738 D rild    : android.hardware.radio@1.5::IRadio,V1_5
+05-09 01:15:48.124  1738  1738 D RILC    : registerService: V1_5
+05-09 01:15:48.124  1738  1738 I RILC    : RILHIDL called registerService
+05-09 01:15:48.124  1738  1738 D RILC    : registerService: starting vendor::samsung::hardware::radio::V2_2::ISehRadio slot1
+05-09 01:15:48.124  1738  1738 D RILC    : V2_2::registerAsService(slot1)
+05-09 01:15:48.124  1738  1738 D RILC    : vendor.samsung.hardware.radio@2.2::ISehRadio,V2_2
+05-09 01:15:48.124  1738  1738 D RILC    : registerService: V2_2
+05-09 01:15:48.124  1738  1738 D RILC    : registerService: starting vendor::samsung::hardware::radio::V2_2::ISehRadio slot2
+05-09 01:15:48.124  1738  1738 D RILC    : V2_2::registerAsService(slot2)
+05-09 01:15:48.125  1738  1738 D RILC    : vendor.samsung.hardware.radio@2.2::ISehRadio,V2_2
+05-09 01:15:48.125  1738  1738 D RILC    : registerService: V2_2
+05-09 01:15:48.125  1738  1738 D rild    : I_RADIO_CONFIG_VERSION_1_2 created
+05-09 01:15:48.125  1738  1738 D RIL_CFG : registerService: starting android::hardware::radio::config::V1_2::IRadioConfig
+05-09 01:15:48.125  1738  1738 D rild    : V1_2::registerAsService(default)
+05-09 01:15:48.125  1738  1738 D rild    : android.hardware.radio.config@1.1::IRadioConfig,V1_2
+05-09 01:15:48.125  1738  1738 D RIL_CFG : registerService: V1_2
+05-09 01:15:48.125  1738  1738 D RILD    : RIL_Init RIL_register completed
+05-09 01:15:48.125  1738  1738 D RILD    : RIL_register_socket started
+05-09 01:15:48.125  1738  1738 D RIL_UIM_SOCKET: Adding socket with id: 0
+05-09 01:15:48.125  1738  1738 D RIL_UIM_SOCKET: Adding socket with id: 1
+05-09 01:15:48.125  1738  1738 I RILC    : RIL_register_socket: calling registerService
+05-09 01:15:48.125  1738  1738 D RIL_SAP : registerService: starting ISap slot1 for slotId 0
+05-09 01:15:48.125  1738  1738 D RIL_SAP : registerService: started ISap slot1 status 0
+05-09 01:15:48.125  1738  1738 D RIL_SAP : registerService: starting ISap slot2 for slotId 1
+05-09 01:15:48.126  1738  1738 D RIL_SAP : registerService: started ISap slot2 status 0
+05-09 01:15:48.126  1738  1738 D RILD    : RIL_register_socket completed
+05-09 01:15:48.174  1724  1724 D boot    : cbd: load_cp_image_by_stage: 2 stage complelte
+05-09 01:15:48.174  1724  1724 D boot    : cbd: load_cp_image_by_stage: stage=3(3), b_off=0x03d02b40, m_off=0x0d000000, b_size=0x00550474, mode=0x00000000
+05-09 01:15:48.183  1724  1724 D boot    : cbd: load_cp_image_by_stage: 3 stage complelte
+05-09 01:15:48.183  1724  1724 D boot    : cbd: load_cp_image_by_stage: stage=4(4), b_off=0x00000000, m_off=0x09a00000, b_size=0x00100000, mode=0x00000000
+05-09 01:15:48.183  1724  1724 D boot    : cbd: load_cp_image_by_stage: 4 stage complelte
+05-09 01:15:48.183  1724  1724 D boot    : cbd: load_cp_image_by_stage: stage=5(5), b_off=0x00080000, m_off=0x00000000, b_size=0x00080000, mode=0x00000000
+05-09 01:15:48.183  1724  1724 D boot    : cbd: load_cp_image_by_stage: 5 stage complelte
+05-09 01:15:48.183  1724  1724 D boot    : cbd: boot: Request Security : secure mode
+05-09 01:15:48.183  1724  1724 D boot    : cbd: std_security_req: security_req: 7:8000:410:0
+05-09 01:15:48.196  1724  1724 D boot    : cbd: boot: Request Security : VSS secure mode
+05-09 01:15:48.196  1724  1724 D boot    : cbd: std_security_req: security_req: c:d000000:550474:0
+05-09 01:15:48.231  1724  1724 D boot    : cbd: boot: Request security : secure mode
+05-09 01:15:48.231  1724  1724 D boot    : cbd: std_security_req: security_req: 0:3b3c:3cfebd4:0
+05-09 01:15:48.508  1724  1724 D boot    : cbd: get_factory_prop: /efs/factory.prop open fail(not support)
+05-09 01:15:48.508  1724  1724 D boot    : cbd: set_sim_configuration: sim count: -22 (echo to ds_detect file)
+05-09 01:15:48.508  1724  1724 D boot    : cbd: boot: Start CP bootloader
+05-09 01:15:48.525  1724  1724 D boot    : cbd: boot: Handshake
+05-09 01:15:48.525  1724  1724 D boot    : cbd: std_udl_req_resp: request:0x0000900D
+05-09 01:15:48.525  1724  1724 D boot    : cbd: std_udl_req_resp: request:0x00009F00
+05-09 01:15:48.526  1724  1724 D boot    : cbd: boot: Complete normal bootup
+05-09 01:15:48.773  1738  1829 E RILD    : Run(): nlmsg_type = 16
+05-09 01:15:48.774  1724  1724 D boot    : cbd: open_srinfo_last: open last_sr_info file - /data/vendor/log/cbd/err/last_sr_info_umts
+05-09 01:15:48.774  1724  1724 E boot    : cbd: (ERR! No such file or directory) open_srinfo_last: last_sr_info open fail
+05-09 01:15:48.774  1724  1724 D boot    : cbd: restore_srinfo: sr_info_last open fail(-1)
+05-09 01:15:48.777  1724  1724 D boot    : cbd: boot_wake_lock: /sys/power/wake_unlock/ss310
+05-09 01:15:48.777  1724  1724 D boot    : cbd: main: Boot up process done!!!
+05-09 01:15:48.777  1724  1724 D boot    : cbd: status_loop: CP status_loop start (modem = 1)
+05-09 01:15:48.777  1724  1724 D boot    : cbd: status_loop: Wait event from modem 1
+05-09 01:15:48.791  1270  1834 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:48.907  1738  1826 E RILD2   : create Thread[ICR2]
+05-09 01:15:48.907  1738  1826 E RILD2   : create Thread[HAR2]
+05-09 01:15:48.908  1738  1826 E RILD2   : create Thread[ICR2]
+05-09 01:15:48.908  1738  1826 E RILD2   : create Thread[HAR2]
+05-09 01:15:48.908  1738  1826 E RILD2   : create Thread[ICR2]
+05-09 01:15:48.908  1738  1826 E RILD2   : create Thread[OCR2]
+05-09 01:15:48.908  1738  1826 D RILC    : registerService: starting vendor::samsung::hardware::radio::bridge::ISehBridge slot2
+05-09 01:15:48.912  1730  1730 E RILClient: Connect_RILD_Internal: Connecting failed. Connection refused(111)
+05-09 01:15:48.912  1730  1730 D RILClient: Connect_RILD_Internal: socket allocated 19
+05-09 01:15:48.913  1730  1730 D RILClient: Connect_RILD_Internal: Success to connect
+05-09 01:15:48.923  1738  1832 E RILD    : create Thread[SINR]
+05-09 01:15:48.923  1738  1832 E RILD    : create Thread[ICR]
+05-09 01:15:48.923  1738  1832 E RILD    : create Thread[ICR]
+05-09 01:15:48.924  1738  1832 E RILD    : create Thread[HAR]
+05-09 01:15:48.924  1738  1832 E RILD    : create Thread[ICR]
+05-09 01:15:48.924  1738  1832 E RILD    : create Thread[HAR]
+05-09 01:15:48.924  1738  1832 E RILD    : create Thread[ICR]
+05-09 01:15:48.924  1738  1832 E RILD    : create Thread[OCR]
+05-09 01:15:48.924  1738  1832 D RILC    : registerService: starting vendor::samsung::hardware::radio::bridge::ISehBridge slot1
+05-09 01:15:48.925  1841  1841 E Multi-Client: **Multi-Client Started slot count : 2 **
+05-09 01:15:48.926  1841  1841 E Multi-Client: getSehRadioBridgeProxy: slot1
+05-09 01:15:48.926  1841  1841 E Multi-Client: OemClientReceiver started
+05-09 01:15:48.927  1841  1841 E Multi-Client2: getSehRadioBridgeProxy: slot2
+05-09 01:15:48.927  1841  1841 E Multi-Client2: OemClientReceiver started
+05-09 01:15:48.927  1841  1841 E Multi-Client: Multi-Client Init starting sleep loop
+05-09 01:15:49.783  1738  1824 E RILC    : radioStateChangedInd: radioService[1]->mRadioIndication == NULL
+05-09 01:15:49.783  1738  1830 E RILC    : radioStateChangedInd: radioService[0]->mRadioIndication == NULL
+05-09 01:15:49.783  1738  1824 E RILD2   : Failed to get Imei manager
+05-09 01:15:49.783  1738  1830 E RILD    : SetLogLevel: Log level is 2.
+05-09 01:15:49.783  1738  1830 D RILD    : getSimbasedChangeType: prop set NO_DFLT_CSC,OMC
+05-09 01:15:49.783  1738  1830 D RILD    : getSimbasedChangeType: token0 NO_DFLT_CSC
+05-09 01:15:49.783  1738  1830 D RILD    : getSimbasedChangeType: token1 OMC
+05-09 01:15:49.783  1738  1830 D RILD    : CheckIfSendPreconfig(): skip for omc or sed
+05-09 01:15:49.783  1738  1830 D RILD    : setPreconfig(): sales code : EUX, omcnw_code : EUX, omcnw_code2 : EUX
+05-09 01:15:49.783  1738  1830 D RILD    : isDuplicatedCpPreconfig curSalesNetworkCode: , newSalesNetworkCode: EUXEUXEUX
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.783  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.783  1738  1824 D RILD2   : WriteProperty Property=ril.rejectForDiagnostics, slotId=1, Value=0 (,0)
+05-09 01:15:49.783  1738  1824 D RILD2   : SMS-MGR(10): evt(8006)
+05-09 01:15:49.783  1738  1824 E RILD2   : OnRadioStateChanged: RADIO_OFF : mIsDeviceReadyNotiNeed = NOT_CONNECTED
+05-09 01:15:49.783  1738  1824 D RILD2   : LEDC-MGR(11): evt(108)
+05-09 01:15:49.784  1738  1824 D RILD2   : CFG-MGR(16): evt(121)
+05-09 01:15:49.784  1738  1824 D RILD2   : CFG-MGR: EVENT_GET_SUPPORT_JSON_CMD_LIST
+05-09 01:15:49.784  1841  1851 E Multi-Client2: OnUnsolicitedResponse: No Registered Clients
+05-09 01:15:49.784  1738  1824 D RILD2   : IpcProtocol41JsonConfig::IpcTxCfgGetSupportJsonCmdList()
+05-09 01:15:49.784  1738  1824 D RILD2   : [B] TX: (M)CFG_CMD (S)CFG_SUPPORT_JSON_CMD_LIST (T)GET l:15 m:00 a:00 [ {"jver":"1.0"}]
+05-09 01:15:49.785  1738  1830 D RILD    : mkdir failed (/efs/imei) 
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.788  1738  1830 D RILD    : HandleNoneQualcommModel - Radio capability update in slot 0
+05-09 01:15:49.788  1738  1830 D RILD    : GetModemCapability - mode: 1
+05-09 01:15:49.788  1738  1830 D RILD    : GetModemCapability - mode: 2
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.788  1738  1830 D RILD    : NET-MGR(6): evt(210)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.788  1738  1830 D RILD    : MakeEventHandler: event: 210
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.788  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.788  1738  1830 D RILD    : WriteProperty Property=ril.rejectForDiagnostics, slotId=0, Value=0 (0,0)
+05-09 01:15:49.788  1738  1830 D RILD    : SMS-MGR(43): evt(8006)
+05-09 01:15:49.788  1738  1830 E RILD    : OnRadioStateChanged: RADIO_OFF : mIsDeviceReadyNotiNeed = NOT_CONNECTED
+05-09 01:15:49.788  1738  1830 D RILD    : LEDC-MGR(44): evt(108)
+05-09 01:15:49.788  1841  1851 E Multi-Client: OnUnsolicitedResponse: No Registered Clients
+05-09 01:15:49.788  1738  1830 D RILD    : CFG-MGR(49): evt(121)
+05-09 01:15:49.788  1738  1830 D RILD    : CFG-MGR: EVENT_GET_SUPPORT_JSON_CMD_LIST
+05-09 01:15:49.788  1738  1830 D RILD    : IpcProtocol41JsonConfig::IpcTxCfgGetSupportJsonCmdList()
+05-09 01:15:49.788  1738  1830 D RILD    : [B] TX: (M)CFG_CMD (S)CFG_SUPPORT_JSON_CMD_LIST (T)GET l:15 m:00 a:00 [ {"jver":"1.0"}]
+05-09 01:15:49.791  1270  1834 D RILClient: Connect_RILD_Internal: socket allocated 8
+05-09 01:15:49.791  1738  1850 D RILD    : Oem client connected
+05-09 01:15:49.792  1738  1850 D RILD    : new oem client connection=61
+05-09 01:15:49.792  1270  1834 D RILClient: Connect_RILD_Internal: Success to connect
+05-09 01:15:49.792  1738  1850 E RILD    : OemClient::ProcessBuffer() from[9], token[1], datalen[24]
+05-09 01:15:49.792  1738  1850 D RILD    : IsRegisteredNetworkType(): netType[1]  feature[00] state[0] 
+05-09 01:15:49.792  1738  1831 D RILD    : GetMessage : oem func id = 0x26
+05-09 01:15:49.792  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.792  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.792  1270  1854 D RILClient: RxReaderFunc(): close(8)
+05-09 01:15:49.792  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.792  1738  1850 D RILD    : OemClient::Process(): EOS. oem client(61), errno:11
+05-09 01:15:49.913  1730  1730 D RILClient: Connect_RILD_Internal: socket allocated 22
+05-09 01:15:49.913  1730  1730 D RILClient: Connect_RILD_Internal: Success to connect
+05-09 01:15:49.913  1738  1850 D RILD    : Oem client connected
+05-09 01:15:49.913  1738  1850 D RILD    : new oem client connection=61
+05-09 01:15:49.913  1738  1850 E RILD    : OemClient::ProcessBuffer() from[2], token[1], datalen[13]
+05-09 01:15:49.913  1738  1850 D RILD    : IsRegisteredNetworkType(): netType[1]  feature[00] state[0] 
+05-09 01:15:49.914  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.914  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.914  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.941  1738  1824 D RILD2   : FAC-MGR(17): evt(114)
+05-09 01:15:49.941  1738  1824 D RILD2   : IpcProtocol41Factory::IpcTxFactorySetKeyStringBlock
+05-09 01:15:49.941  1738  1824 D RILD2   : [B] TX: (M)FACTORY_CMD (S)FACTORY_DEVICE_TEST (T)SET l:2b m:01 a:00 [ 05 00 59 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ]
+05-09 01:15:49.941  1738  1824 D RILD2   : EMBMS-MGR(24): evt(214)
+05-09 01:15:49.941  1738  1824 D RILD2   : OnRadioStateChanged(): radioState: 0
+05-09 01:15:49.941  1738  1824 D RILD2   : OnOemEmbmsRadioStateNoti():
+05-09 01:15:49.941  1738  1824 D RILD2   : OES-MGR(28): evt(300)
+05-09 01:15:49.941  1738  1824 D RILD2   : IpcProtocol41Oes::IpcTxCfrmOesDrkCpInfo()
+05-09 01:15:49.941  1738  1824 D RILD2   : [B] TX: (M)OES_CMD (S)OES_DRK_CP_INFO (T)CFRM l:7 m:02 a:00 [ ]
+05-09 01:15:49.941  1738  1824 D RILD2   : SendDrkCpInfo:
+05-09 01:15:49.941  1738  1824 D RILD2   : SendDrkCpInfo: size 986, count 2
+05-09 01:15:49.943  1738  1835 D RILD2   : [B] RX: (M)GEN_CMD (S)GEN_PHONE_RES (T)RESP l:c m:03 a:00 [ 0F 3B 02 01 80 ]
+05-09 01:15:49.943  1738  1835 D RILD2   : IpcProtocol41Gen GR: 0x8001
+05-09 01:15:49.943  1738  1835 D RILD2   : IpcProtocol GR: 0x8001
+05-09 01:15:49.943  1738  1824 D RILD2   : IpcProtocol41Oes::IpcTxEventDrkCpInfo()
+05-09 01:15:49.943  1738  1824 D RILD2   : [B] TX: (M)OES_CMD (S)OES_DRK_CP_INFO (T)EVENT l:2c7 m:03 a:00 [ BE 02 00 00 30 82 03 D6 30 82 ... ]
+05-09 01:15:49.943  1738  1824 D RILD2   : IpcProtocol41Oes::IpcTxEventDrkCpInfo()
+05-09 01:15:49.943  1738  1824 D RILD2   : [B] TX: (M)OES_CMD (S)OES_DRK_CP_INFO (T)EVENT l:2c7 m:04 a:00 [ 20 01 00 01 86 40 34 D5 2E FF ... ]
+05-09 01:15:49.943  1738  1824 D RILD2   : DOEM-DCA(32): evt(119)
+05-09 01:15:49.943  1738  1824 D RILD2   : DOMESTIC-MGR: EVENT_RADIO_STATE_CHANGED
+05-09 01:15:49.943  1738  1835 D RILD2   : [B] RX: (M)GEN_CMD (S)GEN_PHONE_RES (T)RESP l:c m:04 a:01 [ 13 01 03 01 80 ]
+05-09 01:15:49.943  1738  1835 D RILD2   : IpcProtocol41Gen GR: 0x8001
+05-09 01:15:49.943  1738  1835 D RILD2   : IpcProtocol GR: 0x8001
+05-09 01:15:49.944  1738  1824 D RILD2   : P-MGR(1): evt(5)
+05-09 01:15:49.944  1738  1824 D RILD2   : MakeEventHandler: event: 5
+05-09 01:15:49.944  1738  1824 E RILC    : radioStateChangedInd: radioService[1]->mRadioIndication == NULL
+05-09 01:15:49.944  1738  1824 D RILD2   : RequestComplete - req : 1004, peek : 1004
+05-09 01:15:49.944  1738  1824 D RILD2   : LEDC-MGR(11): evt(107)
+05-09 01:15:49.944  1738  1824 D RILD2   : OnRadioStateChanged: Reset DataCall after radio off if DataCall was connecting state
+05-09 01:15:49.944  1738  1824 D RILD2   : CFG-MGR(16): evt(122)
+05-09 01:15:49.944  1738  1824 D RILD2   : CFG-MGR: EVENT_GET_SUPPORT_JSON_CMD_LIST_DONE
+05-09 01:15:49.944  1738  1824 D RILD2   : RequestComplete - req : 1012, peek : 1012
+05-09 01:15:49.944  1738  1824 D RILD2   : FAC-MGR(17): evt(111)
+05-09 01:15:49.944  1738  1824 D RILD2   : OnFactoryDone()
+05-09 01:15:49.944  1738  1825 D RILD2   : Onprocessing: request id(1011), handleEvent(114)
+05-09 01:15:49.944  1738  1825 D RILD2   : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.944  1738  1824 D RILD2   : RequestComplete - req : 1011, peek : 1011
+05-09 01:15:49.944  1738  1824 D RILD2   : CFG-MGR(16): evt(100)
+05-09 01:15:49.944  1738  1824 D RILD2   : DoOemConfig : sub id = 0x44
+05-09 01:15:49.944  1738  1825 D RILD2   : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.944  1738  1824 D RILD2   : DoOemConfig : DoGetModemCapability
+05-09 01:15:49.944  1738  1825 D RILD2   : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.944  1738  1825 D RILD2   : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.944  1738  1824 D RILD2   : IpcProtocol41Config::IpcTxCfgGetModemCapability()
+05-09 01:15:49.944  1738  1825 D RILD2   : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.944  1738  1824 D RILD2   : [B] TX: (M)CFG_CMD (S)CFG_MODEM_CAPABILITY (T)GET l:c m:05 a:00 [ 01 00 00 00 00 ]
+05-09 01:15:49.944  1738  1824 D RILD2   : OEM-MISC-MGR(34): evt(100)
+05-09 01:15:49.944  1738  1824 D RILD2   : OEMMISC-MGR: Receive event : 100
+05-09 01:15:49.944  1738  1824 D RILD2   : DoOemMisc: sub-ID(0x02)
+05-09 01:15:49.944  1738  1824 D RILD2   : OemMiscSetLoggingTime()
+05-09 01:15:49.944  1738  1824 D RILD2   : IpcProtocol41Misc::IpcTxSetLoggingTimeInfo()
+05-09 01:15:49.944  1738  1824 D RILD2   : [B] TX: (M)MISC_CMD (S)MISC_LOGGING_TIME_INFO (T)SET l:12 m:06 a:00 [ 03 00 1A 05 09 01 0F 31 00 00 00 ]
+05-09 01:15:49.945  1738  1830 D RILD    : EMBMS-MGR(57): evt(214)
+05-09 01:15:49.945  1738  1830 D RILD    : OnRadioStateChanged(): radioState: 0
+05-09 01:15:49.945  1738  1830 D RILD    : OnOemEmbmsRadioStateNoti():
+05-09 01:15:49.945  1738  1830 D RILD    : OES-MGR(61): evt(101)
+05-09 01:15:49.945  1738  1830 D RILD    : DoOemOes: sub-ID(0x02)
+05-09 01:15:49.945  1738  1830 D RILD    : OemOesEventCass:
+05-09 01:15:49.945  1738  1830 D RILD    : IpcProtocol41Oes::IpcTxEventCass()
+05-09 01:15:49.945  1738  1830 D RILD    : [B] TX: (M)OES_CMD (S)OES_CASS (T)EVENT l:3bd m:01 a:00 [ 9F 1F 00 00 00 00 00 00 E1 00 ... ]
+05-09 01:15:49.945  1738  1830 E RILD    : Oem OnRequestComplete:(9)
+05-09 01:15:49.945  1738  1830 D RILD    : RequestComplete - req : 59, peek : 59
+05-09 01:15:49.945  1738  1830 D RILD    : DOEM-DCA(65): evt(119)
+05-09 01:15:49.945  1738  1830 D RILD    : DOMESTIC-MGR: EVENT_RADIO_STATE_CHANGED
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.945  1738  1830 D RILD    : OEM-MISC-MGR(67): evt(100)
+05-09 01:15:49.945  1738  1830 D RILD    : OEMMISC-MGR: Receive event : 100
+05-09 01:15:49.945  1738  1830 D RILD    : DoOemMisc: sub-ID(0xAB)
+05-09 01:15:49.945  1738  1830 D RILD    : IpcProtocol41Misc::IpcTxSendRildBootType()
+05-09 01:15:49.945  1738  1830 D RILD    : [B] TX: (M)MISC_CMD (S)MISC_RILD_BOOT_TYPE (T)EVENT l:8 m:02 a:00 [ 01 ]
+05-09 01:15:49.945  1738  1830 D RILD    : RequestComplete - req : 1011, peek : 1011
+05-09 01:15:49.945  1738  1830 D RILD    : P-MGR(4): evt(5)
+05-09 01:15:49.945  1738  1830 D RILD    : MakeEventHandler: event: 5
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1004), handleEvent(5)
+05-09 01:15:49.945  1738  1830 E RILC    : radioStateChangedInd: radioService[0]->mRadioIndication == NULL
+05-09 01:15:49.945  1738  1830 D RILD    : RequestComplete - req : 1004, peek : 1004
+05-09 01:15:49.945  1738  1830 D RILD    : OEM-SYSDUMP-MGR(70): evt(100)
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.945  1738  1830 D RILD    : OEMSYSDUMP-MGR: Receive event : 100
+05-09 01:15:49.945  1738  1830 D RILD    : DoOemSysDump : sub id = 0x0B
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.945  1738  1830 D RILD    : Ramdump mode : 1
+05-09 01:15:49.945  1738  1830 D RILD    : RequestComplete - req : 1011, peek : 1011
+05-09 01:15:49.945  1738  1830 D RILD    : IpcProtocol41Config::IpcTxSendDebugLevel()
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(197)
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.945  1738  1830 D RILD    : [B] TX: (M)MISC_CMD (S)MISC_RESERVED (T)EVENT l:8 m:03 a:00 [ 01 ]
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(197)
+05-09 01:15:49.945  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.945  1738  1830 D RILD    : LEDC-MGR(44): evt(107)
+05-09 01:15:49.945  1738  1830 D RILD    : OnRadioStateChanged: Reset DataCall after radio off if DataCall was connecting state
+05-09 01:15:49.945  1738  1830 D RILD    : IMEI-MGR(51): evt(112)
+05-09 01:15:49.945  1738  1830 D RILD    : GetLog: radio_PRECONFG_SET.log
+05-09 01:15:49.945  1738  1830 D RILD    : GMISC-MGR(52): evt(197)
+05-09 01:15:49.945  1738  1835 D RILD2   : [B] RX: (M)CFG_CMD (S)CFG_MODEM_CAPABILITY (T)RESP l:d m:05 a:05 [ 01 01 00 00 00 00 ]
+05-09 01:15:49.945  1738  1835 D RILD2   : IpcRxCfgModemCapability:
+05-09 01:15:49.945  1841  1856 E Multi-Client[U]: ExecuteOperation: logcat -b radio -v threadtime -d -f /data/log/radio_PRECONFG_SET.log
+05-09 01:15:49.945  1738  1824 D RILD2   : CFG-MGR(16): evt(120)
+05-09 01:15:49.945  1738  1824 D RILD2   : CFG-MGR: EVENT_GET_MODEM_CAPABILITY_DONE
+05-09 01:15:49.945  1738  1824 D RILD2   : onGetModemCapabilityDone - capabilityMode: 1, supported: 1
+05-09 01:15:49.945  1738  1824 D RILD2   : RequestComplete - req : 1012, peek : 1012
+05-09 01:15:49.945  1738  1835 D RILD2   : [B] RX: (M)GEN_CMD (S)GEN_PHONE_RES (T)RESP l:c m:06 a:06 [ 0A 26 03 00 80 ]
+05-09 01:15:49.945  1738  1830 D RILD    : DoEventGenInfo(): Support NFC
+05-09 01:15:49.945  1738  1830 D RILD    : DoEventGenInfo(): SupportDualIMS
+05-09 01:15:49.945  1738  1835 D RILD2   : IpcProtocol41Gen GR: 0x8000
+05-09 01:15:49.945  1738  1825 D RILD2   : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.945  1738  1835 D RILD2   : IpcProtocol GR: 0x8000
+05-09 01:15:49.945  1738  1825 D RILD2   : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.945  1738  1830 D RILD    : IpcProtocol41Misc::IpcTxOnEventGenInfo()
+05-09 01:15:49.945  1738  1824 D RILD2   : OEM-MISC-MGR(34): evt(101)
+05-09 01:15:49.945  1738  1824 D RILD2   : OEMMISC-MGR: Receive event : 101
+05-09 01:15:49.945  1738  1824 D RILD2   : RequestComplete - req : 1011, peek : 1011
+05-09 01:15:49.945  1738  1824 D RILD2   : CFG-MGR(16): evt(100)
+05-09 01:15:49.945  1738  1824 D RILD2   : DoOemConfig : sub id = 0x44
+05-09 01:15:49.945  1738  1830 D RILD    : [B] TX: (M)MISC_CMD (S)MISC_GENINFO (T)EVENT l:47 m:04 a:00 [ 01 01 00 00 00 10 01 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ]
+05-09 01:15:49.945  1738  1824 D RILD2   : DoOemConfig : DoGetModemCapability
+05-09 01:15:49.945  1738  1825 D RILD2   : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.946  1738  1824 D RILD2   : IpcProtocol41Config::IpcTxCfgGetModemCapability()
+05-09 01:15:49.946  1738  1830 D RILD    : RequestComplete - req : 1011, peek : 1011
+05-09 01:15:49.946  1738  1824 D RILD2   : [B] TX: (M)CFG_CMD (S)CFG_MODEM_CAPABILITY (T)GET l:c m:07 a:00 [ 02 00 00 00 00 ]
+05-09 01:15:49.946  1738  1830 D RILD    : IMEI-MGR(51): evt(100)
+05-09 01:15:49.946  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.946  1738  1830 D RILD    : DoOemImei: sub id = 0x01
+05-09 01:15:49.946  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(121)
+05-09 01:15:49.946  1738  1830 D RILD    : DoOemImeiSetPreconfig:
+05-09 01:15:49.946  1738  1830 D RILD    : WriteTextWithOffset() : EUX
+05-09 01:15:49.946  1738  1844 D RILD    : [B] RX: (M)GEN_CMD (S)GEN_PHONE_RES (T)RESP l:c m:03 a:00 [ 0F 3B 02 01 80 ]
+05-09 01:15:49.946  1738  1844 D RILD    : IpcProtocol41Gen GR: 0x8001
+05-09 01:15:49.946  1738  1844 D RILD    : IpcProtocol GR: 0x8001
+05-09 01:15:49.946  1738  1830 E RILD    : writePreconfigProp(): not set preconfig prop EUR, 1
+05-09 01:15:49.947  1738  1830 D RILD    : set vote count 4
+05-09 01:15:49.947  1738  1830 D RILD    : IpcTxImeiPreconfigSet:
+05-09 01:15:49.947  1738  1830 D RILD    : [B] TX: (M)IMEI_CMD (S)IMEI_PRE_CONFIG (T)SET l:17 m:05 a:00 [ 00 00 00 00 45 55 58 30 31 45 55 58 45 55 58 01 ]
+05-09 01:15:49.947  1738  1830 D RILD    : CFG-MGR(49): evt(122)
+05-09 01:15:49.947  1738  1830 D RILD    : CFG-MGR: EVENT_GET_SUPPORT_JSON_CMD_LIST_DONE
+05-09 01:15:49.947  1738  1830 D RILD    : RequestComplete - req : 1012, peek : 1012
+05-09 01:15:49.947  1738  1831 D RILD    : Onprocessing: request id(1011), handleEvent(100)
+05-09 01:15:49.947  1738  1831 D RILD    : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.947  1738  1830 D RILD    : CFG-MGR(49): evt(100)
+05-09 01:15:49.947  1738  1830 D RILD    : DoOemConfig : sub id = 0x44
+05-09 01:15:49.947  1738  1830 D RILD    : DoOemConfig : DoGetModemCapability
+05-09 01:15:49.947  1738  1830 D RILD    : IpcProtocol41Config::IpcTxCfgGetModemCapability()
+05-09 01:15:49.947  1738  1830 D RILD    : [B] TX: (M)CFG_CMD (S)CFG_MODEM_CAPABILITY (T)GET l:c m:06 a:00 [ 01 00 00 00 00 ]
+05-09 01:15:49.948  1738  1835 D RILD2   : [B] RX: (M)CFG_CMD (S)CFG_MODEM_CAPABILITY (T)RESP l:4a m:07 a:07 [ 02 00 09 00 00 00 01 00 00 00 05 02 00 79 00 29 03 00 00 00 01 01 04 00 00 00 01 01 05 00 00 00 04 01 00 00 00 06 00 00 00 01 01 07 00 00 00 01 03 08 00 00 00 01 01 09 00 00 00 01 00 1C 00 00 00 01 01 ]
+05-09 01:15:49.948  1738  1835 D RILD2   : IpcRxCfgModemCapability:
+05-09 01:15:49.948  1738  1824 D RILD2   : CFG-MGR(16): evt(120)
+05-09 01:15:49.948  1738  1824 D RILD2   : CFG-MGR: EVENT_GET_MODEM_CAPABILITY_DONE
+05-09 01:15:49.948  1738  1824 D RILD2   : onGetModemCapabilityDone - capabilityMode: 2, supported: 0
+05-09 01:15:49.948  1738  1824 D RILD2   : processAllTypeList - TLV count: 9
+05-09 01:15:49.948  1738  1824 D RILD2   : processAllTypeList - Type: RAT_CAPA / ModemCapa:0x79, RadioCapa:0x1BCE0E, Slot:0, Start:10, Next:16
+05-09 01:15:49.948  1738  1824 D RILD2   : processAllTypeList - Setting support_cdma property to false
+05-09 01:15:49.948  1738  1824 D RILD2   : SetConfigValue: name(SUPPORTED_RAT), value(121)
+05-09 01:15:49.948  1738  1824 D RILD2   : SetConfigValue: value set but not notify now (Name: SUPPORTED_RAT, Value: 121)
+05-09 01:15:49.948  1738  1824 D RILD2   : processAllTypeList - SupportedRat: 121
+05-09 01:15:49.948  1738  1824 D RILD2   : processAllTypeList - RadioCapability changed (0x0 -> 0x1BCE0E)
+05-09 01:15:49.948  1738  1824 D RILD2   : MakeEventHandler: event: 219
+05-09 01:15:49.948  1738  1824 E RILD2   : OnRadioCapabilityUpdateNoti - Make RadioCapability
+05-09 01:15:49.948  1738  1824 D RILD2   : SetTelephonyDefaultNetwork - Step 1. Get from CarrierFeature
+05-09 01:15:49.948  1738  1824 D RILD2   : SetTelephonyDefaultNetwork - radioCapability: 0x1BCE0E, cdma: 0, tdscdma: 0, nr: 1
+05-09 01:15:49.948  1738  1824 D RILD2   : SetTelephonyDefaultNetwork - Step 2. Get from vendor table carrierGroup from carrierfeature = EUX
+05-09 01:15:49.948  1738  1824 D RILD2   : SetTelephonyDefaultNetwork - Step 3. Set LTE_GSM_WCDMA as default network
+05-09 01:15:49.948  1738  1824 D RILD2   : SetTelephonyDefaultNetwork - Final default network = 26
+05-09 01:15:49.948  1738  1825 D RILD2   : Onprocessing: request id(1008), handleEvent(32)
+05-09 01:15:49.948  1738  1825 D RILD2   : Onprocessing: request id(1012), handleEvent(100)
+05-09 01:15:49.948  1738  1824 D RILD2   : processAllTypeList - supportedIpc : 1
+05-09 01:15:49.948  1738  1824 D RILD2   : SetSupportSyncProfileInfo(): enbaled : 1
+05-09 01:15:49.948  1738  1844 D RILD    : [B] RX: (M)GEN_CMD (S)GEN_PHONE_RES (T)RESP l:c m:04 a:05 [ 10 03 03 00 80 ]
+05-09 01:15:49.948  1738  1844 D RILD    : IpcProtocol41Gen GR: 0x8000
+05-09 01:15:49.948  1738  1844 D RILD    : IpcProtocol GR: 0x8000
+05-09 01:15:49.948  1738  1844 D RILD    : ProcessSingleIpcMessageReceived() - There is no IpcHistoryRecord
+05-09 01:15:49.951  1738  1824 D RILD2   : processAllTypeList - MODEM_CAPA_TYPE_5G_ENABLED_CAPA (3)
+05-09 01:15:49.951  1738  1824 D RILD2   : processAllTypeList - MODEM_CAPA_TYPE_SUPPORT_EXT_LEN (1)
+05-09 01:15:49.951  1738  1824 D RILD2   : processAllTypeList - MODEM_CAPA_TYPE_SUPPORT_SA_NSA (0)
+05-09 01:15:49.953  1738  1824 D RILD2   : processAllTypeList - MODEM_CAPA_TYPE_SUPPORT_EXPANSION_EMC (1)
+05-09 01:15:49.953  1738  1824 D RILD2   : NotifyChanged: VendorConfigUpdater Call mCallback
+05-09 01:15:49.953  1738  1824 D RILD2   : RequestComplete - req : 1012, peek : 1012
+05-09 01:15:49.953  1738  1824 D RILD2   : NET-MGR(3): evt(32)
+05-09 01:15:49.953  1738  1824 D RILD2   : MakeEventHandler: event: 32
+05-09 01:15:49.953  1738  1824 D RILD2   : IpcProtocol41Net::IpcTxGetNrModeConfig()
+05-09 01:15:49.953  1738  1824 D RILD2   : [B] TX: (M)NET_CMD (S)NET_NR_MODE_CONFIG (T)GET l:7 m:08 a:00 [ ]
+05-09 01:15:49.953  1738  1824 D RILD2   : VENDORCFG-MGR(38): evt(102)
+05-09 01:15:49.953  1738  1824 D RILD2   : VENDORCFG-MGR: EVENT_VENDOR_CONFIGURATION_CHANGED
+05-09 01:15:49.953  1738  1824 D RILD2   : VENDORCFG-MGR: data is nullptr, do not update on the list
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[0] - N: FW_READY, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[1] - N: EGPRS_SUPPORT, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[2] - N: SUPPORTED_RAT, V: 121
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[3] - N: IS_CTC, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[4] - N: VOLTE_911_CALL, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[5] - N: CA_ENABLED, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[6] - N: LTE_CS_CAPA, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[7] - N: MSIM_SUBMODE, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[8] - N: SUPPORTED_NRCA, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[9] - N: SUPPORT_LTE_CAPA_OPTION_C, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[10] - N: REJECT_INFO_FOR_SIM_TRANSFER, V: 0
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[11] - N: WFC_DEFAULT_SPN, V: 
+05-09 01:15:49.953  1738  1824 D RILD2   : OnVendorConfigurationChanged - VendorConfig[12] - N: SUPPORT_UAC_TYPE, V: 0
+05-09 01:15:49.953  1738  1825 D RILD2   : Onprocessing: request id(1008), handleEvent(32)

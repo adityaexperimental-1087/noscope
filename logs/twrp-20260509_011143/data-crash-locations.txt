@@ -1,0 +1,29 @@
+> adb shell ls -la /data/tombstones /data/anr /data/system/dropbox /data/system/uiderrors.txt /data/misc/logd /data/misc/recovery 2>&1
+code=1
+ls: /data/system/uiderrors.txt: No such file or directory
+ls: /data/misc/logd: No such file or directory
+/data/anr:
+total 11
+drwxrwxr-x  2 system system 3452 2026-05-08 19:44 .
+drwxrwx--x 69 system system 4096 2026-05-08 19:46 ..
+
+/data/misc/recovery:
+total 9
+drwxrwx---  3 system log  3452 2026-05-08 20:06 .
+drwxrwx--t 73 system misc 3452 2026-05-08 20:06 ..
+drwxrwx---  2 system log  3452 2026-05-08 20:06 proc
+-r--r-----  1 system log    70 2026-05-08 20:08 ro.build.fingerprint
+-r--r-----  1 system log    70 2026-05-08 20:08 ro.build.fingerprint.1
+
+/data/system/dropbox:
+total 6
+drwx------ 2 system system 3452 2026-05-08 19:44 .
+drwxrwxr-x 8 system system 3452 2026-05-08 19:44 ..
+
+/data/tombstones:
+total 11
+drwxrwxr-x  2 system system 3452 2026-05-08 19:44 .
+drwxrwx--x 69 system system 4096 2026-05-08 19:46 ..
+
+
+Command failed: C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\tools\platform-tools\adb.exe shell ls -la /data/tombstones /data/anr /data/system/dropbox /data/system/uiderrors.txt /data/misc/logd /data/misc/recovery 2>&1

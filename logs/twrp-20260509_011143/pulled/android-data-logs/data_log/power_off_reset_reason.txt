@@ -1,0 +1,22 @@
+00:45:41  2026-05-09 00:45:41+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [711]
+00:45:41  terminating init service start
+00:45:42  terminating init service end
+00:45:42  volume shutdown start
+00:45:42  sync() before umount...
+00:45:42  sync() before umount took
+00:45:42  zram start
+00:45:42  zram end
+00:45:42  disable vlu...
+00:45:42  disable vlu took...
+00:45:45  TryUmount start
+01:07:42  2026-05-09 01:07:42+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [713]
+01:07:42  terminating init service start
+01:07:42  terminating init service end
+01:07:42  volume shutdown start
+01:07:42  sync() before umount...
+01:07:42  sync() before umount took
+01:07:42  zram start
+01:07:42  zram end
+01:07:42  disable vlu...
+01:07:42  disable vlu took...
+01:07:46  TryUmount start

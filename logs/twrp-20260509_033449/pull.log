@@ -1,0 +1,84 @@
+
+> adb pull /tmp/recovery.log C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\tmp-recovery.log
+code=0 signal=null
+
+/tmp/recovery.log: 1 file pulled, 0 skipped. 13.2 MB/s (35245 bytes in 0.003s)
+
+
+
+> adb pull /etc/recovery.fstab C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\etc-recovery.fstab
+code=0 signal=null
+
+/etc/recovery.fstab: 1 file pulled, 0 skipped. 0.4 MB/s (1407 bytes in 0.004s)
+
+
+
+> adb pull /cache/recovery C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\cache-recovery
+code=0 signal=null
+
+/cache/recovery/: 7 files pulled, 0 skipped. 5.4 MB/s (79126 bytes in 0.014s)
+
+
+
+> adb pull /sys/fs/pstore C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\sys-fs-pstore
+code=0 signal=null
+
+/sys/fs/pstore/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /sdcard/TWRP C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\sdcard-TWRP
+code=0 signal=null
+
+/sdcard/TWRP/: 1 file pulled, 0 skipped. 0.1 MB/s (1027 bytes in 0.016s)
+
+
+
+> adb pull /data/media/0/TWRP C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\data-media-0-TWRP
+code=0 signal=null
+
+/data/media/0/TWRP/: 1 file pulled, 0 skipped. 0.5 MB/s (1027 bytes in 0.002s)
+
+
+
+> adb pull /data/log C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\android-data-logs\data_log
+code=0 signal=null
+
+/data/log/: 25 files pulled, 0 skipped. 18.4 MB/s (2108492 bytes in 0.109s)
+
+
+
+> adb pull /data/vendor/log C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\android-data-logs\data_vendor_log
+code=0 signal=null
+
+/data/vendor/log/: 1 file pulled, 0 skipped. 0.1 MB/s (704 bytes in 0.011s)
+
+
+
+> adb pull /data/tombstones C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\android-data-logs\data_tombstones
+code=0 signal=null
+
+/data/tombstones/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /data/anr C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\android-data-logs\data_anr
+code=0 signal=null
+
+/data/anr/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /data/system/dropbox C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\android-data-logs\data_system_dropbox
+code=0 signal=null
+
+/data/system/dropbox/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /data/misc/recovery C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449\pulled\android-data-logs\data_misc_recovery
+code=0 signal=null
+
+/data/misc/recovery/: 4 files pulled, 0 skipped. 0.1 MB/s (564 bytes in 0.010s)
+
+

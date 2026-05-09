@@ -1,0 +1,34 @@
+> adb shell find /data/log /data/vendor/log /data/tombstones /data/anr /data/system/dropbox /data/misc/recovery -maxdepth 4 -type f -printf "%T@ %s %p\n" 2>/dev/null | sort -nr | head -250
+code=0 signal=null
+1778290418.235999996 704 /data/vendor/log/hwc/hwc_error_log.txt
+1778290417.99999997 70 /data/misc/recovery/ro.build.fingerprint.1
+1778290417.99999997 70 /data/misc/recovery/ro.build.fingerprint
+1778290417.99999997 212 /data/misc/recovery/proc/version.1
+1778290417.99999997 212 /data/misc/recovery/proc/version
+1778290417.367999997 1360 /data/log/ddar_log.txt
+1778290397.387999947 4000 /data/log/power_off_reset_reason.txt
+1778290393.559999949 1467051 /data/log/prev_dump.log
+1778290393.527999949 593 /data/log/fsdbg/us_history_1.txt
+1778290393.527999949 3353 /data/log/fsdbg/usinfo_history_1.txt
+1778290393.527999949 131 /data/log/fsdbg/fsdbg_1.txt
+1778290393.527999949 1153 /data/log/fsdbg/u_history_1.txt
+1778290383.651999956 43296 /data/log/ewlogd/ewlog0_20260509_013228156783.log
+1778290343.415999985 208 /data/log/vrrinfo.txt
+1778290072.699999953 131 /data/log/fsdbg/fsdbg_0.txt
+1778290062.851999960 63069 /data/log/ewlogd/ewlog0_20260509_012652438753.log
+1778289982.755999960 131 /data/log/fsdbg/fsdbg_7.txt
+1778289976.719999964 51282 /data/log/ewlogd/ewlog0_20260509_012532551282.log
+1778289902.839999953 131 /data/log/fsdbg/fsdbg_6.txt
+1778289892.859999960 52146 /data/log/ewlogd/ewlog0_20260509_012402609822.log
+1778289812.751999960 131 /data/log/fsdbg/fsdbg_5.txt
+1778289802.855999967 41363 /data/log/ewlogd/ewlog0_20260509_012247852364.log
+1778289733.19999953 131 /data/log/fsdbg/fsdbg_4.txt
+1778289728.159999956 62115 /data/log/ewlogd/ewlog0_20260509_012118123507.log
+1778289642.639999960 131 /data/log/fsdbg/fsdbg_3.txt
+1778289637.347999964 40196 /data/log/ewlogd/ewlog0_20260509_011957758363.log
+1778289557.487999953 52237 /data/log/ewlogd/ewlog0_20260509_011827913848.log
+1778289457.851999967 52995 /data/log/ewlogd/ewlog0_20260509_011657534600.log
+1778289387.803999946 108197 /data/log/ewlogd/ewlog0_20260509_011543613542.log
+1778289349.951999973 62961 /data/log/radio_PRECONFG_SET.log
+
+

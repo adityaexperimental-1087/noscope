@@ -1,0 +1,46 @@
+
+> adb pull /data/tombstones C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_tombstones
+code=0
+
+/data/tombstones/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /data/anr C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_anr
+code=0
+
+/data/anr/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /data/system/dropbox C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_system_dropbox
+code=0
+
+/data/system/dropbox/: 0 files pulled, 0 skipped.
+
+
+
+> adb pull /data/system/uiderrors.txt C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_system_uiderrors.txt
+code=1
+
+adb: error: failed to stat remote object '/data/system/uiderrors.txt': No such file or directory
+
+Command failed: C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\tools\platform-tools\adb.exe pull /data/system/uiderrors.txt C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_system_uiderrors.txt
+adb: error: failed to stat remote object '/data/system/uiderrors.txt': No such file or directory
+
+
+> adb pull /data/misc/logd C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_misc_logd
+code=1
+
+adb: error: failed to stat remote object '/data/misc/logd': No such file or directory
+
+Command failed: C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\tools\platform-tools\adb.exe pull /data/misc/logd C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_misc_logd
+adb: error: failed to stat remote object '/data/misc/logd': No such file or directory
+
+
+> adb pull /data/misc/recovery C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_011143\pulled\android-data-logs\data_misc_recovery
+code=0
+
+/data/misc/recovery/: 4 files pulled, 0 skipped. 0.1 MB/s (564 bytes in 0.008s)
+
+

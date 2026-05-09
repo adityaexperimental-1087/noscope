@@ -1,0 +1,162 @@
+[
+  {
+    "path": "adb-devices--l.txt",
+    "size": 160
+  },
+  {
+    "path": "adb-get-state.txt",
+    "size": 47
+  },
+  {
+    "path": "adb-kill-server.txt",
+    "size": 39
+  },
+  {
+    "path": "adb-root.txt",
+    "size": 65
+  },
+  {
+    "path": "adb-start-server.txt",
+    "size": 119
+  },
+  {
+    "path": "data-log-find.txt",
+    "size": 927
+  },
+  {
+    "path": "proc-last_kmsg.txt",
+    "size": 55835
+  },
+  {
+    "path": "proc-mounts.txt",
+    "size": 2482
+  },
+  {
+    "path": "pstore-console-ramoops-0.txt",
+    "size": 138
+  },
+  {
+    "path": "pstore-pmsg-ramoops-0.txt",
+    "size": 6330
+  },
+  {
+    "path": "pull.log",
+    "size": 1994
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ddar_log.txt",
+    "size": 272
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_004457384269.log",
+    "size": 110638
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\ewlogd\\ewlog0_20260509_010653543907.log",
+    "size": 43941
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_0.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\fsdbg_1.txt",
+    "size": 131
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\u_history_1.txt",
+    "size": 233
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\us_history_1.txt",
+    "size": 121
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\fsdbg\\usinfo_history_1.txt",
+    "size": 673
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\power_off_reset_reason.txt",
+    "size": 800
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\prev_dump.log",
+    "size": 2097372
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\radio_PRECONFG_SET.log",
+    "size": 63980
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_log\\vrrinfo.txt",
+    "size": 208
+  },
+  {
+    "path": "pulled\\android-data-logs\\data_vendor_log\\hwc\\hwc_error_log.txt",
+    "size": 192
+  },
+  {
+    "path": "pulled\\cache-recovery\\.version",
+    "size": 19
+  },
+  {
+    "path": "pulled\\cache-recovery\\intent",
+    "size": 1
+  },
+  {
+    "path": "pulled\\cache-recovery\\last_log.gz",
+    "size": 35669
+  },
+  {
+    "path": "pulled\\cache-recovery\\log.gz",
+    "size": 42072
+  },
+  {
+    "path": "pulled\\cache-recovery\\recovery.fstab",
+    "size": 1407
+  },
+  {
+    "path": "pulled\\cache-recovery\\storage.fstab",
+    "size": 50
+  },
+  {
+    "path": "pulled\\cache-recovery\\uncrypt.log",
+    "size": 0
+  },
+  {
+    "path": "pulled\\data-media-0-TWRP\\.twrps",
+    "size": 1027
+  },
+  {
+    "path": "pulled\\etc-recovery.fstab",
+    "size": 1407
+  },
+  {
+    "path": "pulled\\sdcard-TWRP\\.twrps",
+    "size": 1027
+  },
+  {
+    "path": "pulled\\sys-fs-pstore\\pmsg-ramoops-0",
+    "size": 5474
+  },
+  {
+    "path": "pulled\\tmp-recovery.log",
+    "size": 35361
+  },
+  {
+    "path": "recovery-dmesg.txt",
+    "size": 1106717
+  },
+  {
+    "path": "recovery-getprop.txt",
+    "size": 12380
+  },
+  {
+    "path": "recovery-ls.txt",
+    "size": 13107
+  },
+  {
+    "path": "recovery-mounts.txt",
+    "size": 2627
+  }
+]

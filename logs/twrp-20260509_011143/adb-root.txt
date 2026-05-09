@@ -1,0 +1,5 @@
+> adb root
+code=0 signal=null
+adbd is already running as root
+
+

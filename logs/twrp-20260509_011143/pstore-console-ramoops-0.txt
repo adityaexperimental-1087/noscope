@@ -1,0 +1,5 @@
+> adb exec-out cat /sys/fs/pstore/console-ramoops-0
+code=0 signal=null
+cat: /sys/fs/pstore/console-ramoops-0: No such file or directory
+
+

@@ -1,0 +1,20 @@
+MonsterROM latest recovery log pull
+Generated: 2026-05-09T01:14:18.513Z
+
+Pulled from device: RFCRA1PY67M (recovery / twrp_t2s)
+
+Main findings:
+- Android-side persisted reset reason shows two bootchecker rescue reboots:
+  2026-05-09 00:45:41+0000 REASON: rescueparty_by_bootchecker [711]
+  2026-05-09 01:07:42+0000 REASON: rescueparty_by_bootchecker [713]
+- /data/log/prev_dump.log confirms: reboot: Restarting system with command 'rescueparty_by_bootchecker' and sec_reboot(0, rescueparty_by_bootchecker).
+- pmsg/logcat only preserved early boot: Zygote preload begins and BootAnimation starts/waits for audio policy. It does not preserve a later Java stack.
+- No fresh /data/tombstones, /data/anr, /data/system/dropbox entries were present.
+- logcat -L returns partial pmsg output then 'Unexpected EOF', so the previous-boot logcat buffer is truncated/corrupted.
+- This pull does not show the earlier ApplicationPackageManager VerifyError; current evidence points to system never reaching boot-complete and bootchecker forcing RescueParty reboot.
+
+Useful files:
+- power_off_reset_reason: pulled/android-data-logs/data_log/power_off_reset_reason.txt
+- kernel/shutdown dump: pulled/android-data-logs/data_log/prev_dump.log
+- pmsg decode attempt: last-logcat-all.txt
+- grep contexts: bootchecker-context.txt, deep-triage.txt, keyword-counts.txt

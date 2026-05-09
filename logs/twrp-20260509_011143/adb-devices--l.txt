@@ -1,0 +1,7 @@
+> adb devices -l
+code=0 signal=null
+List of devices attached
+RFCRA1PY67M            recovery product:twrp_t2s model:SAMSUNG_t2s device:t2s transport_id:1
+
+
+

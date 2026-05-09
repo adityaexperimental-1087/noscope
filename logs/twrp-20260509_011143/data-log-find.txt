@@ -1,0 +1,17 @@
+> adb shell find /data/log /data/vendor/log -maxdepth 4 -type f -printf "%T@ %s %p\n" 2>/dev/null | sort -nr | head -200
+code=0 signal=null
+1778288888.347999996 192 /data/vendor/log/hwc/hwc_error_log.txt
+1778288887.579999997 272 /data/log/ddar_log.txt
+1778288865.999999947 800 /data/log/power_off_reset_reason.txt
+1778288862.331999950 2097372 /data/log/prev_dump.log
+1778288862.315999950 673 /data/log/fsdbg/usinfo_history_1.txt
+1778288862.315999950 233 /data/log/fsdbg/u_history_1.txt
+1778288862.315999950 131 /data/log/fsdbg/fsdbg_1.txt
+1778288862.315999950 121 /data/log/fsdbg/us_history_1.txt
+1778288852.463999957 43941 /data/log/ewlogd/ewlog0_20260509_010653543907.log
+1778288812.263999985 208 /data/log/vrrinfo.txt
+1778287541.819999946 131 /data/log/fsdbg/fsdbg_0.txt
+1778287541.211999946 110638 /data/log/ewlogd/ewlog0_20260509_004457384269.log
+1778287503.575999973 63980 /data/log/radio_PRECONFG_SET.log
+
+

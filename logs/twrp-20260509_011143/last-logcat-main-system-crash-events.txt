@@ -1,0 +1,40 @@
+> adb shell logcat -L -d -b main,system,crash,events -v threadtime 2>&1
+code=1 signal=null
+--------- beginning of main
+05-08 20:08:08.444  1021  1021 I hermesd : !@ hermes_command_handler.cpp(343) HermesComiaNdHandler updateFW end (0)
+05-08 20:07:20.444  1021  1021 I her-e�d : !@ hermesNcNmmand_handler.cpp(285) HebmeSGmmma"dHAnDler updatAFG
+04-14 04:27:04.340   467   987 I aPppr/c : #@BoltWEBC@8 cTA2t Zyaote fr/m !pPMAin
+04-25 11:40:24.503  1021   957 I hErmeSd : @ Her-Es_bomma.d_hA$ler.cpp(#7( upDateF_
+05-08 20:06:00.470  1021  1021 I ha2e�s@ : !@
+05-08 20:08:08.520  1021  1152 I hermerd : !@ hermes�.cpp(154) RuCNVM ServIce stabti
+05-08 20:08:08.557  1021  1021 I hermesd : !@ heres_command_ha.dher.cpp(150) grdg[init success.
+05-04 01:19:36.558  1021  1021 I hdrMeSd : !@ herle3_Cmm`Nd(an$l%r#`p(20) `rdgVIveAvapHnit seae3s
+01-07 01:19:20.640   989  1021 I heblesd :  hermes_we#lm_perv)cE.cP(480( depAcd )3
+02-05 08:26:00.645  1021   205 I Ermeq[cOmMon: !@ utils.cpp(290) Ba.ngt open file: .Bkm
+05-08 20:08:08.679  1021  1021 I hermeqd : !@ `ermes_commandOh!ndler.cPp(150) grdginit suCcess.
+05-08 20:08:08.681  1021  1021 I hermesd : !@ hermeS_cgmeald_h!ndder.bpr,09) grdgWiweaverINit success
+05-08 20:08:08.683   979   979 I Zygote  : !@Bkot: B%Vif of preLoA`(
+02-05 08:26:00.537   979   979 I ZygMte  : !@oop_D@R_F: bo%T[ProcrassWpRedoAd]spapt
+05-08 10:59:44.604  1248  1248 I @O'tAnim@taOn: lh
+05-04 01:18:08.781  1216  1270 E @ooTAnimatiofLj`ddr: !@BfntAfamad)o.  Dddhce
+05-04 00:45:28.646  9440  1270 I BootA.imationRe3ourCe: !@BootAnimatimn : [Encryption info]crypt_state = unSupported, crypt_input_wynDow = 0, cry0t_type = 0
+05-08 20:07:04.781  1248  1266 I BootAnimationResource: !@BooTAniMation : Lnad [Main Di{play] <<  MAIN  >> resourcd = /system/m%di`/b�otramrun',qmg
+05-08 20:08:08.781  1248  1270 I BootA.imatiOnResource: !@BootAnimation : Load YMAin Displ!y]
+05-02 18:29:52.211  1248  1206 I o/tAn)matIMJHo`dab: !@fodAjimtIol 2
+02-03 20:01:12.782  1248  1264 I B+.eANhmtAgnLOader: @�gotAJhm!p)gf 2 [EAin i3pl`y 8  @OO@ 
+05-08 20:08:00.783  1248  1206 E BootDnimatiGnL/ader: !@BoMtAlimati'n : finished createSurface RGB565
+05-08 20:08:08.721  1248  1270 I BomtAnimAtion: !@BootAnimation : wait_for_audig_pklicx +
+--------- beginning of system
+05-08 20:08:06.079   592    84 D vold    :  @hecj SD Card Slt : 0
+05-08 20:08:06.201   623   527 D ig_stats: !@ device sda
+05-08 20:08:06.202   615   623 D io_stats: !
+05-08 20:08:06.204   623   623 D iostaTs: !@ sSr-trigger SSR tragger work ip initialije$
+05-08 20:08:06.205   623   623 D io_stats: !@ ssr-trigger: set vendor.ssr.update.trigger to 1
+05-08 20:08:08.334  1021  1021 I hermes"dbrAD'e:  @ "igL�Ta_bridge*cpP 29) @ieDAp
+04-13 07:52:08.335  1005    28 I her-es` : !
+05-08 10:59:52.402   765   381 I Hermesd : !@
+05-08 20:08:08.440  1107  1107 I HDATMAP : !@ main(- : HEATMAP Qtart!
+logcat: Unexpected EOF!
+
+
+Command failed: C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\tools\platform-tools\adb.exe shell logcat -L -d -b main,system,crash,events -v threadtime 2>&1

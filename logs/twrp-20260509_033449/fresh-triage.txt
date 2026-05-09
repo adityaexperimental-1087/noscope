@@ -1,0 +1,935 @@
+Fresh TWRP/recovery log pull
+Generated: 2026-05-09T01:34:51.446Z
+Folder: C:\Users\ditte\Documents\Codex\2026-05-08\can-you-try-to-fully-adapt\logs\twrp-20260509_033449
+
+===== pulled/android-data-logs/data_log/power_off_reset_reason.txt =====
+Counts: {"rescueparty_by_bootchecker":10,"bootchecker":10}
+
+--- line 1 ---
+01:16:27  2026-05-09 01:16:27+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [716]
+01:16:28  terminating init service start
+01:16:29  terminating init service end
+01:16:29  volume shutdown start
+01:16:29  sync() before umount...
+01:16:29  sync() before umount took
+01:16:29  zram start
+01:16:29  zram end
+
+--- line 12 ---
+01:16:29  disable vlu...
+01:16:29  disable vlu took...
+01:16:32  TryUmount start
+01:17:47  2026-05-09 01:17:47+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [717]
+01:17:47  terminating init service start
+01:17:47  terminating init service end
+01:17:47  volume shutdown start
+01:17:48  sync() before umount...
+01:17:48  sync() before umount took
+01:17:48  zram start
+01:17:48  zram end
+
+--- line 23 ---
+01:17:48  disable vlu...
+01:17:48  disable vlu took...
+01:17:51  TryUmount start
+01:19:22  2026-05-09 01:19:22+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [718]
+01:19:22  terminating init service start
+01:19:23  terminating init service end
+01:19:23  volume shutdown start
+01:19:23  sync() before umount...
+01:19:23  sync() before umount took
+01:19:23  zram start
+01:19:23  zram end
+
+--- line 34 ---
+01:19:23  disable vlu...
+01:19:23  disable vlu took...
+01:19:26  TryUmount start
+01:20:42  2026-05-09 01:20:42+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [719]
+01:20:42  terminating init service start
+01:20:42  terminating init service end
+01:20:42  volume shutdown start
+01:20:42  sync() before umount...
+01:20:43  sync() before umount took
+01:20:43  zram start
+01:20:43  zram end
+
+--- line 45 ---
+01:20:43  disable vlu...
+01:20:43  disable vlu took...
+01:20:46  TryUmount start
+01:22:13  2026-05-09 01:22:13+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [720]
+01:22:13  terminating init service start
+01:22:13  terminating init service end
+01:22:13  volume shutdown start
+01:22:13  sync() before umount...
+01:22:13  sync() before umount took
+01:22:13  zram start
+01:22:13  zram end
+
+--- line 56 ---
+01:22:13  disable vlu...
+01:22:13  disable vlu took...
+01:22:16  TryUmount start
+01:23:32  2026-05-09 01:23:32+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [721]
+01:23:32  terminating init service start
+01:23:33  terminating init service end
+01:23:33  volume shutdown start
+01:23:33  sync() before umount...
+01:23:33  sync() before umount took
+01:23:33  zram start
+01:23:33  zram end
+
+--- line 67 ---
+01:23:33  disable vlu...
+01:23:33  disable vlu took...
+01:23:36  TryUmount start
+01:25:02  2026-05-09 01:25:02+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [722]
+01:25:02  terminating init service start
+01:25:03  terminating init service end
+01:25:03  volume shutdown start
+01:25:03  sync() before umount...
+01:25:03  sync() before umount took
+01:25:03  zram start
+01:25:03  zram end
+
+--- line 78 ---
+01:25:03  disable vlu...
+01:25:03  disable vlu took...
+01:25:06  TryUmount start
+01:26:22  2026-05-09 01:26:22+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [723]
+01:26:22  terminating init service start
+01:26:23  terminating init service end
+01:26:23  volume shutdown start
+01:26:23  sync() before umount...
+01:26:23  sync() before umount took
+01:26:23  zram start
+01:26:23  zram end
+
+--- line 89 ---
+01:26:23  disable vlu...
+01:26:23  disable vlu took...
+01:26:26  TryUmount start
+01:27:52  2026-05-09 01:27:52+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [724]
+01:27:52  terminating init service start
+01:27:53  terminating init service end
+01:27:53  volume shutdown start
+01:27:53  sync() before umount...
+01:27:53  sync() before umount took
+01:27:53  zram start
+01:27:53  zram end
+
+--- line 100 ---
+01:27:53  disable vlu...
+01:27:53  disable vlu took...
+01:27:56  TryUmount start
+01:33:13  2026-05-09 01:33:13+0000 |  REBOOT  |       | REASON: rescueparty_by_bootchecker [727]
+01:33:13  terminating init service start
+01:33:13  terminating init service end
+01:33:13  volume shutdown start
+01:33:14  sync() before umount...
+01:33:14  sync() before umount took
+01:33:14  zram start
+01:33:14  zram end
+
+===== pulled/android-data-logs/data_log/prev_dump.log =====
+Counts: {"system_server":1,"zygote":4,"Watchdog":344}
+
+--- line 163 ---
+[0:    0.814380 ] max77705_set_prequal_charge: CNFG_01(0x38)
+[0:    0.814526 ] max77705_fuel_gauge_read_vcell: VCELL(4405), data(0xdc42)
+[0:    0.814733 ] max77705_init_ific : MAX77705_CHG_REG_CHG_INT_OK(0xdf)
+[0:    0.815220 ] max77705_set_charger_watchdog: state(0), reg_data(0x4)
+[0:    0.817058 ] charger_command_polling: OP 0x57 Response OP 0x57 @ 1msec
+[0:    0.817065 ] charger_command_polling : Command 0x57 delay : 1msec
+[0:    0.817189 ] [CHARGER] max77705_set_fw_noautoibus AUTOIBUS: [0x3], chg_dtls00[0xe0]
+[0:    0.817427 ] max77705_get_max_current rp_current:3,is_sink:1,pd_state:25
+[0:    0.817435 ] ifconn_get_charger_status:
+[0:    0.817673 ] max77705_read_adc: RID = 07(RID_OPEN)
+[0:    0.817679 ] pdic_is_valid_charger: default ID + VB
+
+--- line 1600 ---
+[    1.368082] [6:           init:    1] debug-snapshot dss: Add arraydump, scandump mode funtions from adv_tracer_s2d_probe+0x22c/0x26c [exynos_adv_tracer_s2d]
+[    1.368086] [6:           init:    1] exynos-adv-tracer-s2d exynos_adv_tracer_s2d: adv_tracer_s2d_probe successful.
+[    1.368263] [6:           init:    1] init: Loaded kernel module /lib/modules/exynos-adv-tracer-s2d.ko
+[    1.368432] [6:           init:    1] init: Loading module /lib/modules/hardlockup-watchdog.ko with args ''
+[    1.369028] [0:    kworker/0:1:   12] hardlockup_watchdog_enable: cpu0: enabled - interval: 4 sec
+[    1.369252] [1:    kworker/1:0:   17] hardlockup_watchdog_enable: cpu1: enabled - interval: 4 sec
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+
+--- line 1601 ---
+[    1.368086] [6:           init:    1] exynos-adv-tracer-s2d exynos_adv_tracer_s2d: adv_tracer_s2d_probe successful.
+[    1.368263] [6:           init:    1] init: Loaded kernel module /lib/modules/exynos-adv-tracer-s2d.ko
+[    1.368432] [6:           init:    1] init: Loading module /lib/modules/hardlockup-watchdog.ko with args ''
+[    1.369028] [0:    kworker/0:1:   12] hardlockup_watchdog_enable: cpu0: enabled - interval: 4 sec
+[    1.369252] [1:    kworker/1:0:   17] hardlockup_watchdog_enable: cpu1: enabled - interval: 4 sec
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+
+--- line 1602 ---
+[    1.368263] [6:           init:    1] init: Loaded kernel module /lib/modules/exynos-adv-tracer-s2d.ko
+[    1.368432] [6:           init:    1] init: Loading module /lib/modules/hardlockup-watchdog.ko with args ''
+[    1.369028] [0:    kworker/0:1:   12] hardlockup_watchdog_enable: cpu0: enabled - interval: 4 sec
+[    1.369252] [1:    kworker/1:0:   17] hardlockup_watchdog_enable: cpu1: enabled - interval: 4 sec
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+
+--- line 1603 ---
+[    1.368432] [6:           init:    1] init: Loading module /lib/modules/hardlockup-watchdog.ko with args ''
+[    1.369028] [0:    kworker/0:1:   12] hardlockup_watchdog_enable: cpu0: enabled - interval: 4 sec
+[    1.369252] [1:    kworker/1:0:   17] hardlockup_watchdog_enable: cpu1: enabled - interval: 4 sec
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+
+--- line 1604 ---
+[    1.369028] [0:    kworker/0:1:   12] hardlockup_watchdog_enable: cpu0: enabled - interval: 4 sec
+[    1.369252] [1:    kworker/1:0:   17] hardlockup_watchdog_enable: cpu1: enabled - interval: 4 sec
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+
+--- line 1605 ---
+[    1.369252] [1:    kworker/1:0:   17] hardlockup_watchdog_enable: cpu1: enabled - interval: 4 sec
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+[    1.370474] [6:           init:    1] Support dbgc interval:1000 ms
+
+--- line 1606 ---
+[    1.369462] [2:    kworker/2:0:   22] hardlockup_watchdog_enable: cpu2: enabled - interval: 4 sec
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+[    1.370474] [6:           init:    1] Support dbgc interval:1000 ms
+[    1.370478] [6:           init:    1] Support dbgc warnning count: 5
+
+--- line 1607 ---
+[    1.369664] [3:    kworker/3:0:   27] hardlockup_watchdog_enable: cpu3: enabled - interval: 4 sec
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+[    1.370474] [6:           init:    1] Support dbgc interval:1000 ms
+[    1.370478] [6:           init:    1] Support dbgc warnning count: 5
+[    1.370527] [6:           init:    1] ehld-ipc: adv_tracer_ehld_init successful - id:0x2, len:0x4
+
+--- line 1608 ---
+[    1.369702] [4:    kworker/4:2:  164] hardlockup_watchdog_enable: cpu4: enabled - interval: 4 sec
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+[    1.370474] [6:           init:    1] Support dbgc interval:1000 ms
+[    1.370478] [6:           init:    1] Support dbgc warnning count: 5
+[    1.370527] [6:           init:    1] ehld-ipc: adv_tracer_ehld_init successful - id:0x2, len:0x4
+[    1.370544] [6:           init:    1] ehld: cpu#0, dbg_base:0x810000, total:0x1e810000, ioremap:0xffffffc016e80000
+
+--- line 1609 ---
+[    1.369724] [5:    kworker/5:3:  163] hardlockup_watchdog_enable: cpu5: enabled - interval: 4 sec
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+[    1.370474] [6:           init:    1] Support dbgc interval:1000 ms
+[    1.370478] [6:           init:    1] Support dbgc warnning count: 5
+[    1.370527] [6:           init:    1] ehld-ipc: adv_tracer_ehld_init successful - id:0x2, len:0x4
+[    1.370544] [6:           init:    1] ehld: cpu#0, dbg_base:0x810000, total:0x1e810000, ioremap:0xffffffc016e80000
+[    1.370552] [6:           init:    1] ehld: cpu#1, dbg_base:0x910000, total:0x1e910000, ioremap:0xffffffc016f00000
+
+--- line 1610 ---
+[    1.369744] [6:    kworker/6:2:  166] hardlockup_watchdog_enable: cpu6: enabled - interval: 4 sec
+[    1.369885] [7:    kworker/7:0:   47] hardlockup_watchdog_enable: cpu7: enabled - interval: 4 sec
+[    1.369907] [6:           init:    1] hardlockup-watchdog hardlockup-watchdog: Hardlockup Watchdog driver
+[    1.370086] [6:           init:    1] init: Loaded kernel module /lib/modules/hardlockup-watchdog.ko
+[    1.370110] [6:           init:    1] init: Loading module /lib/modules/ehld.ko with args ''
+[    1.370474] [6:           init:    1] Support dbgc interval:1000 ms
+[    1.370478] [6:           init:    1] Support dbgc warnning count: 5
+[    1.370527] [6:           init:    1] ehld-ipc: adv_tracer_ehld_init successful - id:0x2, len:0x4
+[    1.370544] [6:           init:    1] ehld: cpu#0, dbg_base:0x810000, total:0x1e810000, ioremap:0xffffffc016e80000
+[    1.370552] [6:           init:    1] ehld: cpu#1, dbg_base:0x910000, total:0x1e910000, ioremap:0xffffffc016f00000
+[    1.370560] [6:           init:    1] ehld: cpu#2, dbg_base:0xa10000, total:0x1ea10000, ioremap:0xffffffc016f80000
+
+--- line 2172 ---
+[    1.415644] [4:           init:    1] clocksource: mct-frc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 73510017198 ns
+[    1.415820] [4:           init:    1] init: Loaded kernel module /lib/modules/exynos_mct.ko
+[    1.415884] [5:    kworker/5:3:  163] coresight stm0: STM500 initialized
+[    1.415945] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster0 probe
+[    1.415952] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: It is not a multistage watchdog.
+[    1.415982] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN reg val: 98
+[    1.415992] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: probe: mapped reg_base=(____ptrval____)
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+
+--- line 2173 ---
+[    1.415820] [4:           init:    1] init: Loaded kernel module /lib/modules/exynos_mct.ko
+[    1.415884] [5:    kworker/5:3:  163] coresight stm0: STM500 initialized
+[    1.415945] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster0 probe
+[    1.415952] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: It is not a multistage watchdog.
+[    1.415982] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN reg val: 98
+[    1.415992] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: probe: mapped reg_base=(____ptrval____)
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+
+--- line 2174 ---
+[    1.415884] [5:    kworker/5:3:  163] coresight stm0: STM500 initialized
+[    1.415945] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster0 probe
+[    1.415952] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: It is not a multistage watchdog.
+[    1.415982] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN reg val: 98
+[    1.415992] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: probe: mapped reg_base=(____ptrval____)
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+
+--- line 2175 ---
+[    1.415945] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster0 probe
+[    1.415952] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: It is not a multistage watchdog.
+[    1.415982] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN reg val: 98
+[    1.415992] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: probe: mapped reg_base=(____ptrval____)
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+
+--- line 2176 ---
+[    1.415952] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: It is not a multistage watchdog.
+[    1.415982] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN reg val: 98
+[    1.415992] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: probe: mapped reg_base=(____ptrval____)
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+
+--- line 2178 ---
+[    1.415992] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: probe: mapped reg_base=(____ptrval____)
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+
+--- line 2179 ---
+[    1.416007] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Shutdown Watchdog timeout value is: 30
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+
+--- line 2180 ---
+[    1.416039] [4:           init:    1] init: Loading module /lib/modules/exynos-flexpmu-dbg.ko with args ''
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+
+--- line 2181 ---
+[    1.416090] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 keepalive!, old_wtcnt = 37e5, wtcnt = fff5
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+
+--- line 2182 ---
+[    1.416095] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Unable to open rtc device
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+
+--- line 2183 ---
+[    1.416101] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_OUT set true done, val = 19ff620, en= 1
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+
+--- line 2184 ---
+[    1.416107] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: NONCPU_INT_EN set true done, val = 9c, mask = 0
+[    1.416112] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: starting watchdog timer
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+
+--- line 2186 ---
+[    1.416119] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 1f700
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+
+--- line 2187 ---
+[    1.416127] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: Watchdog cluster 0 start, WTCON = 11f739
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+
+--- line 2188 ---
+[    1.416143] [5:    kworker/5:3:  163] debug-snapshot dss: Add wdt start, wdt expire, wdt stop funtions from s3c2410wdt_probe+0x690/0x7d0 [s3c2410_wdt]
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+
+--- line 2189 ---
+[    1.416148] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: watchdog cluster 0, active, reset enabled, irq disabled
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+
+--- line 2190 ---
+[    1.416151] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: DBGACK enabled
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+
+--- line 2191 ---
+[    1.416156] [5:    kworker/5:3:  163] s3c2410-wdt 10050000.watchdog_cl0: windowed watchdog enabled, wtmincnt=1ffea
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+[    1.416296] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0001f701
+
+--- line 2192 ---
+[    1.416159] [5:    kworker/5:3:  163] Multistage watchdog disabled
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+[    1.416296] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0001f701
+[    1.416302] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 1f700
+
+--- line 2193 ---
+[    1.416216] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster1 probe
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+[    1.416296] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0001f701
+[    1.416302] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 1f700
+[    1.416310] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0011f719
+
+--- line 2194 ---
+[    1.416224] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_INT_EN reg val: 0
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+[    1.416296] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0001f701
+[    1.416302] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 1f700
+[    1.416310] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0011f719
+[    1.416317] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_start: count=0x0000ccc4, wtcon=0011f73c
+
+--- line 2195 ---
+[    1.416233] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: probe: mapped reg_base=(____ptrval____)
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+[    1.416296] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0001f701
+[    1.416302] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 1f700
+[    1.416310] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0011f719
+[    1.416317] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_start: count=0x0000ccc4, wtcon=0011f73c
+[    1.416322] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 start, WTCON = 11f73c
+
+--- line 2196 ---
+[    1.416241] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Shutdown timeout value is not defined. We set it for 30secs
+[    1.416277] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 keepalive!, old_wtcnt = 6029, wtcnt = ccc4
+[    1.416281] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Unable to open rtc device
+[    1.416286] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.416290] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: starting watchdog timer
+[    1.416296] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0001f701
+[    1.416302] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 1f700
+[    1.416310] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 0011f719
+[    1.416317] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: s3c2410wdt_multistage_wdt_start: count=0x0000ccc4, wtcon=0011f73c
+[    1.416322] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: Watchdog cluster 1 start, WTCON = 11f73c
+[    1.416327] [5:    kworker/5:3:  163] s3c2410-wdt 10060000.watchdog_cl1: watchdog cluster 1, active, reset disabled, irq enabled
+
+===== last-logcat-all.txt =====
+Counts: {}
+
+===== last-logcat-main-system-crash-events.txt =====
+Counts: {}
+
+===== pstore-pmsg-ramoops-0.txt =====
+Counts: {}
+
+===== proc-last_kmsg.txt =====
+Counts: {"Watchdog":1}
+
+--- line 159 ---
+[0:    0.813758 ] max77705_set_prequal_charge: CNFG_01(0x38)
+[0:    0.813905 ] max77705_fuel_gauge_read_vcell: VCELL(4405), data(0xdc4c)
+[0:    0.814113 ] max77705_init_ific : MAX77705_CHG_REG_CHG_INT_OK(0xdf)
+[0:    0.814601 ] max77705_set_charger_watchdog: state(0), reg_data(0x4)
+[0:    0.816439 ] charger_command_polling: OP 0x57 Response OP 0x57 @ 1msec
+[0:    0.816446 ] charger_command_polling : Command 0x57 delay : 1msec
+[0:    0.816570 ] [CHARGER] max77705_set_fw_noautoibus AUTOIBUS: [0x3], chg_dtls00[0xe0]
+[0:    0.816814 ] max77705_get_max_current rp_current:3,is_sink:1,pd_state:25
+[0:    0.816822 ] ifconn_get_charger_status:
+[0:    0.817057 ] max77705_read_adc: RID = 07(RID_OPEN)
+[0:    0.817063 ] pdic_is_valid_charger: default ID + VB
+
+===== pulled/cache-recovery/last_log.gz =====
+Counts: {"zygote":10,"Watchdog":15}
+
+--- line 354 ---
+ro.boottime.logd=5449960919
+ro.boottime.ueventd=5334371765
+ro.boottime.recovery=5466801380
+ro.boottime.watchdogd=5451478688
+ro.boottime.health-hal-2-1=5468221188
+ro.boottime.hwservicemanager=5452807611
+ro.boottime.vndservicemanager=5458387765
+ro.odm.build.date=Mon Mar 16 02:54:42 UTC 2026
+ro.odm.build.date.utc=1773629682
+ro.odm.build.version.incremental=eng.runner.20260316.025715
+ro.odm.build.fingerprint=samsung/twrp_t2s/t2s:99.87.36/SP2A.220405.004/runner03160254:eng/test-keys
+
+--- line 474 ---
+ro.bionic.cpu_variant=cortex-a76
+ro.bionic.2nd_cpu_variant=
+ro.dalvik.vm.native.bridge=0
+ro.zygote=zygote64
+dalvik.vm.isa.arm64.variant=cortex-a76
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.artfile.size=4294967295
+dalvik.vm.madvise.odexfile.size=104857600
+
+--- line 541 ---
+init.svc.logd=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.watchdogd=running
+init.svc.health-hal-2-1=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+init.svc.adbd=restarting
+init.svc_debug_pid.adbd=509
+init.svc_debug_pid.logd=500
+init.svc_debug_pid.ueventd=482
+
+--- line 550 ---
+init.svc_debug_pid.logd=500
+init.svc_debug_pid.ueventd=482
+init.svc_debug_pid.recovery=507
+init.svc_debug_pid.watchdogd=501
+init.svc_debug_pid.health-hal-2-1=508
+init.svc_debug_pid.hwservicemanager=502
+init.svc_debug_pid.vndservicemanager=506
+ro.logd.kernel=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+pm.dexopt.post-boot=extract
+pm.dexopt.boot-after-ota=extract
+
+--- line 1482 ---
+ro.boottime.logd=5449960919
+ro.boottime.ueventd=5334371765
+ro.boottime.recovery=5466801380
+ro.boottime.watchdogd=5451478688
+ro.boottime.health-hal-2-1=5468221188
+ro.boottime.hwservicemanager=5452807611
+ro.boottime.vndservicemanager=5458387765
+ro.odm.build.date=Mon Mar 16 02:54:42 UTC 2026
+ro.odm.build.date.utc=1773629682
+ro.odm.build.version.incremental=eng.runner.20260316.025715
+ro.odm.build.fingerprint=samsung/twrp_t2s/t2s:99.87.36/SP2A.220405.004/runner03160254:eng/test-keys
+
+--- line 1602 ---
+ro.bionic.cpu_variant=cortex-a76
+ro.bionic.2nd_cpu_variant=
+ro.dalvik.vm.native.bridge=0
+ro.zygote=zygote64
+dalvik.vm.isa.arm64.variant=cortex-a76
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.artfile.size=4294967295
+dalvik.vm.madvise.odexfile.size=104857600
+
+--- line 1669 ---
+init.svc.logd=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.watchdogd=running
+init.svc.health-hal-2-1=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+init.svc.adbd=restarting
+init.svc_debug_pid.adbd=509
+init.svc_debug_pid.logd=500
+init.svc_debug_pid.ueventd=482
+
+--- line 1678 ---
+init.svc_debug_pid.logd=500
+init.svc_debug_pid.ueventd=482
+init.svc_debug_pid.recovery=507
+init.svc_debug_pid.watchdogd=501
+init.svc_debug_pid.health-hal-2-1=508
+init.svc_debug_pid.hwservicemanager=502
+init.svc_debug_pid.vndservicemanager=506
+ro.logd.kernel=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+pm.dexopt.post-boot=extract
+pm.dexopt.boot-after-ota=extract
+
+--- line 2613 ---
+ro.boottime.logd=5506761726
+ro.boottime.ueventd=5389255764
+ro.boottime.recovery=5515989303
+ro.boottime.watchdogd=5507762995
+ro.boottime.health-hal-2-1=5518560649
+ro.boottime.hwservicemanager=5509697149
+ro.boottime.vndservicemanager=5510985033
+ro.odm.build.date=Mon Mar 16 02:54:42 UTC 2026
+ro.odm.build.date.utc=1773629682
+ro.odm.build.version.incremental=eng.runner.20260316.025715
+ro.odm.build.fingerprint=samsung/twrp_t2s/t2s:99.87.36/SP2A.220405.004/runner03160254:eng/test-keys
+
+--- line 2733 ---
+ro.bionic.cpu_variant=cortex-a76
+ro.bionic.2nd_cpu_variant=
+ro.dalvik.vm.native.bridge=0
+ro.zygote=zygote64
+dalvik.vm.isa.arm64.variant=cortex-a76
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.artfile.size=4294967295
+dalvik.vm.madvise.odexfile.size=104857600
+
+--- line 2800 ---
+init.svc.logd=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.watchdogd=running
+init.svc.health-hal-2-1=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+init.svc.adbd=restarting
+init.svc_debug_pid.adbd=512
+init.svc_debug_pid.logd=503
+init.svc_debug_pid.ueventd=485
+
+--- line 2809 ---
+init.svc_debug_pid.logd=503
+init.svc_debug_pid.ueventd=485
+init.svc_debug_pid.recovery=507
+init.svc_debug_pid.watchdogd=504
+init.svc_debug_pid.health-hal-2-1=511
+init.svc_debug_pid.hwservicemanager=505
+init.svc_debug_pid.vndservicemanager=506
+ro.logd.kernel=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+pm.dexopt.post-boot=extract
+pm.dexopt.boot-after-ota=extract
+
+--- line 3613 ---
+ro.boottime.logd=5506761726
+ro.boottime.ueventd=5389255764
+ro.boottime.recovery=5515989303
+ro.boottime.watchdogd=5507762995
+ro.boottime.health-hal-2-1=5518560649
+ro.boottime.hwservicemanager=5509697149
+ro.boottime.vndservicemanager=5510985033
+ro.odm.build.date=Mon Mar 16 02:54:42 UTC 2026
+ro.odm.build.date.utc=1773629682
+ro.odm.build.version.incremental=eng.runner.20260316.025715
+ro.odm.build.fingerprint=samsung/twrp_t2s/t2s:99.87.36/SP2A.220405.004/runner03160254:eng/test-keys
+
+--- line 3733 ---
+ro.bionic.cpu_variant=cortex-a76
+ro.bionic.2nd_cpu_variant=
+ro.dalvik.vm.native.bridge=0
+ro.zygote=zygote64
+dalvik.vm.isa.arm64.variant=cortex-a76
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.artfile.size=4294967295
+dalvik.vm.madvise.odexfile.size=104857600
+
+--- line 3800 ---
+init.svc.logd=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.watchdogd=running
+init.svc.health-hal-2-1=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+init.svc.adbd=restarting
+init.svc_debug_pid.adbd=512
+init.svc_debug_pid.logd=503
+init.svc_debug_pid.ueventd=485
+
+--- line 3809 ---
+init.svc_debug_pid.logd=503
+init.svc_debug_pid.ueventd=485
+init.svc_debug_pid.recovery=507
+init.svc_debug_pid.watchdogd=504
+init.svc_debug_pid.health-hal-2-1=511
+init.svc_debug_pid.hwservicemanager=505
+init.svc_debug_pid.vndservicemanager=506
+ro.logd.kernel=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+pm.dexopt.post-boot=extract
+pm.dexopt.boot-after-ota=extract
+
+--- line 4653 ---
+ro.boottime.logd=5506761726
+ro.boottime.ueventd=5389255764
+ro.boottime.recovery=5515989303
+ro.boottime.watchdogd=5507762995
+ro.boottime.health-hal-2-1=5518560649
+ro.boottime.hwservicemanager=5509697149
+ro.boottime.vndservicemanager=5510985033
+ro.odm.build.date=Mon Mar 16 02:54:42 UTC 2026
+ro.odm.build.date.utc=1773629682
+ro.odm.build.version.incremental=eng.runner.20260316.025715
+ro.odm.build.fingerprint=samsung/twrp_t2s/t2s:99.87.36/SP2A.220405.004/runner03160254:eng/test-keys
+
+--- line 4773 ---
+ro.bionic.cpu_variant=cortex-a76
+ro.bionic.2nd_cpu_variant=
+ro.dalvik.vm.native.bridge=0
+ro.zygote=zygote64
+dalvik.vm.isa.arm64.variant=cortex-a76
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.artfile.size=4294967295
+dalvik.vm.madvise.odexfile.size=104857600
+
+--- line 4840 ---
+init.svc.logd=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.watchdogd=running
+init.svc.health-hal-2-1=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+init.svc.adbd=restarting
+init.svc_debug_pid.adbd=512
+init.svc_debug_pid.logd=503
+init.svc_debug_pid.ueventd=485
+
+--- line 4849 ---
+init.svc_debug_pid.logd=503
+init.svc_debug_pid.ueventd=485
+init.svc_debug_pid.recovery=507
+init.svc_debug_pid.watchdogd=504
+init.svc_debug_pid.health-hal-2-1=511
+init.svc_debug_pid.hwservicemanager=505
+init.svc_debug_pid.vndservicemanager=506
+ro.logd.kernel=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+pm.dexopt.post-boot=extract
+pm.dexopt.boot-after-ota=extract
+
+===== pulled/tmp-recovery.log =====
+Counts: {"zygote":2,"Watchdog":3}
+
+--- line 354 ---
+ro.boottime.logd=5548381688
+ro.boottime.ueventd=5429602765
+ro.boottime.recovery=5559245265
+ro.boottime.watchdogd=5549990265
+ro.boottime.health-hal-2-1=5560753149
+ro.boottime.hwservicemanager=5552176726
+ro.boottime.vndservicemanager=5554289457
+ro.odm.build.date=Mon Mar 16 02:54:42 UTC 2026
+ro.odm.build.date.utc=1773629682
+ro.odm.build.version.incremental=eng.runner.20260316.025715
+ro.odm.build.fingerprint=samsung/twrp_t2s/t2s:99.87.36/SP2A.220405.004/runner03160254:eng/test-keys
+
+--- line 474 ---
+ro.bionic.cpu_variant=cortex-a76
+ro.bionic.2nd_cpu_variant=
+ro.dalvik.vm.native.bridge=0
+ro.zygote=zygote64
+dalvik.vm.isa.arm64.variant=cortex-a76
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.artfile.size=4294967295
+dalvik.vm.madvise.odexfile.size=104857600
+
+--- line 541 ---
+init.svc.logd=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.watchdogd=running
+init.svc.health-hal-2-1=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+init.svc.adbd=restarting
+init.svc_debug_pid.adbd=508
+init.svc_debug_pid.logd=502
+init.svc_debug_pid.ueventd=484
+
+--- line 550 ---
+init.svc_debug_pid.logd=502
+init.svc_debug_pid.ueventd=484
+init.svc_debug_pid.recovery=506
+init.svc_debug_pid.watchdogd=503
+init.svc_debug_pid.health-hal-2-1=507
+init.svc_debug_pid.hwservicemanager=504
+init.svc_debug_pid.vndservicemanager=505
+ro.logd.kernel=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+pm.dexopt.post-boot=extract
+pm.dexopt.boot-after-ota=extract
+

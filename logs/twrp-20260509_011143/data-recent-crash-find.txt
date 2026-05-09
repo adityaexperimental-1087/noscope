@@ -1,0 +1,8 @@
+> adb shell find /data/tombstones /data/anr /data/system/dropbox /data/misc/logd /data/misc/recovery -maxdepth 2 -type f -printf "%T@ %s %p\n" 2>/dev/null | sort -nr | head -200
+code=0
+1778288887.315999997 212 /data/misc/recovery/proc/version.1
+1778288887.315999997 212 /data/misc/recovery/proc/version
+1778288887.311999997 70 /data/misc/recovery/ro.build.fingerprint.1
+1778288887.311999997 70 /data/misc/recovery/ro.build.fingerprint
+
+
