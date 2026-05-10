@@ -6,6 +6,10 @@ SET_PROP "system" "ro.monsterrom.timestamp" "$ROM_BUILD_TIMESTAMP"
 SET_PROP "system" "ro.monsterrom.device" "$TARGET_CODENAME"
 SET_PROP "system" "ro.monsterrom.target" "$TARGET_CODENAME"
 
+VALUE="$(GET_PROP "$WORK_DIR/product/etc/build.prop" "ro.build.display.id")"
+SET_PROP "system" "ro.build.display.id" "kl2500-$ROM_VERSION ($VALUE)"
+SET_PROP "product" "ro.build.display.id" "kl2500-$ROM_VERSION ($VALUE)"
+
 if [ ! "$(GET_PROP "system" "ro.unica.version")" ]; then
     SET_PROP "system" "ro.unica.version" "$(GET_PROP "system" "ro.monsterrom.version")"
 fi

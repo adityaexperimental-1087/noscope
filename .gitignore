@@ -12,3 +12,4 @@ security/*_platform.pk8
 !.gitattributes
 !.gitignore
 !.gitmodules
+unica/mods/hypercam/system/priv-app/hypercam/hypercam.apk

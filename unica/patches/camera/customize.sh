@@ -222,17 +222,17 @@ if [[ "$SOURCE_SAIV_CONFIG_ARDOODLE_LIB" != "$TARGET_SAIV_CONFIG_ARDOODLE_LIB" ]
     fi
 fi
 
-# mass camera
-if $SOURCE_HAS_MASS_CAMERA_APP; then
-    if ! $TARGET_HAS_MASS_CAMERA_APP; then
-        ADD_TO_WORK_DIR "e2sxxx" "system" "system/priv-app/SamsungCamera/SamsungCamera.apk" 0 0 644 "u:object_r:system_file:s0"
-        ADD_TO_WORK_DIR "e2sxxx" "system" "system/priv-app/SamsungCamera/oat"
-    else
-        LOG "- TARGET_HAS_MASS_CAMERA_APP is set. Ignoring."
-    fi
-else
-    LOG "- SOURCE_HAS_MASS_CAMERA_APP is not set. Ignoring."
-fi
+# # mass camera
+# if $SOURCE_HAS_MASS_CAMERA_APP; then
+#     if ! $TARGET_HAS_MASS_CAMERA_APP; then
+#         ADD_TO_WORK_DIR "e2sxxx" "system" "system/priv-app/SamsungCamera/SamsungCamera.apk" 0 0 644 "u:object_r:system_file:s0"
+#         ADD_TO_WORK_DIR "e2sxxx" "system" "system/priv-app/SamsungCamera/oat"
+#     else
+#         LOG "- TARGET_HAS_MASS_CAMERA_APP is set. Ignoring."
+#     fi
+# else
+#     LOG "- SOURCE_HAS_MASS_CAMERA_APP is not set. Ignoring."
+# fi
 
 # Camera libs debloat
 if ! grep -q "\"system\"" "$WORK_DIR/system/system/cameradata/portrait_data/single_bokeh_feature.json" 2> /dev/null; then
