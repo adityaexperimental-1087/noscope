@@ -5,7 +5,7 @@
 # [
 source "$SRC_DIR/scripts/utils/install_utils.sh" || exit 1
 
-trap 'rm -rf "$TMP_DIR"' EXIT INT
+# trap 'rm -rf "$TMP_DIR"' EXIT INT
 
 # https://android.googlesource.com/platform/build/+/refs/tags/android-15.0.0_r1/tools/releasetools/build_super_image.py#72
 BUILD_SUPER_EMPTY()

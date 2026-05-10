@@ -1,3 +1,6 @@
+source "$SRC_DIR/scripts/utils/common_utils.sh"
+source "$SRC_DIR/scripts/utils/module_utils.sh"
+
 E3Q_NFC_BLOBS="
 system/etc/libnfc-nci.conf
 system/lib64/libnfc_nci_jni.so
@@ -18,3 +21,13 @@ DELETE_FROM_WORK_DIR "system" "system/lib64/libnfc_sec_jni.so"
 
 SET_PROP "vendor" "ro.vendor.nfc.info.antpos" "27"
 
+DECODE_APK "system" "system/priv-app/SecSettings/SecSettings.apk"
+
+# avoid crashed when open NFC settings
+FTP="
+system/priv-app/SecSettings/SecSettings.apk/smali_classes5/com/samsung/android/settings/nfc/NfcAntennaGuideDialog.smali
+system/priv-app/SecSettings/SecSettings.apk/smali_classes5/com/samsung/android/settings/nfc/NfcSettings.smali
+"
+for f in $FTP; do
+   sed -i "s/\"27\"/\"1\"/g" "$APKTOOL_DIR/$f"
+done

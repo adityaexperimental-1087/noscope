@@ -19,7 +19,7 @@ fi
 PRIVATE_KEY_PATH+=".pk8"
 PUBLIC_KEY_PATH+=".x509.pem"
 
-trap 'rm -rf "$TMP_DIR"' EXIT INT
+# trap 'rm -rf "$TMP_DIR"' EXIT INT
 
 CALCULATE_MIN_CACHE_SIZE()
 {
@@ -494,7 +494,7 @@ for p in $PARTITIONS_LIST; do
     else
         LOG "- Converting $p.img to $p.new.dat"
         EVAL "img2sdat -o \"$TMP_DIR\" --tgt-block-map \"$TMP_DIR/target/$p.map\" \"$TMP_DIR/target/$p.img\"" || exit 1
-        rm -f "$TMP_DIR/target/$p.img" "$TMP_DIR/target/$p.map"
+        # rm -f "$TMP_DIR/target/$p.img" "$TMP_DIR/target/$p.map"
 
         if ! $DEBUG; then
             LOG "- Compressing $p.new.dat"

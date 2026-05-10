@@ -19,7 +19,7 @@ fi
 PRIVATE_KEY_PATH+=".pk8"
 PUBLIC_KEY_PATH+=".x509.pem"
 
-trap 'rm -rf "$TMP_DIR"' EXIT INT
+# trap 'rm -rf "$TMP_DIR"' EXIT INT
 
 # https://android.googlesource.com/platform/build/+/refs/tags/android-15.0.0_r1/tools/releasetools/common.py#4042
 GENERATE_OP_LIST()
@@ -250,7 +250,7 @@ for p in $PARTITIONS_LIST; do
 
     LOG "- Converting $p.img to $p.new.dat"
     EVAL "img2sdat -o \"$TMP_DIR\" --tgt-block-map \"$TMP_DIR/$p.map\" \"$TMP_DIR/$p.img\"" || exit 1
-    rm -f "$TMP_DIR/$p.img" "$TMP_DIR/$p.map"
+    # rm -f "$TMP_DIR/$p.img" "$TMP_DIR/$p.map"
 
     if ! $DEBUG; then
         LOG "- Compressing $p.new.dat"
