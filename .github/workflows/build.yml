@@ -1,4 +1,4 @@
-name: Build
+name: Build S26
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - 'sixteenQPR2'
-
+      - 'testing'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
